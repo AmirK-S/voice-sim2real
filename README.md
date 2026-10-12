@@ -23,3 +23,17 @@ Data (gitignored, in `data/`): LibriSpeech test-clean (openslr.org, CC BY 4.0), 
 | ASR | facebook/wav2vec2-base-960h (transformers, MPS) |
 | ASR | mlx-community/parakeet-tdt-0.6b-v2 (parakeet-mlx) |
 | Channel | ffmpeg 8 kHz G.711 mu-law round trip |
+
+## Run the experiment
+
+```
+uv run python scripts/01_make_corpus.py          # 250 LibriSpeech sentences x (human + 7 TTS), 122 caller sentences x 7 TTS
+uv run python scripts/02_channel_selftest.py     # channel checks (G.711, SNR, loss, muffle)
+uv run python scripts/03_asr_selftest.py         # ASR checks
+uv run python scripts/04_run_experiment.py       # every voice x condition x model (cached, resumable)
+uv run python scripts/05_analyze.py              # tables, figures, summary.json
+```
+
+`04_run_experiment.py --model whisper --conditions clean,realistic` runs one worker on a subset; `--merge-only` rebuilds `results/utterances.csv` from the transcript shards. Results: `results/utterances.csv` (one row per sentence x voice x condition x model), `results/tables/`, `results/figures/`, `results/FINDINGS.md`.
+
+If `import sim2real` fails under `uv run`, macOS may have flagged the editable `.pth` file in `.venv` as hidden (Python 3.12 skips hidden `.pth` files). The scripts add `src/` to `sys.path` themselves; `chflags nohidden .venv/lib/python3.12/site-packages/*.pth` also fixes it.

@@ -1,0 +1,310 @@
+{
+ "n_rows": 57080,
+ "voice_spread": [
+  {
+   "model": "parakeet-tdt-0.6b-v2",
+   "condition": "clean",
+   "min": 0.014331946370781322,
+   "max": 0.05779010633379565,
+   "human": 0.01756819232547388,
+   "max_over_min": 4.032258064516129
+  },
+  {
+   "model": "parakeet-tdt-0.6b-v2",
+   "condition": "phone",
+   "min": 0.01571890892279242,
+   "max": 0.055940822931114194,
+   "human": 0.01849283402681461,
+   "max_over_min": 3.5588235294117645
+  },
+  {
+   "model": "parakeet-tdt-0.6b-v2",
+   "condition": "phone+loss10",
+   "min": 0.01687471104946833,
+   "max": 0.061257512713823396,
+   "human": 0.020573277854831252,
+   "max_over_min": 3.6301369863013706
+  },
+  {
+   "model": "parakeet-tdt-0.6b-v2",
+   "condition": "phone+muffle",
+   "min": 0.016181229773462782,
+   "max": 0.061488673139158574,
+   "human": 0.021497919556171984,
+   "max_over_min": 3.8000000000000003
+  },
+  {
+   "model": "parakeet-tdt-0.6b-v2",
+   "condition": "phone+noise10",
+   "min": 0.02311604253351826,
+   "max": 0.0758206195099399,
+   "human": 0.03536754507628294,
+   "max_over_min": 3.2800000000000002
+  },
+  {
+   "model": "parakeet-tdt-0.6b-v2",
+   "condition": "phone+noise5",
+   "min": 0.03629218677762367,
+   "max": 0.10841423948220065,
+   "human": 0.05894590846047157,
+   "max_over_min": 2.9872611464968153
+  },
+  {
+   "model": "parakeet-tdt-0.6b-v2",
+   "condition": "realistic",
+   "min": 0.025196486361534907,
+   "max": 0.0769764216366158,
+   "human": 0.03421174294960703,
+   "max_over_min": 3.0550458715596327
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "clean",
+   "min": 0.026352288488210817,
+   "max": 0.1077207582061951,
+   "human": 0.03305594082293111,
+   "max_over_min": 4.087719298245615
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "phone",
+   "min": 0.02750809061488673,
+   "max": 0.14748035136384652,
+   "human": 0.048081368469717986,
+   "max_over_min": 5.3613445378151265
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "phone+loss10",
+   "min": 0.0319001386962552,
+   "max": 0.13106796116504854,
+   "human": 0.05547850208044383,
+   "max_over_min": 4.108695652173913
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "phone+loss5",
+   "min": 0.030282015718908924,
+   "max": 0.13337956541840038,
+   "human": 0.050855293573740176,
+   "max_over_min": 4.404580152671755
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "phone+muffle",
+   "min": 0.045538603791030974,
+   "max": 0.20527045769764216,
+   "human": 0.09269533055940823,
+   "max_over_min": 4.50761421319797
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "phone+noise10",
+   "min": 0.18331021729079983,
+   "max": 0.48982894128525195,
+   "human": 0.32778548312528893,
+   "max_over_min": 2.6721311475409832
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "phone+noise20",
+   "min": 0.05016181229773463,
+   "max": 0.22122052704576978,
+   "human": 0.09315765141007859,
+   "max_over_min": 4.410138248847926
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "phone+noise5",
+   "min": 0.45168747110494684,
+   "max": 0.7096625057790107,
+   "human": 0.5501618122977346,
+   "max_over_min": 1.571136131013306
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "realistic",
+   "min": 0.18331021729079983,
+   "max": 0.4576976421636616,
+   "human": 0.2942672214516875,
+   "max_over_min": 2.4968474148802016
+  },
+  {
+   "model": "whisper-large-v3-turbo",
+   "condition": "clean",
+   "min": 0.018261673601479428,
+   "max": 0.06934812760055478,
+   "human": 0.019417475728155338,
+   "max_over_min": 3.7974683544303796
+  },
+  {
+   "model": "whisper-large-v3-turbo",
+   "condition": "phone",
+   "min": 0.016412390198797967,
+   "max": 0.06842348589921406,
+   "human": 0.020804438280166437,
+   "max_over_min": 4.169014084507042
+  },
+  {
+   "model": "whisper-large-v3-turbo",
+   "condition": "phone+noise10",
+   "min": 0.02727693018955155,
+   "max": 0.09107720758206195,
+   "human": 0.04184003698566805,
+   "max_over_min": 3.3389830508474576
+  },
+  {
+   "model": "whisper-large-v3-turbo",
+   "condition": "realistic",
+   "min": 0.030975496994914472,
+   "max": 0.08992140545538604,
+   "human": 0.04230235783633842,
+   "max_over_min": 2.9029850746268657
+  }
+ ],
+ "human_wer": [
+  {
+   "model": "parakeet-tdt-0.6b-v2",
+   "condition": "clean",
+   "wer": 0.01756819232547388,
+   "lo": 0.012885383266939564,
+   "hi": 0.022748943015676606
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "clean",
+   "wer": 0.03305594082293111,
+   "lo": 0.02622211910286156,
+   "hi": 0.04017016048934938
+  },
+  {
+   "model": "whisper-large-v3-turbo",
+   "condition": "clean",
+   "wer": 0.019417475728155338,
+   "lo": 0.014648638403701248,
+   "hi": 0.024699611243596497
+  },
+  {
+   "model": "parakeet-tdt-0.6b-v2",
+   "condition": "phone",
+   "wer": 0.01849283402681461,
+   "lo": 0.013649387897134015,
+   "hi": 0.023938074698009845
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "phone",
+   "wer": 0.048081368469717986,
+   "lo": 0.03985507246376811,
+   "hi": 0.05650786245041717
+  },
+  {
+   "model": "whisper-large-v3-turbo",
+   "condition": "phone",
+   "wer": 0.020804438280166437,
+   "lo": 0.015785803325546542,
+   "hi": 0.026496761711452193
+  },
+  {
+   "model": "parakeet-tdt-0.6b-v2",
+   "condition": "phone+loss10",
+   "wer": 0.020573277854831252,
+   "lo": 0.015186290940607753,
+   "hi": 0.02660458932697933
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "phone+loss10",
+   "wer": 0.05547850208044383,
+   "lo": 0.046287753666520236,
+   "hi": 0.06510670123653768
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "phone+loss5",
+   "wer": 0.050855293573740176,
+   "lo": 0.04258157361279435,
+   "hi": 0.05930978692076559
+  },
+  {
+   "model": "parakeet-tdt-0.6b-v2",
+   "condition": "phone+muffle",
+   "wer": 0.021497919556171984,
+   "lo": 0.01657334695729729,
+   "hi": 0.02699417075090993
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "phone+muffle",
+   "wer": 0.09269533055940823,
+   "lo": 0.08019172925294839,
+   "hi": 0.10586019968023903
+  },
+  {
+   "model": "parakeet-tdt-0.6b-v2",
+   "condition": "phone+noise10",
+   "wer": 0.03536754507628294,
+   "lo": 0.027883966719136496,
+   "hi": 0.04351830531890399
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "phone+noise10",
+   "wer": 0.32778548312528893,
+   "lo": 0.2931894593601251,
+   "hi": 0.36361528483407196
+  },
+  {
+   "model": "whisper-large-v3-turbo",
+   "condition": "phone+noise10",
+   "wer": 0.04184003698566805,
+   "lo": 0.034004048194445975,
+   "hi": 0.05026469009027148
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "phone+noise20",
+   "wer": 0.09315765141007859,
+   "lo": 0.07998178840541091,
+   "hi": 0.10668236487037776
+  },
+  {
+   "model": "parakeet-tdt-0.6b-v2",
+   "condition": "phone+noise5",
+   "wer": 0.05894590846047157,
+   "lo": 0.047906907116000555,
+   "hi": 0.07052356930813129
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "phone+noise5",
+   "wer": 0.5501618122977346,
+   "lo": 0.5052927951689272,
+   "hi": 0.5960615078214837
+  },
+  {
+   "model": "parakeet-tdt-0.6b-v2",
+   "condition": "realistic",
+   "wer": 0.03421174294960703,
+   "lo": 0.027287481738006977,
+   "hi": 0.04178655451313355
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "realistic",
+   "wer": 0.2942672214516875,
+   "lo": 0.2624517272242053,
+   "hi": 0.3276175558585873
+  },
+  {
+   "model": "whisper-large-v3-turbo",
+   "condition": "realistic",
+   "wer": 0.04230235783633842,
+   "lo": 0.03440228211689713,
+   "hi": 0.051146497246241485
+  }
+ ],
+ "n_flips": 3,
+ "n_confident_flips": 0,
+ "n_flip_cells": 120
+}

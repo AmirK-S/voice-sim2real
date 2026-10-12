@@ -1,6 +1,10 @@
 [project]
-name = "sim2real"
+name = "voice-sim2real"
 version = "0.1.0"
+description = "Do synthetic callers change which model wins? Measuring the acoustic sim-to-real gap in voice-agent evaluation."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Amir Kellou-Sidhoum" }]
 requires-python = ">=3.12,<3.13"
 dependencies = [
     "datasets>=5.1.0",
@@ -32,3 +36,6 @@ packages = ["src/sim2real"]
 
 [tool.uv.sources]
 en-core-web-sm = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl" }
+
+[project.urls]
+Repository = "https://github.com/AmirK-S/voice-sim2real"

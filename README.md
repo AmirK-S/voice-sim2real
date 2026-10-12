@@ -1,8 +1,19 @@
-# How much do synthetic callers lie?
+# voice-sim2real
 
-A local, reproducible experiment on one slice of the sim-to-real gap in voice-agent evaluation: when the same scripts are read by TTS voices instead of real people, do public speech recognition (ASR) models give the same scores, and above all the same ranking between models?
+[![tests](https://github.com/AmirK-S/voice-sim2real/actions/workflows/tests.yml/badge.svg)](https://github.com/AmirK-S/voice-sim2real/actions/workflows/tests.yml)
 
-Short note for a peer: [`REPORT.md`](REPORT.md). Full results, numbers and caveats: [`results/FINDINGS.md`](results/FINDINGS.md).
+**Do synthetic callers change which model wins?** A local, reproducible measurement of one slice of the sim-to-real gap in voice-agent evaluation: the same scripts read by real people and by 7 TTS voices, sent through simulated phone channels, transcribed by 3 public ASR models. About 74,000 scored transcriptions.
+
+**TL;DR**
+- No single synthetic voice confidently flipped the winner between two close models, but **averaging voices made the lab confident where real speech shows no winner**.
+- The voice changes **how big** a difference looks: from 0.37x to 3.72x the real gap.
+- Some voices hide **about half the damage** that noise does to real speech.
+- Whisper produced text on **33 of 100 clips of pure noise**.
+- About 25 real recordings plus synthetic runs (PPI) give a valid estimate of real-speech WER, with a tighter interval than the recordings alone.
+
+One-page summary: [`REPORT.md`](REPORT.md). Every number, CI and caveat: [`results/FINDINGS.md`](results/FINDINGS.md).
+
+![Whisper vs Parakeet, lab vs reality](results/figures/fig4_decision_whisper_vs_parakeet.png)
 
 ## Why
 
@@ -31,11 +42,11 @@ uv run python scripts/05_analyze.py              # tables, figures, summary.json
 uv run --with pytest python -m pytest tests      # stats unit tests
 ```
 
-Useful variants of step 4: `--model whisper --conditions clean,realistic` runs one model on a subset, `--group rate` runs the rate-matched voices, `--noise-only` runs the hallucination check on pure noise, `--merge-only` rebuilds `results/utterances.csv` from the transcript shards. `scripts/run_v2.sh` is the exact chain used for the published run.
+Useful variants of step 4: `--model whisper --conditions clean,realistic` runs one model on a subset, `--group rate` runs the rate-matched voices, `--noise-only` runs the hallucination check on pure noise, `--merge-only` rebuilds `results/utterances.csv` from the transcript shards. `scripts/reproduce.sh` (or `make reproduce`) runs the exact published grid.
 
 Data goes to `data/` (gitignored): LibriSpeech test-clean (openslr.org, CC BY 4.0), ESC-50 noise (GitHub, CC BY-NC 3.0), Piper voices. Models live in the Hugging Face cache.
 
-If `import sim2real` fails under `uv run`, macOS may have flagged the editable `.pth` file in `.venv` as hidden. The scripts add `src/` to `sys.path` themselves; `chflags nohidden .venv/lib/python3.12/site-packages/*.pth` also fixes it.
+The same steps are available as `make setup`, `make smoke`, `make corpus`, `make run`, `make analyze` and `make test`.
 
 ## What is in the experiment
 
@@ -103,6 +114,20 @@ The pipeline is three plain functions, so each piece can be swapped.
 
 **Your own scripts.** The caller set lives in `src/sim2real/data.py` (`emergency_callers()`, `KEYWORDS`). Keyword recall and call-level detection use that keyword list.
 
+## Project layout
+
+```
+src/sim2real/   tts.py (voices), channel.py (phone line, noise, loss, codecs), asr.py (models, cache),
+                stats.py (bootstrap, DiD, McNemar, rule of three, PPI), data.py (corpus, caller scripts)
+scripts/        numbered pipeline steps, self-tests, reproduce.sh
+results/        FINDINGS.md, tables/ (CSV), figures/ (PNG), summary.json
+tests/          statistics unit tests (run in CI)
+```
+
+## Troubleshooting
+
+If `import sim2real` fails under `uv run`, macOS may have flagged the editable `.pth` file in `.venv` as hidden. The scripts add `src/` to `sys.path` themselves; `chflags nohidden .venv/lib/python3.12/site-packages/*.pth` also fixes it.
+
 ## Licences
 
-LibriSpeech: CC BY 4.0. ESC-50: CC BY-NC 3.0 (non-commercial; mention it if results are shared). Whisper English spelling map vendored from openai-whisper (MIT).
+Code: MIT. LibriSpeech: CC BY 4.0. ESC-50: CC BY-NC 3.0 (non-commercial; mention it if results are shared). Whisper English spelling map vendored from openai-whisper (MIT).

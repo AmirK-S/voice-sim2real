@@ -4,3 +4,6 @@ results/raw/
 __pycache__/
 *.pyc
 .DS_Store
+results/smoke_test.json
+results/utterances.csv
+results/examples/

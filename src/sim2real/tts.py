@@ -70,3 +70,40 @@ def say(text: str, voice: str = "Samantha"):
     if audio.ndim > 1:
         audio = audio.mean(axis=1)
     return audio, sr
+
+
+# ---------------------------------------------------------------------------
+# Unified entry point used by the corpus builder and the experiments.
+# ---------------------------------------------------------------------------
+
+VOICES = (
+    [f"kokoro:{v}" for v in KOKORO_VOICES]
+    + [f"piper:{v}" for v in PIPER_VOICE_IDS]
+    + ["mms:eng"]
+    + [f"say:{v}" for v in SAY_VOICES]
+)
+"""Every synthetic voice of the experiment, as 'engine:voice' ids."""
+
+
+def synthesize(text: str, voice_id: str) -> np.ndarray:
+    """Synthesize `text` with `voice_id` ('kokoro:af_heart', 'piper:en_US-lessac-medium', 'mms:eng',
+    'say:Samantha', ...) and return 16 kHz mono float32 audio clipped to [-1, 1]."""
+    from .audio import resample
+
+    engine, _, voice = voice_id.partition(":")
+    if engine == "kokoro":
+        a, sr = kokoro(text, voice=voice)
+    elif engine == "piper":
+        a, sr = piper(text, voice=voice)
+    elif engine == "mms":
+        if voice != "eng":
+            raise ValueError(f"only mms:eng is supported, got {voice_id!r}")
+        a, sr = mms(text)
+    elif engine == "say":
+        a, sr = say(text, voice=voice)
+    else:
+        raise ValueError(f"unknown TTS engine in {voice_id!r}")
+    a = np.asarray(a, dtype=np.float32)
+    if a.ndim > 1:
+        a = a.mean(axis=1)
+    return np.clip(resample(a, sr, 16000), -1.0, 1.0).astype(np.float32)

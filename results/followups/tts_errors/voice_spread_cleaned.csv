@@ -1,0 +1,16 @@
+rule,model,min,argmin,max,argmax,max_over_min,lo,hi
+raw,whisper-large-v3-turbo,0.01618,kokoro:am_michael,0.06588,mms:eng,4.07143,3.20000,5.86364
+raw,parakeet-tdt-0.6b-v2,0.01341,kokoro:af_heart,0.05224,mms:eng,3.89655,3.09459,5.27666
+raw,wav2vec2-base-960h,0.02335,kokoro:af_heart,0.10495,mms:eng,4.49505,3.63492,5.71233
+R3,whisper-large-v3-turbo,0.01459,kokoro:am_michael,0.04828,mms:eng,3.30991,2.64280,4.82465
+R3,parakeet-tdt-0.6b-v2,0.01158,kokoro:af_heart,0.03439,mms:eng,2.96951,2.40732,3.90115
+R3,wav2vec2-base-960h,0.02154,kokoro:af_heart,0.08808,mms:eng,4.08970,3.23786,5.32232
+R2,whisper-large-v3-turbo,0.01367,kokoro:am_michael,0.04128,mms:eng,3.01912,2.35677,4.50542
+R2,parakeet-tdt-0.6b-v2,0.01112,kokoro:af_heart,0.02728,mms:eng,2.45324,1.99711,3.25382
+R2,wav2vec2-base-960h,0.02132,kokoro:af_heart,0.08493,mms:eng,3.98455,3.10295,5.28148
+R3sym,whisper-large-v3-turbo,0.01462,kokoro:am_michael,0.04837,mms:eng,3.30771,2.64202,4.82171
+R3sym,parakeet-tdt-0.6b-v2,0.01161,kokoro:af_heart,0.03445,mms:eng,2.96754,2.40626,3.89663
+R3sym,wav2vec2-base-960h,0.02159,kokoro:af_heart,0.08825,mms:eng,4.08698,3.23668,5.31900
+R2sym,whisper-large-v3-turbo,0.01372,kokoro:am_michael,0.04139,mms:eng,3.01720,2.35656,4.49866
+R2sym,parakeet-tdt-0.6b-v2,0.01116,kokoro:af_heart,0.02735,mms:eng,2.45225,1.99672,3.24862
+R2sym,wav2vec2-base-960h,0.02092,kokoro:af_heart,0.08468,mms:eng,4.04870,3.15072,5.36453

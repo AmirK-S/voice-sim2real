@@ -1,0 +1,25 @@
+rule,voice,id,keyword,ref,hyp_whisper,hyp_parakeet,hyp_wav2vec2,heard_hell
+R3,mms:eng,em000,help,"Help, he is not breathing.",Kelp he is not breathing.,Kelpt he is not braith thing.,COPHE IS NOT BRAITHING,False
+R3,mms:eng,em010,stabbed,"My neighbor got stabbed, there is blood everywhere.",My neighbor got stouted. There is blood everywhere.,My neighbor got stouted. There is blood everywhere.,MY NEIGHBOUR GOT STOUTED THERE IS BLOOD EVERYWHERE,False
+R3,mms:eng,em063,help,"Help, I have been stabbed.",Elpi have been stabbed.,Elp I have been stabbed.,ELPI HAVE BEEN STABBID,False
+R3,mms:eng,em064,cant get up,I fell and I can't get up.,I fell and I can't give up.,"I fell, and I can't give up.",I FELL AND I CAN'T GIVE UP,False
+R3,mms:eng,em071,help,"Help, I fell in the garden and I cannot move.","""'Tope, I fell in the garden, and I cannot move.'","Tulp, I fell in the garden, and I cannot move.",TELP I FELL IN THE GARDEN AND I CANNOT MOVE,False
+R3,say:Daniel,em000,help,"Help, he is not breathing.","Hell, he is not breathing.","Hell, he is not breathing.",HELL HE IS NOT BREATHING,True
+R3,say:Daniel,em031,help,"Help, my husband is having chest pain and he is sweating.","Hell, my husband is having chest pain and he is sweating.","Hell, my husband is having chest pain and he is sweating.",HELL MY HUSBAND IS HAVING CHEST PAIN AND HE IS SWEATING,True
+R3,say:Daniel,em040,help,"Help, someone broke into my house and they have a gun.","Hell, someone broke into my house and they have a gun.","Hell, someone broke into my house and they have a gun.",HELL SOME ONE BROKE INTO MY HOUSE AND THEY HAVE A GUN,True
+R3,say:Daniel,em054,help,"Help, help, my baby is not breathing.","Hell, hell, my baby is not breathing.","Hell, hell, my baby is not breathing.",HELL HELL MY BABY IS NOT BREATHING,True
+R3,say:Daniel,em063,help,"Help, I have been stabbed.","Hell, I have been stabbed.","Hell, I have been stabbed.",HELL I HAVE BEEN STAMBED,True
+R3,say:Daniel,em071,help,"Help, I fell in the garden and I cannot move.","Hell, I fell in the garden and I cannot move.","Hell, I fell in the garden and I cannot move.",HELL I FELL IN THE GARDEN AND I CANNOT MOVE,True
+R2,mms:eng,em000,help,"Help, he is not breathing.",Kelp he is not breathing.,Kelpt he is not braith thing.,COPHE IS NOT BRAITHING,False
+R2,mms:eng,em010,stabbed,"My neighbor got stabbed, there is blood everywhere.",My neighbor got stouted. There is blood everywhere.,My neighbor got stouted. There is blood everywhere.,MY NEIGHBOUR GOT STOUTED THERE IS BLOOD EVERYWHERE,False
+R2,mms:eng,em063,help,"Help, I have been stabbed.",Elpi have been stabbed.,Elp I have been stabbed.,ELPI HAVE BEEN STABBID,False
+R2,mms:eng,em064,cant get up,I fell and I can't get up.,I fell and I can't give up.,"I fell, and I can't give up.",I FELL AND I CAN'T GIVE UP,False
+R2,mms:eng,em070,cant get up,"I can't get up, please send someone.",I could get up please send someone.,"I cat, get up, please, send someone.",I CANT GET UP PLEASE AND SOME ONE,False
+R2,mms:eng,em071,help,"Help, I fell in the garden and I cannot move.","""'Tope, I fell in the garden, and I cannot move.'","Tulp, I fell in the garden, and I cannot move.",TELP I FELL IN THE GARDEN AND I CANNOT MOVE,False
+R2,mms:eng,em076,fell,"Yes, I fell, I can't get up by myself.","Yes, I feel I can't get up by myself.","Yes, I felt I can't get up by myself.",YES I FELL I CAN'T GET UP BY MYSELF,False
+R2,say:Daniel,em000,help,"Help, he is not breathing.","Hell, he is not breathing.","Hell, he is not breathing.",HELL HE IS NOT BREATHING,True
+R2,say:Daniel,em031,help,"Help, my husband is having chest pain and he is sweating.","Hell, my husband is having chest pain and he is sweating.","Hell, my husband is having chest pain and he is sweating.",HELL MY HUSBAND IS HAVING CHEST PAIN AND HE IS SWEATING,True
+R2,say:Daniel,em040,help,"Help, someone broke into my house and they have a gun.","Hell, someone broke into my house and they have a gun.","Hell, someone broke into my house and they have a gun.",HELL SOME ONE BROKE INTO MY HOUSE AND THEY HAVE A GUN,True
+R2,say:Daniel,em054,help,"Help, help, my baby is not breathing.","Hell, hell, my baby is not breathing.","Hell, hell, my baby is not breathing.",HELL HELL MY BABY IS NOT BREATHING,True
+R2,say:Daniel,em063,help,"Help, I have been stabbed.","Hell, I have been stabbed.","Hell, I have been stabbed.",HELL I HAVE BEEN STAMBED,True
+R2,say:Daniel,em071,help,"Help, I fell in the garden and I cannot move.","Hell, I fell in the garden and I cannot move.","Hell, I fell in the garden and I cannot move.",HELL I FELL IN THE GARDEN AND I CANNOT MOVE,True

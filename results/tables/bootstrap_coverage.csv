@@ -1,0 +1,5 @@
+quantity,condition,reps,coverage_sentence_bootstrap,coverage_speaker_bootstrap
+human WER,clean,400,0.953,0.948
+human WER,realistic,400,0.875,0.943
+"Whisper - Parakeet gap, human",clean,400,0.965,0.920
+"Whisper - Parakeet gap, human",realistic,400,0.927,0.935

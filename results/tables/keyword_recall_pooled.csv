@@ -1,381 +1,457 @@
 level,keyword,condition,model,hits,total,recall,lo,hi
-pooled_voices,ALL,clean,parakeet-tdt-0.6b-v2,758,777,0.97555,0.96208,0.98521
-pooled_voices,ALL,clean,wav2vec2-base-960h,670,777,0.86229,0.83604,0.88575
-pooled_voices,ALL,clean,whisper-large-v3-turbo,757,777,0.97426,0.96053,0.98421
-pooled_voices,ALL,phone,parakeet-tdt-0.6b-v2,759,777,0.97683,0.96363,0.98621
-pooled_voices,ALL,phone,wav2vec2-base-960h,624,777,0.80309,0.77336,0.83050
-pooled_voices,ALL,phone,whisper-large-v3-turbo,758,777,0.97555,0.96208,0.98521
-pooled_voices,ALL,phone+loss10,parakeet-tdt-0.6b-v2,757,777,0.97426,0.96053,0.98421
-pooled_voices,ALL,phone+loss10,wav2vec2-base-960h,627,777,0.80695,0.77741,0.83414
-pooled_voices,ALL,phone+loss5,wav2vec2-base-960h,625,777,0.80438,0.77471,0.83171
-pooled_voices,ALL,phone+muffle,parakeet-tdt-0.6b-v2,747,777,0.96139,0.94534,0.97380
-pooled_voices,ALL,phone+muffle,wav2vec2-base-960h,573,777,0.73745,0.70501,0.76808
-pooled_voices,ALL,phone+noise10,parakeet-tdt-0.6b-v2,725,777,0.93308,0.91316,0.94962
-pooled_voices,ALL,phone+noise10,wav2vec2-base-960h,389,777,0.50064,0.46490,0.53638
-pooled_voices,ALL,phone+noise10,whisper-large-v3-turbo,740,777,0.95238,0.93496,0.96625
-pooled_voices,ALL,phone+noise20,wav2vec2-base-960h,553,777,0.71171,0.67846,0.74335
-pooled_voices,ALL,phone+noise5,parakeet-tdt-0.6b-v2,699,777,0.89961,0.87630,0.91984
-pooled_voices,ALL,phone+noise5,wav2vec2-base-960h,220,777,0.28314,0.25169,0.31624
-pooled_voices,ALL,realistic,parakeet-tdt-0.6b-v2,726,777,0.93436,0.91460,0.95074
-pooled_voices,ALL,realistic,wav2vec2-base-960h,427,777,0.54955,0.51379,0.58493
-pooled_voices,ALL,realistic,whisper-large-v3-turbo,738,777,0.94981,0.93202,0.96407
-per_keyword,ambulance,clean,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,ambulance,clean,wav2vec2-base-960h,36,42,0.85714,0.71461,0.94572
-per_keyword,ambulance,clean,whisper-large-v3-turbo,42,42,1.00000,0.91592,1.00000
-per_keyword,ambulance,phone,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,ambulance,phone,wav2vec2-base-960h,34,42,0.80952,0.65882,0.91399
-per_keyword,ambulance,phone,whisper-large-v3-turbo,42,42,1.00000,0.91592,1.00000
-per_keyword,ambulance,phone+loss10,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,ambulance,phone+loss10,wav2vec2-base-960h,33,42,0.78571,0.63188,0.89704
-per_keyword,ambulance,phone+loss5,wav2vec2-base-960h,33,42,0.78571,0.63188,0.89704
-per_keyword,ambulance,phone+muffle,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,ambulance,phone+muffle,wav2vec2-base-960h,26,42,0.61905,0.45637,0.76428
-per_keyword,ambulance,phone+noise10,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,ambulance,phone+noise10,wav2vec2-base-960h,17,42,0.40476,0.25629,0.56718
-per_keyword,ambulance,phone+noise10,whisper-large-v3-turbo,42,42,1.00000,0.91592,1.00000
-per_keyword,ambulance,phone+noise20,wav2vec2-base-960h,24,42,0.57143,0.40961,0.72279
-per_keyword,ambulance,phone+noise5,parakeet-tdt-0.6b-v2,41,42,0.97619,0.87434,0.99940
-per_keyword,ambulance,phone+noise5,wav2vec2-base-960h,5,42,0.11905,0.03981,0.25632
-per_keyword,ambulance,realistic,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,ambulance,realistic,wav2vec2-base-960h,23,42,0.54762,0.38673,0.70154
-per_keyword,ambulance,realistic,whisper-large-v3-turbo,42,42,1.00000,0.91592,1.00000
-per_keyword,bleeding,clean,parakeet-tdt-0.6b-v2,49,49,1.00000,0.92748,1.00000
-per_keyword,bleeding,clean,wav2vec2-base-960h,47,49,0.95918,0.86021,0.99502
-per_keyword,bleeding,clean,whisper-large-v3-turbo,49,49,1.00000,0.92748,1.00000
-per_keyword,bleeding,phone,parakeet-tdt-0.6b-v2,49,49,1.00000,0.92748,1.00000
-per_keyword,bleeding,phone,wav2vec2-base-960h,46,49,0.93878,0.83134,0.98719
-per_keyword,bleeding,phone,whisper-large-v3-turbo,49,49,1.00000,0.92748,1.00000
-per_keyword,bleeding,phone+loss10,parakeet-tdt-0.6b-v2,49,49,1.00000,0.92748,1.00000
-per_keyword,bleeding,phone+loss10,wav2vec2-base-960h,42,49,0.85714,0.72758,0.94058
-per_keyword,bleeding,phone+loss5,wav2vec2-base-960h,45,49,0.91837,0.80399,0.97731
-per_keyword,bleeding,phone+muffle,parakeet-tdt-0.6b-v2,49,49,1.00000,0.92748,1.00000
-per_keyword,bleeding,phone+muffle,wav2vec2-base-960h,46,49,0.93878,0.83134,0.98719
-per_keyword,bleeding,phone+noise10,parakeet-tdt-0.6b-v2,49,49,1.00000,0.92748,1.00000
-per_keyword,bleeding,phone+noise10,wav2vec2-base-960h,27,49,0.55102,0.40231,0.69335
-per_keyword,bleeding,phone+noise10,whisper-large-v3-turbo,48,49,0.97959,0.89146,0.99948
-per_keyword,bleeding,phone+noise20,wav2vec2-base-960h,45,49,0.91837,0.80399,0.97731
-per_keyword,bleeding,phone+noise5,parakeet-tdt-0.6b-v2,47,49,0.95918,0.86021,0.99502
-per_keyword,bleeding,phone+noise5,wav2vec2-base-960h,14,49,0.28571,0.16584,0.43263
-per_keyword,bleeding,realistic,parakeet-tdt-0.6b-v2,49,49,1.00000,0.92748,1.00000
-per_keyword,bleeding,realistic,wav2vec2-base-960h,23,49,0.46939,0.32534,0.61727
-per_keyword,bleeding,realistic,whisper-large-v3-turbo,48,49,0.97959,0.89146,0.99948
-per_keyword,cant get up,clean,parakeet-tdt-0.6b-v2,33,35,0.94286,0.80843,0.99300
-per_keyword,cant get up,clean,wav2vec2-base-960h,32,35,0.91429,0.76942,0.98196
-per_keyword,cant get up,clean,whisper-large-v3-turbo,33,35,0.94286,0.80843,0.99300
-per_keyword,cant get up,phone,parakeet-tdt-0.6b-v2,33,35,0.94286,0.80843,0.99300
-per_keyword,cant get up,phone,wav2vec2-base-960h,26,35,0.74286,0.56744,0.87511
-per_keyword,cant get up,phone,whisper-large-v3-turbo,33,35,0.94286,0.80843,0.99300
-per_keyword,cant get up,phone+loss10,parakeet-tdt-0.6b-v2,33,35,0.94286,0.80843,0.99300
-per_keyword,cant get up,phone+loss10,wav2vec2-base-960h,27,35,0.77143,0.59864,0.89579
-per_keyword,cant get up,phone+loss5,wav2vec2-base-960h,26,35,0.74286,0.56744,0.87511
-per_keyword,cant get up,phone+muffle,parakeet-tdt-0.6b-v2,34,35,0.97143,0.85083,0.99928
-per_keyword,cant get up,phone+muffle,wav2vec2-base-960h,24,35,0.68571,0.50712,0.83148
-per_keyword,cant get up,phone+noise10,parakeet-tdt-0.6b-v2,31,35,0.88571,0.73262,0.96797
-per_keyword,cant get up,phone+noise10,wav2vec2-base-960h,21,35,0.60000,0.42112,0.76129
-per_keyword,cant get up,phone+noise10,whisper-large-v3-turbo,31,35,0.88571,0.73262,0.96797
-per_keyword,cant get up,phone+noise20,wav2vec2-base-960h,26,35,0.74286,0.56744,0.87511
-per_keyword,cant get up,phone+noise5,parakeet-tdt-0.6b-v2,30,35,0.85714,0.69743,0.95194
-per_keyword,cant get up,phone+noise5,wav2vec2-base-960h,14,35,0.40000,0.23871,0.57888
-per_keyword,cant get up,realistic,parakeet-tdt-0.6b-v2,31,35,0.88571,0.73262,0.96797
-per_keyword,cant get up,realistic,wav2vec2-base-960h,22,35,0.62857,0.44923,0.78527
-per_keyword,cant get up,realistic,whisper-large-v3-turbo,32,35,0.91429,0.76942,0.98196
-per_keyword,chest pain,clean,parakeet-tdt-0.6b-v2,34,35,0.97143,0.85083,0.99928
-per_keyword,chest pain,clean,wav2vec2-base-960h,20,35,0.57143,0.39353,0.73677
-per_keyword,chest pain,clean,whisper-large-v3-turbo,32,35,0.91429,0.76942,0.98196
-per_keyword,chest pain,phone,parakeet-tdt-0.6b-v2,35,35,1.00000,0.89997,1.00000
-per_keyword,chest pain,phone,wav2vec2-base-960h,7,35,0.20000,0.08441,0.36938
-per_keyword,chest pain,phone,whisper-large-v3-turbo,32,35,0.91429,0.76942,0.98196
-per_keyword,chest pain,phone+loss10,parakeet-tdt-0.6b-v2,34,35,0.97143,0.85083,0.99928
-per_keyword,chest pain,phone+loss10,wav2vec2-base-960h,8,35,0.22857,0.10421,0.40136
-per_keyword,chest pain,phone+loss5,wav2vec2-base-960h,10,35,0.28571,0.14635,0.46304
-per_keyword,chest pain,phone+muffle,parakeet-tdt-0.6b-v2,32,35,0.91429,0.76942,0.98196
-per_keyword,chest pain,phone+muffle,wav2vec2-base-960h,2,35,0.05714,0.00700,0.19157
-per_keyword,chest pain,phone+noise10,parakeet-tdt-0.6b-v2,31,35,0.88571,0.73262,0.96797
-per_keyword,chest pain,phone+noise10,wav2vec2-base-960h,0,35,0.00000,0.00000,0.10003
-per_keyword,chest pain,phone+noise10,whisper-large-v3-turbo,30,35,0.85714,0.69743,0.95194
-per_keyword,chest pain,phone+noise20,wav2vec2-base-960h,0,35,0.00000,0.00000,0.10003
-per_keyword,chest pain,phone+noise5,parakeet-tdt-0.6b-v2,26,35,0.74286,0.56744,0.87511
-per_keyword,chest pain,phone+noise5,wav2vec2-base-960h,1,35,0.02857,0.00072,0.14917
-per_keyword,chest pain,realistic,parakeet-tdt-0.6b-v2,33,35,0.94286,0.80843,0.99300
-per_keyword,chest pain,realistic,wav2vec2-base-960h,0,35,0.00000,0.00000,0.10003
-per_keyword,chest pain,realistic,whisper-large-v3-turbo,33,35,0.94286,0.80843,0.99300
-per_keyword,choking,clean,parakeet-tdt-0.6b-v2,28,28,1.00000,0.87656,1.00000
-per_keyword,choking,clean,wav2vec2-base-960h,23,28,0.82143,0.63107,0.93936
-per_keyword,choking,clean,whisper-large-v3-turbo,28,28,1.00000,0.87656,1.00000
-per_keyword,choking,phone,parakeet-tdt-0.6b-v2,28,28,1.00000,0.87656,1.00000
-per_keyword,choking,phone,wav2vec2-base-960h,22,28,0.78571,0.59047,0.91704
-per_keyword,choking,phone,whisper-large-v3-turbo,28,28,1.00000,0.87656,1.00000
-per_keyword,choking,phone+loss10,parakeet-tdt-0.6b-v2,28,28,1.00000,0.87656,1.00000
-per_keyword,choking,phone+loss10,wav2vec2-base-960h,23,28,0.82143,0.63107,0.93936
-per_keyword,choking,phone+loss5,wav2vec2-base-960h,19,28,0.67857,0.47648,0.84122
-per_keyword,choking,phone+muffle,parakeet-tdt-0.6b-v2,28,28,1.00000,0.87656,1.00000
-per_keyword,choking,phone+muffle,wav2vec2-base-960h,19,28,0.67857,0.47648,0.84122
-per_keyword,choking,phone+noise10,parakeet-tdt-0.6b-v2,28,28,1.00000,0.87656,1.00000
-per_keyword,choking,phone+noise10,wav2vec2-base-960h,11,28,0.39286,0.21504,0.59423
-per_keyword,choking,phone+noise10,whisper-large-v3-turbo,28,28,1.00000,0.87656,1.00000
-per_keyword,choking,phone+noise20,wav2vec2-base-960h,18,28,0.64286,0.44065,0.81359
-per_keyword,choking,phone+noise5,parakeet-tdt-0.6b-v2,27,28,0.96429,0.81652,0.99910
-per_keyword,choking,phone+noise5,wav2vec2-base-960h,4,28,0.14286,0.04034,0.32665
-per_keyword,choking,realistic,parakeet-tdt-0.6b-v2,26,28,0.92857,0.76497,0.99123
-per_keyword,choking,realistic,wav2vec2-base-960h,15,28,0.53571,0.33870,0.72489
-per_keyword,choking,realistic,whisper-large-v3-turbo,26,28,0.92857,0.76497,0.99123
-per_keyword,fell,clean,parakeet-tdt-0.6b-v2,103,105,0.98095,0.93288,0.99768
-per_keyword,fell,clean,wav2vec2-base-960h,100,105,0.95238,0.89237,0.98436
-per_keyword,fell,clean,whisper-large-v3-turbo,102,105,0.97143,0.91877,0.99407
-per_keyword,fell,phone,parakeet-tdt-0.6b-v2,104,105,0.99048,0.94808,0.99976
-per_keyword,fell,phone,wav2vec2-base-960h,94,105,0.89524,0.82028,0.94653
-per_keyword,fell,phone,whisper-large-v3-turbo,101,105,0.96190,0.90533,0.98952
-per_keyword,fell,phone+loss10,parakeet-tdt-0.6b-v2,103,105,0.98095,0.93288,0.99768
-per_keyword,fell,phone+loss10,wav2vec2-base-960h,97,105,0.92381,0.85539,0.96653
-per_keyword,fell,phone+loss5,wav2vec2-base-960h,98,105,0.93333,0.86746,0.97278
-per_keyword,fell,phone+muffle,parakeet-tdt-0.6b-v2,103,105,0.98095,0.93288,0.99768
-per_keyword,fell,phone+muffle,wav2vec2-base-960h,100,105,0.95238,0.89237,0.98436
-per_keyword,fell,phone+noise10,parakeet-tdt-0.6b-v2,101,105,0.96190,0.90533,0.98952
-per_keyword,fell,phone+noise10,wav2vec2-base-960h,88,105,0.83810,0.75348,0.90276
-per_keyword,fell,phone+noise10,whisper-large-v3-turbo,101,105,0.96190,0.90533,0.98952
-per_keyword,fell,phone+noise20,wav2vec2-base-960h,100,105,0.95238,0.89237,0.98436
-per_keyword,fell,phone+noise5,parakeet-tdt-0.6b-v2,94,105,0.89524,0.82028,0.94653
-per_keyword,fell,phone+noise5,wav2vec2-base-960h,61,105,0.58095,0.48067,0.67655
-per_keyword,fell,realistic,parakeet-tdt-0.6b-v2,98,105,0.93333,0.86746,0.97278
-per_keyword,fell,realistic,wav2vec2-base-960h,84,105,0.80000,0.71067,0.87173
-per_keyword,fell,realistic,whisper-large-v3-turbo,99,105,0.94286,0.87977,0.97874
-per_keyword,fire,clean,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,fire,clean,wav2vec2-base-960h,42,42,1.00000,0.91592,1.00000
-per_keyword,fire,clean,whisper-large-v3-turbo,42,42,1.00000,0.91592,1.00000
-per_keyword,fire,phone,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,fire,phone,wav2vec2-base-960h,41,42,0.97619,0.87434,0.99940
-per_keyword,fire,phone,whisper-large-v3-turbo,42,42,1.00000,0.91592,1.00000
-per_keyword,fire,phone+loss10,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,fire,phone+loss10,wav2vec2-base-960h,42,42,1.00000,0.91592,1.00000
-per_keyword,fire,phone+loss5,wav2vec2-base-960h,42,42,1.00000,0.91592,1.00000
-per_keyword,fire,phone+muffle,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,fire,phone+muffle,wav2vec2-base-960h,42,42,1.00000,0.91592,1.00000
-per_keyword,fire,phone+noise10,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,fire,phone+noise10,wav2vec2-base-960h,36,42,0.85714,0.71461,0.94572
-per_keyword,fire,phone+noise10,whisper-large-v3-turbo,42,42,1.00000,0.91592,1.00000
-per_keyword,fire,phone+noise20,wav2vec2-base-960h,42,42,1.00000,0.91592,1.00000
-per_keyword,fire,phone+noise5,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,fire,phone+noise5,wav2vec2-base-960h,23,42,0.54762,0.38673,0.70154
-per_keyword,fire,realistic,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,fire,realistic,wav2vec2-base-960h,37,42,0.88095,0.74368,0.96019
-per_keyword,fire,realistic,whisper-large-v3-turbo,42,42,1.00000,0.91592,1.00000
-per_keyword,gun,clean,parakeet-tdt-0.6b-v2,35,35,1.00000,0.89997,1.00000
-per_keyword,gun,clean,wav2vec2-base-960h,33,35,0.94286,0.80843,0.99300
-per_keyword,gun,clean,whisper-large-v3-turbo,35,35,1.00000,0.89997,1.00000
-per_keyword,gun,phone,parakeet-tdt-0.6b-v2,35,35,1.00000,0.89997,1.00000
-per_keyword,gun,phone,wav2vec2-base-960h,30,35,0.85714,0.69743,0.95194
-per_keyword,gun,phone,whisper-large-v3-turbo,35,35,1.00000,0.89997,1.00000
-per_keyword,gun,phone+loss10,parakeet-tdt-0.6b-v2,35,35,1.00000,0.89997,1.00000
-per_keyword,gun,phone+loss10,wav2vec2-base-960h,31,35,0.88571,0.73262,0.96797
-per_keyword,gun,phone+loss5,wav2vec2-base-960h,31,35,0.88571,0.73262,0.96797
-per_keyword,gun,phone+muffle,parakeet-tdt-0.6b-v2,35,35,1.00000,0.89997,1.00000
-per_keyword,gun,phone+muffle,wav2vec2-base-960h,30,35,0.85714,0.69743,0.95194
-per_keyword,gun,phone+noise10,parakeet-tdt-0.6b-v2,35,35,1.00000,0.89997,1.00000
-per_keyword,gun,phone+noise10,wav2vec2-base-960h,22,35,0.62857,0.44923,0.78527
-per_keyword,gun,phone+noise10,whisper-large-v3-turbo,35,35,1.00000,0.89997,1.00000
-per_keyword,gun,phone+noise20,wav2vec2-base-960h,28,35,0.80000,0.63062,0.91559
-per_keyword,gun,phone+noise5,parakeet-tdt-0.6b-v2,34,35,0.97143,0.85083,0.99928
-per_keyword,gun,phone+noise5,wav2vec2-base-960h,4,35,0.11429,0.03203,0.26738
-per_keyword,gun,realistic,parakeet-tdt-0.6b-v2,35,35,1.00000,0.89997,1.00000
-per_keyword,gun,realistic,wav2vec2-base-960h,24,35,0.68571,0.50712,0.83148
-per_keyword,gun,realistic,whisper-large-v3-turbo,35,35,1.00000,0.89997,1.00000
-per_keyword,heart attack,clean,parakeet-tdt-0.6b-v2,20,21,0.95238,0.76184,0.99880
-per_keyword,heart attack,clean,wav2vec2-base-960h,13,21,0.61905,0.38435,0.81893
-per_keyword,heart attack,clean,whisper-large-v3-turbo,21,21,1.00000,0.83890,1.00000
-per_keyword,heart attack,phone,parakeet-tdt-0.6b-v2,20,21,0.95238,0.76184,0.99880
-per_keyword,heart attack,phone,wav2vec2-base-960h,14,21,0.66667,0.43032,0.85412
-per_keyword,heart attack,phone,whisper-large-v3-turbo,21,21,1.00000,0.83890,1.00000
-per_keyword,heart attack,phone+loss10,parakeet-tdt-0.6b-v2,20,21,0.95238,0.76184,0.99880
-per_keyword,heart attack,phone+loss10,wav2vec2-base-960h,18,21,0.85714,0.63658,0.96951
-per_keyword,heart attack,phone+loss5,wav2vec2-base-960h,15,21,0.71429,0.47825,0.88719
-per_keyword,heart attack,phone+muffle,parakeet-tdt-0.6b-v2,20,21,0.95238,0.76184,0.99880
-per_keyword,heart attack,phone+muffle,wav2vec2-base-960h,15,21,0.71429,0.47825,0.88719
-per_keyword,heart attack,phone+noise10,parakeet-tdt-0.6b-v2,20,21,0.95238,0.76184,0.99880
-per_keyword,heart attack,phone+noise10,wav2vec2-base-960h,9,21,0.42857,0.21820,0.65979
-per_keyword,heart attack,phone+noise10,whisper-large-v3-turbo,21,21,1.00000,0.83890,1.00000
-per_keyword,heart attack,phone+noise20,wav2vec2-base-960h,13,21,0.61905,0.38435,0.81893
-per_keyword,heart attack,phone+noise5,parakeet-tdt-0.6b-v2,20,21,0.95238,0.76184,0.99880
-per_keyword,heart attack,phone+noise5,wav2vec2-base-960h,4,21,0.19048,0.05446,0.41907
-per_keyword,heart attack,realistic,parakeet-tdt-0.6b-v2,20,21,0.95238,0.76184,0.99880
-per_keyword,heart attack,realistic,wav2vec2-base-960h,10,21,0.47619,0.25713,0.70219
-per_keyword,heart attack,realistic,whisper-large-v3-turbo,21,21,1.00000,0.83890,1.00000
-per_keyword,help,clean,parakeet-tdt-0.6b-v2,102,112,0.91071,0.84193,0.95635
-per_keyword,help,clean,wav2vec2-base-960h,89,112,0.79464,0.70797,0.86514
-per_keyword,help,clean,whisper-large-v3-turbo,101,112,0.90179,0.83106,0.94994
-per_keyword,help,phone,parakeet-tdt-0.6b-v2,101,112,0.90179,0.83106,0.94994
-per_keyword,help,phone,wav2vec2-base-960h,92,112,0.82143,0.73777,0.88738
-per_keyword,help,phone,whisper-large-v3-turbo,103,112,0.91964,0.85293,0.96260
-per_keyword,help,phone+loss10,parakeet-tdt-0.6b-v2,101,112,0.90179,0.83106,0.94994
-per_keyword,help,phone+loss10,wav2vec2-base-960h,92,112,0.82143,0.73777,0.88738
-per_keyword,help,phone+loss5,wav2vec2-base-960h,90,112,0.80357,0.71785,0.87261
-per_keyword,help,phone+muffle,parakeet-tdt-0.6b-v2,93,112,0.83036,0.74783,0.89466
-per_keyword,help,phone+muffle,wav2vec2-base-960h,88,112,0.78571,0.69815,0.85762
-per_keyword,help,phone+noise10,parakeet-tdt-0.6b-v2,85,112,0.75893,0.66897,0.83473
-per_keyword,help,phone+noise10,wav2vec2-base-960h,58,112,0.51786,0.42147,0.61327
-per_keyword,help,phone+noise10,whisper-large-v3-turbo,98,112,0.87500,0.79917,0.92995
-per_keyword,help,phone+noise20,wav2vec2-base-960h,82,112,0.73214,0.64020,0.81142
-per_keyword,help,phone+noise5,parakeet-tdt-0.6b-v2,81,112,0.72321,0.63069,0.80357
-per_keyword,help,phone+noise5,wav2vec2-base-960h,47,112,0.41964,0.32704,0.51660
-per_keyword,help,realistic,parakeet-tdt-0.6b-v2,86,112,0.76786,0.67865,0.84241
-per_keyword,help,realistic,wav2vec2-base-960h,70,112,0.62500,0.52853,0.71469
-per_keyword,help,realistic,whisper-large-v3-turbo,95,112,0.84821,0.76813,0.90902
-per_keyword,not breathing,clean,parakeet-tdt-0.6b-v2,48,49,0.97959,0.89146,0.99948
-per_keyword,not breathing,clean,wav2vec2-base-960h,43,49,0.87755,0.75231,0.95371
-per_keyword,not breathing,clean,whisper-large-v3-turbo,49,49,1.00000,0.92748,1.00000
-per_keyword,not breathing,phone,parakeet-tdt-0.6b-v2,48,49,0.97959,0.89146,0.99948
-per_keyword,not breathing,phone,wav2vec2-base-960h,42,49,0.85714,0.72758,0.94058
-per_keyword,not breathing,phone,whisper-large-v3-turbo,49,49,1.00000,0.92748,1.00000
-per_keyword,not breathing,phone+loss10,parakeet-tdt-0.6b-v2,48,49,0.97959,0.89146,0.99948
-per_keyword,not breathing,phone+loss10,wav2vec2-base-960h,40,49,0.81633,0.67978,0.91241
-per_keyword,not breathing,phone+loss5,wav2vec2-base-960h,40,49,0.81633,0.67978,0.91241
-per_keyword,not breathing,phone+muffle,parakeet-tdt-0.6b-v2,47,49,0.95918,0.86021,0.99502
-per_keyword,not breathing,phone+muffle,wav2vec2-base-960h,41,49,0.83673,0.70343,0.92678
-per_keyword,not breathing,phone+noise10,parakeet-tdt-0.6b-v2,45,49,0.91837,0.80399,0.97731
-per_keyword,not breathing,phone+noise10,wav2vec2-base-960h,16,49,0.32653,0.19949,0.47540
-per_keyword,not breathing,phone+noise10,whisper-large-v3-turbo,48,49,0.97959,0.89146,0.99948
-per_keyword,not breathing,phone+noise20,wav2vec2-base-960h,36,49,0.73469,0.58918,0.85053
-per_keyword,not breathing,phone+noise5,parakeet-tdt-0.6b-v2,44,49,0.89796,0.77772,0.96603
-per_keyword,not breathing,phone+noise5,wav2vec2-base-960h,6,49,0.12245,0.04629,0.24769
-per_keyword,not breathing,realistic,parakeet-tdt-0.6b-v2,46,49,0.93878,0.83134,0.98719
-per_keyword,not breathing,realistic,wav2vec2-base-960h,19,49,0.38776,0.25197,0.53761
-per_keyword,not breathing,realistic,whisper-large-v3-turbo,49,49,1.00000,0.92748,1.00000
-per_keyword,overdose,clean,parakeet-tdt-0.6b-v2,34,35,0.97143,0.85083,0.99928
-per_keyword,overdose,clean,wav2vec2-base-960h,18,35,0.51429,0.33989,0.68617
-per_keyword,overdose,clean,whisper-large-v3-turbo,35,35,1.00000,0.89997,1.00000
-per_keyword,overdose,phone,parakeet-tdt-0.6b-v2,34,35,0.97143,0.85083,0.99928
-per_keyword,overdose,phone,wav2vec2-base-960h,17,35,0.48571,0.31383,0.66011
-per_keyword,overdose,phone,whisper-large-v3-turbo,35,35,1.00000,0.89997,1.00000
-per_keyword,overdose,phone+loss10,parakeet-tdt-0.6b-v2,34,35,0.97143,0.85083,0.99928
-per_keyword,overdose,phone+loss10,wav2vec2-base-960h,17,35,0.48571,0.31383,0.66011
-per_keyword,overdose,phone+loss5,wav2vec2-base-960h,17,35,0.48571,0.31383,0.66011
-per_keyword,overdose,phone+muffle,parakeet-tdt-0.6b-v2,34,35,0.97143,0.85083,0.99928
-per_keyword,overdose,phone+muffle,wav2vec2-base-960h,7,35,0.20000,0.08441,0.36938
-per_keyword,overdose,phone+noise10,parakeet-tdt-0.6b-v2,34,35,0.97143,0.85083,0.99928
-per_keyword,overdose,phone+noise10,wav2vec2-base-960h,0,35,0.00000,0.00000,0.10003
-per_keyword,overdose,phone+noise10,whisper-large-v3-turbo,34,35,0.97143,0.85083,0.99928
-per_keyword,overdose,phone+noise20,wav2vec2-base-960h,3,35,0.08571,0.01804,0.23058
-per_keyword,overdose,phone+noise5,parakeet-tdt-0.6b-v2,35,35,1.00000,0.89997,1.00000
-per_keyword,overdose,phone+noise5,wav2vec2-base-960h,0,35,0.00000,0.00000,0.10003
-per_keyword,overdose,realistic,parakeet-tdt-0.6b-v2,34,35,0.97143,0.85083,0.99928
-per_keyword,overdose,realistic,wav2vec2-base-960h,3,35,0.08571,0.01804,0.23058
-per_keyword,overdose,realistic,whisper-large-v3-turbo,33,35,0.94286,0.80843,0.99300
-per_keyword,seizure,clean,parakeet-tdt-0.6b-v2,28,28,1.00000,0.87656,1.00000
-per_keyword,seizure,clean,wav2vec2-base-960h,22,28,0.78571,0.59047,0.91704
-per_keyword,seizure,clean,whisper-large-v3-turbo,28,28,1.00000,0.87656,1.00000
-per_keyword,seizure,phone,parakeet-tdt-0.6b-v2,28,28,1.00000,0.87656,1.00000
-per_keyword,seizure,phone,wav2vec2-base-960h,15,28,0.53571,0.33870,0.72489
-per_keyword,seizure,phone,whisper-large-v3-turbo,28,28,1.00000,0.87656,1.00000
-per_keyword,seizure,phone+loss10,parakeet-tdt-0.6b-v2,28,28,1.00000,0.87656,1.00000
-per_keyword,seizure,phone+loss10,wav2vec2-base-960h,18,28,0.64286,0.44065,0.81359
-per_keyword,seizure,phone+loss5,wav2vec2-base-960h,19,28,0.67857,0.47648,0.84122
-per_keyword,seizure,phone+muffle,parakeet-tdt-0.6b-v2,28,28,1.00000,0.87656,1.00000
-per_keyword,seizure,phone+muffle,wav2vec2-base-960h,7,28,0.25000,0.10691,0.44872
-per_keyword,seizure,phone+noise10,parakeet-tdt-0.6b-v2,28,28,1.00000,0.87656,1.00000
-per_keyword,seizure,phone+noise10,wav2vec2-base-960h,5,28,0.17857,0.06064,0.36893
-per_keyword,seizure,phone+noise10,whisper-large-v3-turbo,28,28,1.00000,0.87656,1.00000
-per_keyword,seizure,phone+noise20,wav2vec2-base-960h,11,28,0.39286,0.21504,0.59423
-per_keyword,seizure,phone+noise5,parakeet-tdt-0.6b-v2,28,28,1.00000,0.87656,1.00000
-per_keyword,seizure,phone+noise5,wav2vec2-base-960h,1,28,0.03571,0.00090,0.18348
-per_keyword,seizure,realistic,parakeet-tdt-0.6b-v2,28,28,1.00000,0.87656,1.00000
-per_keyword,seizure,realistic,wav2vec2-base-960h,5,28,0.17857,0.06064,0.36893
-per_keyword,seizure,realistic,whisper-large-v3-turbo,28,28,1.00000,0.87656,1.00000
-per_keyword,shot,clean,parakeet-tdt-0.6b-v2,28,28,1.00000,0.87656,1.00000
-per_keyword,shot,clean,wav2vec2-base-960h,25,28,0.89286,0.71774,0.97733
-per_keyword,shot,clean,whisper-large-v3-turbo,28,28,1.00000,0.87656,1.00000
-per_keyword,shot,phone,parakeet-tdt-0.6b-v2,28,28,1.00000,0.87656,1.00000
-per_keyword,shot,phone,wav2vec2-base-960h,23,28,0.82143,0.63107,0.93936
-per_keyword,shot,phone,whisper-large-v3-turbo,28,28,1.00000,0.87656,1.00000
-per_keyword,shot,phone+loss10,parakeet-tdt-0.6b-v2,28,28,1.00000,0.87656,1.00000
-per_keyword,shot,phone+loss10,wav2vec2-base-960h,24,28,0.85714,0.67335,0.95966
-per_keyword,shot,phone+loss5,wav2vec2-base-960h,23,28,0.82143,0.63107,0.93936
-per_keyword,shot,phone+muffle,parakeet-tdt-0.6b-v2,28,28,1.00000,0.87656,1.00000
-per_keyword,shot,phone+muffle,wav2vec2-base-960h,21,28,0.75000,0.55128,0.89309
-per_keyword,shot,phone+noise10,parakeet-tdt-0.6b-v2,28,28,1.00000,0.87656,1.00000
-per_keyword,shot,phone+noise10,wav2vec2-base-960h,12,28,0.42857,0.24462,0.62821
-per_keyword,shot,phone+noise10,whisper-large-v3-turbo,27,28,0.96429,0.81652,0.99910
-per_keyword,shot,phone+noise20,wav2vec2-base-960h,21,28,0.75000,0.55128,0.89309
-per_keyword,shot,phone+noise5,parakeet-tdt-0.6b-v2,27,28,0.96429,0.81652,0.99910
-per_keyword,shot,phone+noise5,wav2vec2-base-960h,7,28,0.25000,0.10691,0.44872
-per_keyword,shot,realistic,parakeet-tdt-0.6b-v2,28,28,1.00000,0.87656,1.00000
-per_keyword,shot,realistic,wav2vec2-base-960h,13,28,0.46429,0.27511,0.66130
-per_keyword,shot,realistic,whisper-large-v3-turbo,27,28,0.96429,0.81652,0.99910
-per_keyword,smoke,clean,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,smoke,clean,wav2vec2-base-960h,42,42,1.00000,0.91592,1.00000
-per_keyword,smoke,clean,whisper-large-v3-turbo,42,42,1.00000,0.91592,1.00000
-per_keyword,smoke,phone,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,smoke,phone,wav2vec2-base-960h,42,42,1.00000,0.91592,1.00000
-per_keyword,smoke,phone,whisper-large-v3-turbo,42,42,1.00000,0.91592,1.00000
-per_keyword,smoke,phone+loss10,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,smoke,phone+loss10,wav2vec2-base-960h,38,42,0.90476,0.77378,0.97344
-per_keyword,smoke,phone+loss5,wav2vec2-base-960h,39,42,0.92857,0.80517,0.98502
-per_keyword,smoke,phone+muffle,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,smoke,phone+muffle,wav2vec2-base-960h,34,42,0.80952,0.65882,0.91399
-per_keyword,smoke,phone+noise10,parakeet-tdt-0.6b-v2,41,42,0.97619,0.87434,0.99940
-per_keyword,smoke,phone+noise10,wav2vec2-base-960h,24,42,0.57143,0.40961,0.72279
-per_keyword,smoke,phone+noise10,whisper-large-v3-turbo,41,42,0.97619,0.87434,0.99940
-per_keyword,smoke,phone+noise20,wav2vec2-base-960h,32,42,0.76190,0.60550,0.87948
-per_keyword,smoke,phone+noise5,parakeet-tdt-0.6b-v2,39,42,0.92857,0.80517,0.98502
-per_keyword,smoke,phone+noise5,wav2vec2-base-960h,16,42,0.38095,0.23572,0.54363
-per_keyword,smoke,realistic,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,smoke,realistic,wav2vec2-base-960h,22,42,0.52381,0.36418,0.67996
-per_keyword,smoke,realistic,whisper-large-v3-turbo,42,42,1.00000,0.91592,1.00000
-per_keyword,stabbed,clean,parakeet-tdt-0.6b-v2,27,28,0.96429,0.81652,0.99910
-per_keyword,stabbed,clean,wav2vec2-base-960h,23,28,0.82143,0.63107,0.93936
-per_keyword,stabbed,clean,whisper-large-v3-turbo,27,28,0.96429,0.81652,0.99910
-per_keyword,stabbed,phone,parakeet-tdt-0.6b-v2,27,28,0.96429,0.81652,0.99910
-per_keyword,stabbed,phone,wav2vec2-base-960h,21,28,0.75000,0.55128,0.89309
-per_keyword,stabbed,phone,whisper-large-v3-turbo,27,28,0.96429,0.81652,0.99910
-per_keyword,stabbed,phone+loss10,parakeet-tdt-0.6b-v2,27,28,0.96429,0.81652,0.99910
-per_keyword,stabbed,phone+loss10,wav2vec2-base-960h,19,28,0.67857,0.47648,0.84122
-per_keyword,stabbed,phone+loss5,wav2vec2-base-960h,20,28,0.71429,0.51333,0.86776
-per_keyword,stabbed,phone+muffle,parakeet-tdt-0.6b-v2,27,28,0.96429,0.81652,0.99910
-per_keyword,stabbed,phone+muffle,wav2vec2-base-960h,15,28,0.53571,0.33870,0.72489
-per_keyword,stabbed,phone+noise10,parakeet-tdt-0.6b-v2,22,28,0.78571,0.59047,0.91704
-per_keyword,stabbed,phone+noise10,wav2vec2-base-960h,0,28,0.00000,0.00000,0.12344
-per_keyword,stabbed,phone+noise10,whisper-large-v3-turbo,24,28,0.85714,0.67335,0.95966
-per_keyword,stabbed,phone+noise20,wav2vec2-base-960h,14,28,0.50000,0.30647,0.69353
-per_keyword,stabbed,phone+noise5,parakeet-tdt-0.6b-v2,21,28,0.75000,0.55128,0.89309
-per_keyword,stabbed,phone+noise5,wav2vec2-base-960h,0,28,0.00000,0.00000,0.12344
-per_keyword,stabbed,realistic,parakeet-tdt-0.6b-v2,23,28,0.82143,0.63107,0.93936
-per_keyword,stabbed,realistic,wav2vec2-base-960h,9,28,0.32143,0.15878,0.52352
-per_keyword,stabbed,realistic,whisper-large-v3-turbo,25,28,0.89286,0.71774,0.97733
-per_keyword,stroke,clean,parakeet-tdt-0.6b-v2,21,21,1.00000,0.83890,1.00000
-per_keyword,stroke,clean,wav2vec2-base-960h,21,21,1.00000,0.83890,1.00000
-per_keyword,stroke,clean,whisper-large-v3-turbo,21,21,1.00000,0.83890,1.00000
-per_keyword,stroke,phone,parakeet-tdt-0.6b-v2,21,21,1.00000,0.83890,1.00000
-per_keyword,stroke,phone,wav2vec2-base-960h,18,21,0.85714,0.63658,0.96951
-per_keyword,stroke,phone,whisper-large-v3-turbo,21,21,1.00000,0.83890,1.00000
-per_keyword,stroke,phone+loss10,parakeet-tdt-0.6b-v2,21,21,1.00000,0.83890,1.00000
-per_keyword,stroke,phone+loss10,wav2vec2-base-960h,17,21,0.80952,0.58093,0.94554
-per_keyword,stroke,phone+loss5,wav2vec2-base-960h,16,21,0.76190,0.52834,0.91782
-per_keyword,stroke,phone+muffle,parakeet-tdt-0.6b-v2,21,21,1.00000,0.83890,1.00000
-per_keyword,stroke,phone+muffle,wav2vec2-base-960h,15,21,0.71429,0.47825,0.88719
-per_keyword,stroke,phone+noise10,parakeet-tdt-0.6b-v2,21,21,1.00000,0.83890,1.00000
-per_keyword,stroke,phone+noise10,wav2vec2-base-960h,16,21,0.76190,0.52834,0.91782
-per_keyword,stroke,phone+noise10,whisper-large-v3-turbo,20,21,0.95238,0.76184,0.99880
-per_keyword,stroke,phone+noise20,wav2vec2-base-960h,18,21,0.85714,0.63658,0.96951
-per_keyword,stroke,phone+noise5,parakeet-tdt-0.6b-v2,21,21,1.00000,0.83890,1.00000
-per_keyword,stroke,phone+noise5,wav2vec2-base-960h,9,21,0.42857,0.21820,0.65979
-per_keyword,stroke,realistic,parakeet-tdt-0.6b-v2,21,21,1.00000,0.83890,1.00000
-per_keyword,stroke,realistic,wav2vec2-base-960h,12,21,0.57143,0.34021,0.78180
-per_keyword,stroke,realistic,whisper-large-v3-turbo,19,21,0.90476,0.69623,0.98825
-per_keyword,unconscious,clean,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,unconscious,clean,wav2vec2-base-960h,41,42,0.97619,0.87434,0.99940
-per_keyword,unconscious,clean,whisper-large-v3-turbo,42,42,1.00000,0.91592,1.00000
-per_keyword,unconscious,phone,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,unconscious,phone,wav2vec2-base-960h,40,42,0.95238,0.83836,0.99418
-per_keyword,unconscious,phone,whisper-large-v3-turbo,42,42,1.00000,0.91592,1.00000
-per_keyword,unconscious,phone+loss10,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,unconscious,phone+loss10,wav2vec2-base-960h,41,42,0.97619,0.87434,0.99940
-per_keyword,unconscious,phone+loss5,wav2vec2-base-960h,42,42,1.00000,0.91592,1.00000
-per_keyword,unconscious,phone+muffle,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,unconscious,phone+muffle,wav2vec2-base-960h,41,42,0.97619,0.87434,0.99940
-per_keyword,unconscious,phone+noise10,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,unconscious,phone+noise10,wav2vec2-base-960h,27,42,0.64286,0.48026,0.78449
-per_keyword,unconscious,phone+noise10,whisper-large-v3-turbo,42,42,1.00000,0.91592,1.00000
-per_keyword,unconscious,phone+noise20,wav2vec2-base-960h,40,42,0.95238,0.83836,0.99418
-per_keyword,unconscious,phone+noise5,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,unconscious,phone+noise5,wav2vec2-base-960h,4,42,0.09524,0.02656,0.22622
-per_keyword,unconscious,realistic,parakeet-tdt-0.6b-v2,42,42,1.00000,0.91592,1.00000
-per_keyword,unconscious,realistic,wav2vec2-base-960h,36,42,0.85714,0.71461,0.94572
-per_keyword,unconscious,realistic,whisper-large-v3-turbo,42,42,1.00000,0.91592,1.00000
+pooled_voices,ALL,clean,parakeet-tdt-0.6b-v2,715,735,0.97279,0.95936,0.98586
+pooled_voices,ALL,clean,wav2vec2-base-960h,631,735,0.85850,0.82069,0.89466
+pooled_voices,ALL,clean,whisper-large-v3-turbo,716,735,0.97415,0.96139,0.98639
+pooled_voices,ALL,g722-wb,parakeet-tdt-0.6b-v2,716,735,0.97415,0.96032,0.98714
+pooled_voices,ALL,g722-wb,wav2vec2-base-960h,636,735,0.86531,0.82776,0.90143
+pooled_voices,ALL,opus-nb,parakeet-tdt-0.6b-v2,711,735,0.96735,0.94994,0.98413
+pooled_voices,ALL,opus-nb,wav2vec2-base-960h,591,735,0.80408,0.75834,0.84694
+pooled_voices,ALL,opus-nb+loss5,parakeet-tdt-0.6b-v2,710,735,0.96599,0.94879,0.98157
+pooled_voices,ALL,opus-nb+loss5,wav2vec2-base-960h,580,735,0.78912,0.74170,0.83517
+pooled_voices,ALL,phone,parakeet-tdt-0.6b-v2,711,735,0.96735,0.94966,0.98427
+pooled_voices,ALL,phone,wav2vec2-base-960h,596,735,0.81088,0.76403,0.85570
+pooled_voices,ALL,phone,whisper-large-v3-turbo,716,735,0.97415,0.96032,0.98715
+pooled_voices,ALL,phone+loss5,parakeet-tdt-0.6b-v2,711,735,0.96735,0.94974,0.98367
+pooled_voices,ALL,phone+loss5,wav2vec2-base-960h,581,735,0.79048,0.74313,0.83572
+pooled_voices,ALL,phone+muffle,parakeet-tdt-0.6b-v2,704,735,0.95782,0.93578,0.97857
+pooled_voices,ALL,phone+muffle,wav2vec2-base-960h,530,735,0.72109,0.66037,0.77614
+pooled_voices,ALL,phone+noise10,parakeet-tdt-0.6b-v2,701,735,0.95374,0.93531,0.97171
+pooled_voices,ALL,phone+noise10,wav2vec2-base-960h,404,735,0.54966,0.48405,0.61080
+pooled_voices,ALL,phone+noise10,whisper-large-v3-turbo,709,735,0.96463,0.94750,0.98086
+pooled_voices,ALL,phone+noise5,parakeet-tdt-0.6b-v2,690,735,0.93878,0.91571,0.96131
+pooled_voices,ALL,phone+noise5,wav2vec2-base-960h,234,735,0.31837,0.25520,0.38235
+pooled_voices,ALL,realistic,parakeet-tdt-0.6b-v2,695,735,0.94558,0.92611,0.96464
+pooled_voices,ALL,realistic,wav2vec2-base-960h,406,735,0.55238,0.49461,0.60924
+pooled_voices,ALL,realistic,whisper-large-v3-turbo,702,735,0.95510,0.93664,0.97253
+per_keyword,ambulance,clean,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,ambulance,clean,wav2vec2-base-960h,35,42,0.83333,0.78571,0.85714
+per_keyword,ambulance,clean,whisper-large-v3-turbo,42,42,1.00000,1.00000,1.00000
+per_keyword,ambulance,g722-wb,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,ambulance,g722-wb,wav2vec2-base-960h,38,42,0.90476,0.85714,0.95238
+per_keyword,ambulance,opus-nb,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,ambulance,opus-nb,wav2vec2-base-960h,34,42,0.80952,0.64286,0.95238
+per_keyword,ambulance,opus-nb+loss5,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,ambulance,opus-nb+loss5,wav2vec2-base-960h,34,42,0.80952,0.64286,0.95238
+per_keyword,ambulance,phone,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,ambulance,phone,wav2vec2-base-960h,35,42,0.83333,0.76190,0.90476
+per_keyword,ambulance,phone,whisper-large-v3-turbo,42,42,1.00000,1.00000,1.00000
+per_keyword,ambulance,phone+loss5,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,ambulance,phone+loss5,wav2vec2-base-960h,35,42,0.83333,0.76190,0.90476
+per_keyword,ambulance,phone+muffle,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,ambulance,phone+muffle,wav2vec2-base-960h,22,42,0.52381,0.40476,0.61905
+per_keyword,ambulance,phone+noise10,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,ambulance,phone+noise10,wav2vec2-base-960h,19,42,0.45238,0.26190,0.64345
+per_keyword,ambulance,phone+noise10,whisper-large-v3-turbo,42,42,1.00000,1.00000,1.00000
+per_keyword,ambulance,phone+noise5,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,ambulance,phone+noise5,wav2vec2-base-960h,11,42,0.26190,0.07143,0.47619
+per_keyword,ambulance,realistic,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,ambulance,realistic,wav2vec2-base-960h,20,42,0.47619,0.28571,0.66667
+per_keyword,ambulance,realistic,whisper-large-v3-turbo,42,42,1.00000,1.00000,1.00000
+per_keyword,bleeding,clean,parakeet-tdt-0.6b-v2,49,49,1.00000,1.00000,1.00000
+per_keyword,bleeding,clean,wav2vec2-base-960h,48,49,0.97959,0.93878,1.00000
+per_keyword,bleeding,clean,whisper-large-v3-turbo,49,49,1.00000,1.00000,1.00000
+per_keyword,bleeding,g722-wb,parakeet-tdt-0.6b-v2,49,49,1.00000,1.00000,1.00000
+per_keyword,bleeding,g722-wb,wav2vec2-base-960h,48,49,0.97959,0.93878,1.00000
+per_keyword,bleeding,opus-nb,parakeet-tdt-0.6b-v2,49,49,1.00000,1.00000,1.00000
+per_keyword,bleeding,opus-nb,wav2vec2-base-960h,47,49,0.95918,0.89796,1.00000
+per_keyword,bleeding,opus-nb+loss5,parakeet-tdt-0.6b-v2,48,49,0.97959,0.93878,1.00000
+per_keyword,bleeding,opus-nb+loss5,wav2vec2-base-960h,44,49,0.89796,0.77551,0.97959
+per_keyword,bleeding,phone,parakeet-tdt-0.6b-v2,49,49,1.00000,1.00000,1.00000
+per_keyword,bleeding,phone,wav2vec2-base-960h,48,49,0.97959,0.93878,1.00000
+per_keyword,bleeding,phone,whisper-large-v3-turbo,49,49,1.00000,1.00000,1.00000
+per_keyword,bleeding,phone+loss5,parakeet-tdt-0.6b-v2,49,49,1.00000,1.00000,1.00000
+per_keyword,bleeding,phone+loss5,wav2vec2-base-960h,48,49,0.97959,0.93878,1.00000
+per_keyword,bleeding,phone+muffle,parakeet-tdt-0.6b-v2,49,49,1.00000,1.00000,1.00000
+per_keyword,bleeding,phone+muffle,wav2vec2-base-960h,46,49,0.93878,0.87755,0.97959
+per_keyword,bleeding,phone+noise10,parakeet-tdt-0.6b-v2,47,49,0.95918,0.91837,1.00000
+per_keyword,bleeding,phone+noise10,wav2vec2-base-960h,26,49,0.53061,0.32653,0.75510
+per_keyword,bleeding,phone+noise10,whisper-large-v3-turbo,49,49,1.00000,1.00000,1.00000
+per_keyword,bleeding,phone+noise5,parakeet-tdt-0.6b-v2,47,49,0.95918,0.91837,1.00000
+per_keyword,bleeding,phone+noise5,wav2vec2-base-960h,13,49,0.26531,0.06122,0.51020
+per_keyword,bleeding,realistic,parakeet-tdt-0.6b-v2,47,49,0.95918,0.91837,1.00000
+per_keyword,bleeding,realistic,wav2vec2-base-960h,25,49,0.51020,0.26531,0.75510
+per_keyword,bleeding,realistic,whisper-large-v3-turbo,47,49,0.95918,0.91837,1.00000
+per_keyword,cant get up,clean,parakeet-tdt-0.6b-v2,33,35,0.94286,0.88571,1.00000
+per_keyword,cant get up,clean,wav2vec2-base-960h,33,35,0.94286,0.82857,1.00000
+per_keyword,cant get up,clean,whisper-large-v3-turbo,33,35,0.94286,0.88571,1.00000
+per_keyword,cant get up,g722-wb,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,cant get up,g722-wb,wav2vec2-base-960h,34,35,0.97143,0.91429,1.00000
+per_keyword,cant get up,opus-nb,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,cant get up,opus-nb,wav2vec2-base-960h,29,35,0.82857,0.68571,0.94286
+per_keyword,cant get up,opus-nb+loss5,parakeet-tdt-0.6b-v2,33,35,0.94286,0.88571,1.00000
+per_keyword,cant get up,opus-nb+loss5,wav2vec2-base-960h,28,35,0.80000,0.68571,0.85714
+per_keyword,cant get up,phone,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,cant get up,phone,wav2vec2-base-960h,31,35,0.88571,0.71429,1.00000
+per_keyword,cant get up,phone,whisper-large-v3-turbo,31,35,0.88571,0.80000,0.97143
+per_keyword,cant get up,phone+loss5,parakeet-tdt-0.6b-v2,33,35,0.94286,0.88571,1.00000
+per_keyword,cant get up,phone+loss5,wav2vec2-base-960h,29,35,0.82857,0.68571,0.97143
+per_keyword,cant get up,phone+muffle,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,cant get up,phone+muffle,wav2vec2-base-960h,29,35,0.82857,0.68571,0.97143
+per_keyword,cant get up,phone+noise10,parakeet-tdt-0.6b-v2,33,35,0.94286,0.88571,1.00000
+per_keyword,cant get up,phone+noise10,wav2vec2-base-960h,25,35,0.71429,0.57143,0.82857
+per_keyword,cant get up,phone+noise10,whisper-large-v3-turbo,32,35,0.91429,0.80000,1.00000
+per_keyword,cant get up,phone+noise5,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,cant get up,phone+noise5,wav2vec2-base-960h,20,35,0.57143,0.34286,0.77143
+per_keyword,cant get up,realistic,parakeet-tdt-0.6b-v2,31,35,0.88571,0.80000,0.97143
+per_keyword,cant get up,realistic,wav2vec2-base-960h,25,35,0.71429,0.62857,0.80000
+per_keyword,cant get up,realistic,whisper-large-v3-turbo,31,35,0.88571,0.80000,0.97143
+per_keyword,chest pain,clean,parakeet-tdt-0.6b-v2,35,35,1.00000,1.00000,1.00000
+per_keyword,chest pain,clean,wav2vec2-base-960h,20,35,0.57143,0.48571,0.65714
+per_keyword,chest pain,clean,whisper-large-v3-turbo,33,35,0.94286,0.88571,1.00000
+per_keyword,chest pain,g722-wb,parakeet-tdt-0.6b-v2,35,35,1.00000,1.00000,1.00000
+per_keyword,chest pain,g722-wb,wav2vec2-base-960h,23,35,0.65714,0.60000,0.71429
+per_keyword,chest pain,opus-nb,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,chest pain,opus-nb,wav2vec2-base-960h,5,35,0.14286,0.05714,0.22857
+per_keyword,chest pain,opus-nb+loss5,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,chest pain,opus-nb+loss5,wav2vec2-base-960h,6,35,0.17143,0.14286,0.22857
+per_keyword,chest pain,phone,parakeet-tdt-0.6b-v2,35,35,1.00000,1.00000,1.00000
+per_keyword,chest pain,phone,wav2vec2-base-960h,6,35,0.17143,0.08571,0.25714
+per_keyword,chest pain,phone,whisper-large-v3-turbo,34,35,0.97143,0.91429,1.00000
+per_keyword,chest pain,phone+loss5,parakeet-tdt-0.6b-v2,35,35,1.00000,1.00000,1.00000
+per_keyword,chest pain,phone+loss5,wav2vec2-base-960h,6,35,0.17143,0.08571,0.25714
+per_keyword,chest pain,phone+muffle,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,chest pain,phone+muffle,wav2vec2-base-960h,4,35,0.11429,0.02857,0.20000
+per_keyword,chest pain,phone+noise10,parakeet-tdt-0.6b-v2,32,35,0.91429,0.80000,1.00000
+per_keyword,chest pain,phone+noise10,wav2vec2-base-960h,2,35,0.05714,0.00000,0.11429
+per_keyword,chest pain,phone+noise10,whisper-large-v3-turbo,32,35,0.91429,0.80000,1.00000
+per_keyword,chest pain,phone+noise5,parakeet-tdt-0.6b-v2,30,35,0.85714,0.68571,1.00000
+per_keyword,chest pain,phone+noise5,wav2vec2-base-960h,0,35,0.00000,0.00000,0.00000
+per_keyword,chest pain,realistic,parakeet-tdt-0.6b-v2,32,35,0.91429,0.80000,1.00000
+per_keyword,chest pain,realistic,wav2vec2-base-960h,1,35,0.02857,0.00000,0.08571
+per_keyword,chest pain,realistic,whisper-large-v3-turbo,34,35,0.97143,0.91429,1.00000
+per_keyword,choking,clean,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,choking,clean,wav2vec2-base-960h,20,28,0.71429,0.60714,0.82143
+per_keyword,choking,clean,whisper-large-v3-turbo,28,28,1.00000,1.00000,1.00000
+per_keyword,choking,g722-wb,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,choking,g722-wb,wav2vec2-base-960h,21,28,0.75000,0.60714,0.92857
+per_keyword,choking,opus-nb,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,choking,opus-nb,wav2vec2-base-960h,21,28,0.75000,0.60714,0.92857
+per_keyword,choking,opus-nb+loss5,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,choking,opus-nb+loss5,wav2vec2-base-960h,19,28,0.67857,0.50000,0.89286
+per_keyword,choking,phone,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,choking,phone,wav2vec2-base-960h,21,28,0.75000,0.53571,0.85714
+per_keyword,choking,phone,whisper-large-v3-turbo,28,28,1.00000,1.00000,1.00000
+per_keyword,choking,phone+loss5,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,choking,phone+loss5,wav2vec2-base-960h,21,28,0.75000,0.53571,0.85714
+per_keyword,choking,phone+muffle,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,choking,phone+muffle,wav2vec2-base-960h,17,28,0.60714,0.50000,0.71429
+per_keyword,choking,phone+noise10,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,choking,phone+noise10,wav2vec2-base-960h,10,28,0.35714,0.28571,0.42857
+per_keyword,choking,phone+noise10,whisper-large-v3-turbo,27,28,0.96429,0.89286,1.00000
+per_keyword,choking,phone+noise5,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,choking,phone+noise5,wav2vec2-base-960h,2,28,0.07143,0.00000,0.14286
+per_keyword,choking,realistic,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,choking,realistic,wav2vec2-base-960h,10,28,0.35714,0.21429,0.50000
+per_keyword,choking,realistic,whisper-large-v3-turbo,28,28,1.00000,1.00000,1.00000
+per_keyword,fell,clean,parakeet-tdt-0.6b-v2,90,91,0.98901,0.96703,1.00000
+per_keyword,fell,clean,wav2vec2-base-960h,90,91,0.98901,0.96703,1.00000
+per_keyword,fell,clean,whisper-large-v3-turbo,89,91,0.97802,0.94505,1.00000
+per_keyword,fell,g722-wb,parakeet-tdt-0.6b-v2,90,91,0.98901,0.96703,1.00000
+per_keyword,fell,g722-wb,wav2vec2-base-960h,90,91,0.98901,0.96703,1.00000
+per_keyword,fell,opus-nb,parakeet-tdt-0.6b-v2,90,91,0.98901,0.96703,1.00000
+per_keyword,fell,opus-nb,wav2vec2-base-960h,82,91,0.90110,0.82418,0.96703
+per_keyword,fell,opus-nb+loss5,parakeet-tdt-0.6b-v2,89,91,0.97802,0.94505,1.00000
+per_keyword,fell,opus-nb+loss5,wav2vec2-base-960h,76,91,0.83516,0.73626,0.92308
+per_keyword,fell,phone,parakeet-tdt-0.6b-v2,90,91,0.98901,0.96703,1.00000
+per_keyword,fell,phone,wav2vec2-base-960h,82,91,0.90110,0.83516,0.95604
+per_keyword,fell,phone,whisper-large-v3-turbo,89,91,0.97802,0.94505,1.00000
+per_keyword,fell,phone+loss5,parakeet-tdt-0.6b-v2,90,91,0.98901,0.96703,1.00000
+per_keyword,fell,phone+loss5,wav2vec2-base-960h,75,91,0.82418,0.75824,0.87912
+per_keyword,fell,phone+muffle,parakeet-tdt-0.6b-v2,89,91,0.97802,0.94505,1.00000
+per_keyword,fell,phone+muffle,wav2vec2-base-960h,89,91,0.97802,0.94505,1.00000
+per_keyword,fell,phone+noise10,parakeet-tdt-0.6b-v2,89,91,0.97802,0.94505,1.00000
+per_keyword,fell,phone+noise10,wav2vec2-base-960h,77,91,0.84615,0.72527,0.94505
+per_keyword,fell,phone+noise10,whisper-large-v3-turbo,90,91,0.98901,0.96703,1.00000
+per_keyword,fell,phone+noise5,parakeet-tdt-0.6b-v2,88,91,0.96703,0.93407,1.00000
+per_keyword,fell,phone+noise5,wav2vec2-base-960h,56,91,0.61538,0.45055,0.76923
+per_keyword,fell,realistic,parakeet-tdt-0.6b-v2,89,91,0.97802,0.94505,1.00000
+per_keyword,fell,realistic,wav2vec2-base-960h,76,91,0.83516,0.71429,0.94505
+per_keyword,fell,realistic,whisper-large-v3-turbo,89,91,0.97802,0.94505,1.00000
+per_keyword,fire,clean,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,fire,clean,wav2vec2-base-960h,42,42,1.00000,1.00000,1.00000
+per_keyword,fire,clean,whisper-large-v3-turbo,42,42,1.00000,1.00000,1.00000
+per_keyword,fire,g722-wb,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,fire,g722-wb,wav2vec2-base-960h,42,42,1.00000,1.00000,1.00000
+per_keyword,fire,opus-nb,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,fire,opus-nb,wav2vec2-base-960h,42,42,1.00000,1.00000,1.00000
+per_keyword,fire,opus-nb+loss5,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,fire,opus-nb+loss5,wav2vec2-base-960h,42,42,1.00000,1.00000,1.00000
+per_keyword,fire,phone,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,fire,phone,wav2vec2-base-960h,42,42,1.00000,1.00000,1.00000
+per_keyword,fire,phone,whisper-large-v3-turbo,42,42,1.00000,1.00000,1.00000
+per_keyword,fire,phone+loss5,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,fire,phone+loss5,wav2vec2-base-960h,42,42,1.00000,1.00000,1.00000
+per_keyword,fire,phone+muffle,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,fire,phone+muffle,wav2vec2-base-960h,42,42,1.00000,1.00000,1.00000
+per_keyword,fire,phone+noise10,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,fire,phone+noise10,wav2vec2-base-960h,40,42,0.95238,0.90476,1.00000
+per_keyword,fire,phone+noise10,whisper-large-v3-turbo,42,42,1.00000,1.00000,1.00000
+per_keyword,fire,phone+noise5,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,fire,phone+noise5,wav2vec2-base-960h,26,42,0.61905,0.42857,0.80952
+per_keyword,fire,realistic,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,fire,realistic,wav2vec2-base-960h,40,42,0.95238,0.90476,1.00000
+per_keyword,fire,realistic,whisper-large-v3-turbo,42,42,1.00000,1.00000,1.00000
+per_keyword,gun,clean,parakeet-tdt-0.6b-v2,35,35,1.00000,1.00000,1.00000
+per_keyword,gun,clean,wav2vec2-base-960h,33,35,0.94286,0.88571,1.00000
+per_keyword,gun,clean,whisper-large-v3-turbo,35,35,1.00000,1.00000,1.00000
+per_keyword,gun,g722-wb,parakeet-tdt-0.6b-v2,35,35,1.00000,1.00000,1.00000
+per_keyword,gun,g722-wb,wav2vec2-base-960h,33,35,0.94286,0.88571,1.00000
+per_keyword,gun,opus-nb,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,gun,opus-nb,wav2vec2-base-960h,32,35,0.91429,0.85714,0.97143
+per_keyword,gun,opus-nb+loss5,parakeet-tdt-0.6b-v2,35,35,1.00000,1.00000,1.00000
+per_keyword,gun,opus-nb+loss5,wav2vec2-base-960h,31,35,0.88571,0.85714,0.94286
+per_keyword,gun,phone,parakeet-tdt-0.6b-v2,35,35,1.00000,1.00000,1.00000
+per_keyword,gun,phone,wav2vec2-base-960h,34,35,0.97143,0.91429,1.00000
+per_keyword,gun,phone,whisper-large-v3-turbo,35,35,1.00000,1.00000,1.00000
+per_keyword,gun,phone+loss5,parakeet-tdt-0.6b-v2,35,35,1.00000,1.00000,1.00000
+per_keyword,gun,phone+loss5,wav2vec2-base-960h,32,35,0.91429,0.85714,0.97143
+per_keyword,gun,phone+muffle,parakeet-tdt-0.6b-v2,35,35,1.00000,1.00000,1.00000
+per_keyword,gun,phone+muffle,wav2vec2-base-960h,31,35,0.88571,0.85714,0.94286
+per_keyword,gun,phone+noise10,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,gun,phone+noise10,wav2vec2-base-960h,27,35,0.77143,0.62857,0.91429
+per_keyword,gun,phone+noise10,whisper-large-v3-turbo,34,35,0.97143,0.91429,1.00000
+per_keyword,gun,phone+noise5,parakeet-tdt-0.6b-v2,32,35,0.91429,0.85714,0.97143
+per_keyword,gun,phone+noise5,wav2vec2-base-960h,18,35,0.51429,0.28571,0.74286
+per_keyword,gun,realistic,parakeet-tdt-0.6b-v2,33,35,0.94286,0.88571,1.00000
+per_keyword,gun,realistic,wav2vec2-base-960h,26,35,0.74286,0.60000,0.85714
+per_keyword,gun,realistic,whisper-large-v3-turbo,34,35,0.97143,0.91429,1.00000
+per_keyword,heart attack,clean,parakeet-tdt-0.6b-v2,20,21,0.95238,0.85714,1.00000
+per_keyword,heart attack,clean,wav2vec2-base-960h,15,21,0.71429,0.28571,1.00000
+per_keyword,heart attack,clean,whisper-large-v3-turbo,21,21,1.00000,1.00000,1.00000
+per_keyword,heart attack,g722-wb,parakeet-tdt-0.6b-v2,20,21,0.95238,0.85714,1.00000
+per_keyword,heart attack,g722-wb,wav2vec2-base-960h,13,21,0.61905,0.28571,0.85714
+per_keyword,heart attack,opus-nb,parakeet-tdt-0.6b-v2,20,21,0.95238,0.85714,1.00000
+per_keyword,heart attack,opus-nb,wav2vec2-base-960h,15,21,0.71429,0.57143,0.85714
+per_keyword,heart attack,opus-nb+loss5,parakeet-tdt-0.6b-v2,21,21,1.00000,1.00000,1.00000
+per_keyword,heart attack,opus-nb+loss5,wav2vec2-base-960h,13,21,0.61905,0.42857,0.71429
+per_keyword,heart attack,phone,parakeet-tdt-0.6b-v2,20,21,0.95238,0.85714,1.00000
+per_keyword,heart attack,phone,wav2vec2-base-960h,12,21,0.57143,0.42857,0.85714
+per_keyword,heart attack,phone,whisper-large-v3-turbo,21,21,1.00000,1.00000,1.00000
+per_keyword,heart attack,phone+loss5,parakeet-tdt-0.6b-v2,20,21,0.95238,0.85714,1.00000
+per_keyword,heart attack,phone+loss5,wav2vec2-base-960h,13,21,0.61905,0.42857,0.85714
+per_keyword,heart attack,phone+muffle,parakeet-tdt-0.6b-v2,20,21,0.95238,0.85714,1.00000
+per_keyword,heart attack,phone+muffle,wav2vec2-base-960h,12,21,0.57143,0.28571,0.71429
+per_keyword,heart attack,phone+noise10,parakeet-tdt-0.6b-v2,20,21,0.95238,0.85714,1.00000
+per_keyword,heart attack,phone+noise10,wav2vec2-base-960h,7,21,0.33333,0.14286,0.57143
+per_keyword,heart attack,phone+noise10,whisper-large-v3-turbo,21,21,1.00000,1.00000,1.00000
+per_keyword,heart attack,phone+noise5,parakeet-tdt-0.6b-v2,20,21,0.95238,0.85714,1.00000
+per_keyword,heart attack,phone+noise5,wav2vec2-base-960h,4,21,0.19048,0.00000,0.28571
+per_keyword,heart attack,realistic,parakeet-tdt-0.6b-v2,21,21,1.00000,1.00000,1.00000
+per_keyword,heart attack,realistic,wav2vec2-base-960h,9,21,0.42857,0.42857,0.42857
+per_keyword,heart attack,realistic,whisper-large-v3-turbo,21,21,1.00000,1.00000,1.00000
+per_keyword,help,clean,parakeet-tdt-0.6b-v2,78,91,0.85714,0.79121,0.92308
+per_keyword,help,clean,wav2vec2-base-960h,69,91,0.75824,0.68132,0.84615
+per_keyword,help,clean,whisper-large-v3-turbo,81,91,0.89011,0.82418,0.95604
+per_keyword,help,g722-wb,parakeet-tdt-0.6b-v2,78,91,0.85714,0.78022,0.92308
+per_keyword,help,g722-wb,wav2vec2-base-960h,67,91,0.73626,0.64835,0.83516
+per_keyword,help,opus-nb,parakeet-tdt-0.6b-v2,75,91,0.82418,0.74725,0.90110
+per_keyword,help,opus-nb,wav2vec2-base-960h,69,91,0.75824,0.68132,0.84615
+per_keyword,help,opus-nb+loss5,parakeet-tdt-0.6b-v2,76,91,0.83516,0.75824,0.91209
+per_keyword,help,opus-nb+loss5,wav2vec2-base-960h,72,91,0.79121,0.71429,0.86813
+per_keyword,help,phone,parakeet-tdt-0.6b-v2,73,91,0.80220,0.70330,0.89038
+per_keyword,help,phone,wav2vec2-base-960h,66,91,0.72527,0.64835,0.80220
+per_keyword,help,phone,whisper-large-v3-turbo,80,91,0.87912,0.80220,0.95604
+per_keyword,help,phone+loss5,parakeet-tdt-0.6b-v2,74,91,0.81319,0.71429,0.91209
+per_keyword,help,phone+loss5,wav2vec2-base-960h,67,91,0.73626,0.65934,0.82418
+per_keyword,help,phone+muffle,parakeet-tdt-0.6b-v2,71,91,0.78022,0.67033,0.89011
+per_keyword,help,phone+muffle,wav2vec2-base-960h,67,91,0.73626,0.65934,0.82418
+per_keyword,help,phone+noise10,parakeet-tdt-0.6b-v2,72,91,0.79121,0.69231,0.89011
+per_keyword,help,phone+noise10,wav2vec2-base-960h,51,91,0.56044,0.42857,0.67033
+per_keyword,help,phone+noise10,whisper-large-v3-turbo,77,91,0.84615,0.76923,0.92308
+per_keyword,help,phone+noise5,parakeet-tdt-0.6b-v2,70,91,0.76923,0.67033,0.86813
+per_keyword,help,phone+noise5,wav2vec2-base-960h,40,91,0.43956,0.30769,0.56044
+per_keyword,help,realistic,parakeet-tdt-0.6b-v2,68,91,0.74725,0.64835,0.84615
+per_keyword,help,realistic,wav2vec2-base-960h,52,91,0.57143,0.42857,0.70330
+per_keyword,help,realistic,whisper-large-v3-turbo,74,91,0.81319,0.70330,0.91209
+per_keyword,not breathing,clean,parakeet-tdt-0.6b-v2,48,49,0.97959,0.93878,1.00000
+per_keyword,not breathing,clean,wav2vec2-base-960h,43,49,0.87755,0.85714,0.91837
+per_keyword,not breathing,clean,whisper-large-v3-turbo,48,49,0.97959,0.93878,1.00000
+per_keyword,not breathing,g722-wb,parakeet-tdt-0.6b-v2,48,49,0.97959,0.93878,1.00000
+per_keyword,not breathing,g722-wb,wav2vec2-base-960h,44,49,0.89796,0.85714,0.93878
+per_keyword,not breathing,opus-nb,parakeet-tdt-0.6b-v2,48,49,0.97959,0.93878,1.00000
+per_keyword,not breathing,opus-nb,wav2vec2-base-960h,41,49,0.83673,0.77551,0.89796
+per_keyword,not breathing,opus-nb+loss5,parakeet-tdt-0.6b-v2,48,49,0.97959,0.93878,1.00000
+per_keyword,not breathing,opus-nb+loss5,wav2vec2-base-960h,41,49,0.83673,0.79592,0.85714
+per_keyword,not breathing,phone,parakeet-tdt-0.6b-v2,48,49,0.97959,0.93878,1.00000
+per_keyword,not breathing,phone,wav2vec2-base-960h,42,49,0.85714,0.79592,0.91837
+per_keyword,not breathing,phone,whisper-large-v3-turbo,49,49,1.00000,1.00000,1.00000
+per_keyword,not breathing,phone+loss5,parakeet-tdt-0.6b-v2,48,49,0.97959,0.93878,1.00000
+per_keyword,not breathing,phone+loss5,wav2vec2-base-960h,38,49,0.77551,0.65306,0.85714
+per_keyword,not breathing,phone+muffle,parakeet-tdt-0.6b-v2,48,49,0.97959,0.93878,1.00000
+per_keyword,not breathing,phone+muffle,wav2vec2-base-960h,43,49,0.87755,0.85714,0.91837
+per_keyword,not breathing,phone+noise10,parakeet-tdt-0.6b-v2,47,49,0.95918,0.91837,1.00000
+per_keyword,not breathing,phone+noise10,wav2vec2-base-960h,19,49,0.38776,0.32653,0.46939
+per_keyword,not breathing,phone+noise10,whisper-large-v3-turbo,47,49,0.95918,0.91837,1.00000
+per_keyword,not breathing,phone+noise5,parakeet-tdt-0.6b-v2,44,49,0.89796,0.81633,0.95918
+per_keyword,not breathing,phone+noise5,wav2vec2-base-960h,4,49,0.08163,0.00000,0.20408
+per_keyword,not breathing,realistic,parakeet-tdt-0.6b-v2,49,49,1.00000,1.00000,1.00000
+per_keyword,not breathing,realistic,wav2vec2-base-960h,22,49,0.44898,0.26531,0.63265
+per_keyword,not breathing,realistic,whisper-large-v3-turbo,48,49,0.97959,0.93878,1.00000
+per_keyword,overdose,clean,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,overdose,clean,wav2vec2-base-960h,17,35,0.48571,0.31429,0.62857
+per_keyword,overdose,clean,whisper-large-v3-turbo,35,35,1.00000,1.00000,1.00000
+per_keyword,overdose,g722-wb,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,overdose,g722-wb,wav2vec2-base-960h,17,35,0.48571,0.37143,0.60000
+per_keyword,overdose,opus-nb,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,overdose,opus-nb,wav2vec2-base-960h,14,35,0.40000,0.25714,0.51429
+per_keyword,overdose,opus-nb+loss5,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,overdose,opus-nb+loss5,wav2vec2-base-960h,15,35,0.42857,0.28571,0.54286
+per_keyword,overdose,phone,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,overdose,phone,wav2vec2-base-960h,16,35,0.45714,0.37143,0.54286
+per_keyword,overdose,phone,whisper-large-v3-turbo,35,35,1.00000,1.00000,1.00000
+per_keyword,overdose,phone+loss5,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,overdose,phone+loss5,wav2vec2-base-960h,12,35,0.34286,0.22857,0.45714
+per_keyword,overdose,phone+muffle,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,overdose,phone+muffle,wav2vec2-base-960h,5,35,0.14286,0.14286,0.14286
+per_keyword,overdose,phone+noise10,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,overdose,phone+noise10,wav2vec2-base-960h,3,35,0.08571,0.02857,0.14286
+per_keyword,overdose,phone+noise10,whisper-large-v3-turbo,35,35,1.00000,1.00000,1.00000
+per_keyword,overdose,phone+noise5,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,overdose,phone+noise5,wav2vec2-base-960h,0,35,0.00000,0.00000,0.00000
+per_keyword,overdose,realistic,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,overdose,realistic,wav2vec2-base-960h,2,35,0.05714,0.00000,0.11429
+per_keyword,overdose,realistic,whisper-large-v3-turbo,33,35,0.94286,0.88571,1.00000
+per_keyword,seizure,clean,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,seizure,clean,wav2vec2-base-960h,21,28,0.75000,0.53571,0.92857
+per_keyword,seizure,clean,whisper-large-v3-turbo,28,28,1.00000,1.00000,1.00000
+per_keyword,seizure,g722-wb,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,seizure,g722-wb,wav2vec2-base-960h,24,28,0.85714,0.57143,1.00000
+per_keyword,seizure,opus-nb,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,seizure,opus-nb,wav2vec2-base-960h,22,28,0.78571,0.64286,0.92857
+per_keyword,seizure,opus-nb+loss5,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,seizure,opus-nb+loss5,wav2vec2-base-960h,21,28,0.75000,0.46429,1.00000
+per_keyword,seizure,phone,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,seizure,phone,wav2vec2-base-960h,19,28,0.67857,0.39286,0.92857
+per_keyword,seizure,phone,whisper-large-v3-turbo,28,28,1.00000,1.00000,1.00000
+per_keyword,seizure,phone+loss5,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,seizure,phone+loss5,wav2vec2-base-960h,20,28,0.71429,0.42857,0.92857
+per_keyword,seizure,phone+muffle,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,seizure,phone+muffle,wav2vec2-base-960h,4,28,0.14286,0.03571,0.25000
+per_keyword,seizure,phone+noise10,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,seizure,phone+noise10,wav2vec2-base-960h,6,28,0.21429,0.00000,0.42857
+per_keyword,seizure,phone+noise10,whisper-large-v3-turbo,28,28,1.00000,1.00000,1.00000
+per_keyword,seizure,phone+noise5,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,seizure,phone+noise5,wav2vec2-base-960h,2,28,0.07143,0.00000,0.21429
+per_keyword,seizure,realistic,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,seizure,realistic,wav2vec2-base-960h,12,28,0.42857,0.14286,0.71429
+per_keyword,seizure,realistic,whisper-large-v3-turbo,28,28,1.00000,1.00000,1.00000
+per_keyword,shot,clean,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,shot,clean,wav2vec2-base-960h,26,28,0.92857,0.85714,1.00000
+per_keyword,shot,clean,whisper-large-v3-turbo,27,28,0.96429,0.89286,1.00000
+per_keyword,shot,g722-wb,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,shot,g722-wb,wav2vec2-base-960h,24,28,0.85714,0.75000,0.96429
+per_keyword,shot,opus-nb,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,shot,opus-nb,wav2vec2-base-960h,24,28,0.85714,0.75000,0.96429
+per_keyword,shot,opus-nb+loss5,parakeet-tdt-0.6b-v2,27,28,0.96429,0.89286,1.00000
+per_keyword,shot,opus-nb+loss5,wav2vec2-base-960h,27,28,0.96429,0.89286,1.00000
+per_keyword,shot,phone,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,shot,phone,wav2vec2-base-960h,24,28,0.85714,0.75000,0.96429
+per_keyword,shot,phone,whisper-large-v3-turbo,28,28,1.00000,1.00000,1.00000
+per_keyword,shot,phone+loss5,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,shot,phone+loss5,wav2vec2-base-960h,25,28,0.89286,0.85714,0.96429
+per_keyword,shot,phone+muffle,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,shot,phone+muffle,wav2vec2-base-960h,23,28,0.82143,0.75000,0.85714
+per_keyword,shot,phone+noise10,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,shot,phone+noise10,wav2vec2-base-960h,16,28,0.57143,0.35714,0.78571
+per_keyword,shot,phone+noise10,whisper-large-v3-turbo,28,28,1.00000,1.00000,1.00000
+per_keyword,shot,phone+noise5,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,shot,phone+noise5,wav2vec2-base-960h,6,28,0.21429,0.07143,0.35714
+per_keyword,shot,realistic,parakeet-tdt-0.6b-v2,27,28,0.96429,0.89286,1.00000
+per_keyword,shot,realistic,wav2vec2-base-960h,15,28,0.53571,0.42857,0.64286
+per_keyword,shot,realistic,whisper-large-v3-turbo,27,28,0.96429,0.89286,1.00000
+per_keyword,smoke,clean,parakeet-tdt-0.6b-v2,35,35,1.00000,1.00000,1.00000
+per_keyword,smoke,clean,wav2vec2-base-960h,35,35,1.00000,1.00000,1.00000
+per_keyword,smoke,clean,whisper-large-v3-turbo,35,35,1.00000,1.00000,1.00000
+per_keyword,smoke,g722-wb,parakeet-tdt-0.6b-v2,35,35,1.00000,1.00000,1.00000
+per_keyword,smoke,g722-wb,wav2vec2-base-960h,35,35,1.00000,1.00000,1.00000
+per_keyword,smoke,opus-nb,parakeet-tdt-0.6b-v2,35,35,1.00000,1.00000,1.00000
+per_keyword,smoke,opus-nb,wav2vec2-base-960h,34,35,0.97143,0.91429,1.00000
+per_keyword,smoke,opus-nb+loss5,parakeet-tdt-0.6b-v2,35,35,1.00000,1.00000,1.00000
+per_keyword,smoke,opus-nb+loss5,wav2vec2-base-960h,33,35,0.94286,0.82857,1.00000
+per_keyword,smoke,phone,parakeet-tdt-0.6b-v2,35,35,1.00000,1.00000,1.00000
+per_keyword,smoke,phone,wav2vec2-base-960h,35,35,1.00000,1.00000,1.00000
+per_keyword,smoke,phone,whisper-large-v3-turbo,35,35,1.00000,1.00000,1.00000
+per_keyword,smoke,phone+loss5,parakeet-tdt-0.6b-v2,35,35,1.00000,1.00000,1.00000
+per_keyword,smoke,phone+loss5,wav2vec2-base-960h,34,35,0.97143,0.91429,1.00000
+per_keyword,smoke,phone+muffle,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,smoke,phone+muffle,wav2vec2-base-960h,28,35,0.80000,0.65714,0.94286
+per_keyword,smoke,phone+noise10,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,smoke,phone+noise10,wav2vec2-base-960h,22,35,0.62857,0.45714,0.80000
+per_keyword,smoke,phone+noise10,whisper-large-v3-turbo,35,35,1.00000,1.00000,1.00000
+per_keyword,smoke,phone+noise5,parakeet-tdt-0.6b-v2,33,35,0.94286,0.88571,1.00000
+per_keyword,smoke,phone+noise5,wav2vec2-base-960h,7,35,0.20000,0.14286,0.31429
+per_keyword,smoke,realistic,parakeet-tdt-0.6b-v2,34,35,0.97143,0.91429,1.00000
+per_keyword,smoke,realistic,wav2vec2-base-960h,18,35,0.51429,0.42857,0.62857
+per_keyword,smoke,realistic,whisper-large-v3-turbo,34,35,0.97143,0.91429,1.00000
+per_keyword,stabbed,clean,parakeet-tdt-0.6b-v2,27,28,0.96429,0.89286,1.00000
+per_keyword,stabbed,clean,wav2vec2-base-960h,24,28,0.85714,0.71429,1.00000
+per_keyword,stabbed,clean,whisper-large-v3-turbo,27,28,0.96429,0.89286,1.00000
+per_keyword,stabbed,g722-wb,parakeet-tdt-0.6b-v2,27,28,0.96429,0.89286,1.00000
+per_keyword,stabbed,g722-wb,wav2vec2-base-960h,22,28,0.78571,0.57143,1.00000
+per_keyword,stabbed,opus-nb,parakeet-tdt-0.6b-v2,27,28,0.96429,0.89286,1.00000
+per_keyword,stabbed,opus-nb,wav2vec2-base-960h,21,28,0.75000,0.57143,0.92857
+per_keyword,stabbed,opus-nb+loss5,parakeet-tdt-0.6b-v2,27,28,0.96429,0.89286,1.00000
+per_keyword,stabbed,opus-nb+loss5,wav2vec2-base-960h,18,28,0.64286,0.46429,0.89286
+per_keyword,stabbed,phone,parakeet-tdt-0.6b-v2,27,28,0.96429,0.89286,1.00000
+per_keyword,stabbed,phone,wav2vec2-base-960h,23,28,0.82143,0.64286,1.00000
+per_keyword,stabbed,phone,whisper-large-v3-turbo,27,28,0.96429,0.89286,1.00000
+per_keyword,stabbed,phone+loss5,parakeet-tdt-0.6b-v2,27,28,0.96429,0.89286,1.00000
+per_keyword,stabbed,phone+loss5,wav2vec2-base-960h,25,28,0.89286,0.67857,1.00000
+per_keyword,stabbed,phone+muffle,parakeet-tdt-0.6b-v2,25,28,0.89286,0.78571,1.00000
+per_keyword,stabbed,phone+muffle,wav2vec2-base-960h,13,28,0.46429,0.32143,0.64286
+per_keyword,stabbed,phone+noise10,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,stabbed,phone+noise10,wav2vec2-base-960h,7,28,0.25000,0.07143,0.39286
+per_keyword,stabbed,phone+noise10,whisper-large-v3-turbo,27,28,0.96429,0.89286,1.00000
+per_keyword,stabbed,phone+noise5,parakeet-tdt-0.6b-v2,28,28,1.00000,1.00000,1.00000
+per_keyword,stabbed,phone+noise5,wav2vec2-base-960h,3,28,0.10714,0.03571,0.14286
+per_keyword,stabbed,realistic,parakeet-tdt-0.6b-v2,27,28,0.96429,0.89286,1.00000
+per_keyword,stabbed,realistic,wav2vec2-base-960h,6,28,0.21429,0.07143,0.35714
+per_keyword,stabbed,realistic,whisper-large-v3-turbo,27,28,0.96429,0.89286,1.00000
+per_keyword,stroke,clean,parakeet-tdt-0.6b-v2,21,21,1.00000,1.00000,1.00000
+per_keyword,stroke,clean,wav2vec2-base-960h,19,21,0.90476,0.85714,1.00000
+per_keyword,stroke,clean,whisper-large-v3-turbo,21,21,1.00000,1.00000,1.00000
+per_keyword,stroke,g722-wb,parakeet-tdt-0.6b-v2,21,21,1.00000,1.00000,1.00000
+per_keyword,stroke,g722-wb,wav2vec2-base-960h,19,21,0.90476,0.85714,1.00000
+per_keyword,stroke,opus-nb,parakeet-tdt-0.6b-v2,21,21,1.00000,1.00000,1.00000
+per_keyword,stroke,opus-nb,wav2vec2-base-960h,18,21,0.85714,0.71429,1.00000
+per_keyword,stroke,opus-nb+loss5,parakeet-tdt-0.6b-v2,21,21,1.00000,1.00000,1.00000
+per_keyword,stroke,opus-nb+loss5,wav2vec2-base-960h,19,21,0.90476,0.71429,1.00000
+per_keyword,stroke,phone,parakeet-tdt-0.6b-v2,21,21,1.00000,1.00000,1.00000
+per_keyword,stroke,phone,wav2vec2-base-960h,20,21,0.95238,0.85714,1.00000
+per_keyword,stroke,phone,whisper-large-v3-turbo,21,21,1.00000,1.00000,1.00000
+per_keyword,stroke,phone+loss5,parakeet-tdt-0.6b-v2,21,21,1.00000,1.00000,1.00000
+per_keyword,stroke,phone+loss5,wav2vec2-base-960h,19,21,0.90476,0.85714,1.00000
+per_keyword,stroke,phone+muffle,parakeet-tdt-0.6b-v2,21,21,1.00000,1.00000,1.00000
+per_keyword,stroke,phone+muffle,wav2vec2-base-960h,15,21,0.71429,0.71429,0.71429
+per_keyword,stroke,phone+noise10,parakeet-tdt-0.6b-v2,21,21,1.00000,1.00000,1.00000
+per_keyword,stroke,phone+noise10,wav2vec2-base-960h,13,21,0.61905,0.57143,0.71429
+per_keyword,stroke,phone+noise10,whisper-large-v3-turbo,21,21,1.00000,1.00000,1.00000
+per_keyword,stroke,phone+noise5,parakeet-tdt-0.6b-v2,20,21,0.95238,0.85714,1.00000
+per_keyword,stroke,phone+noise5,wav2vec2-base-960h,5,21,0.23810,0.00000,0.42857
+per_keyword,stroke,realistic,parakeet-tdt-0.6b-v2,21,21,1.00000,1.00000,1.00000
+per_keyword,stroke,realistic,wav2vec2-base-960h,13,21,0.61905,0.57143,0.71429
+per_keyword,stroke,realistic,whisper-large-v3-turbo,21,21,1.00000,1.00000,1.00000
+per_keyword,unconscious,clean,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,unconscious,clean,wav2vec2-base-960h,41,42,0.97619,0.92857,1.00000
+per_keyword,unconscious,clean,whisper-large-v3-turbo,42,42,1.00000,1.00000,1.00000
+per_keyword,unconscious,g722-wb,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,unconscious,g722-wb,wav2vec2-base-960h,42,42,1.00000,1.00000,1.00000
+per_keyword,unconscious,opus-nb,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,unconscious,opus-nb,wav2vec2-base-960h,41,42,0.97619,0.92857,1.00000
+per_keyword,unconscious,opus-nb+loss5,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,unconscious,opus-nb+loss5,wav2vec2-base-960h,41,42,0.97619,0.92857,1.00000
+per_keyword,unconscious,phone,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,unconscious,phone,wav2vec2-base-960h,40,42,0.95238,0.90476,1.00000
+per_keyword,unconscious,phone,whisper-large-v3-turbo,42,42,1.00000,1.00000,1.00000
+per_keyword,unconscious,phone+loss5,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,unconscious,phone+loss5,wav2vec2-base-960h,40,42,0.95238,0.90476,1.00000
+per_keyword,unconscious,phone+muffle,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,unconscious,phone+muffle,wav2vec2-base-960h,40,42,0.95238,0.90476,1.00000
+per_keyword,unconscious,phone+noise10,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,unconscious,phone+noise10,wav2vec2-base-960h,34,42,0.80952,0.64286,0.92857
+per_keyword,unconscious,phone+noise10,whisper-large-v3-turbo,42,42,1.00000,1.00000,1.00000
+per_keyword,unconscious,phone+noise5,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,unconscious,phone+noise5,wav2vec2-base-960h,17,42,0.40476,0.14286,0.66667
+per_keyword,unconscious,realistic,parakeet-tdt-0.6b-v2,42,42,1.00000,1.00000,1.00000
+per_keyword,unconscious,realistic,wav2vec2-base-960h,34,42,0.80952,0.69048,0.90476
+per_keyword,unconscious,realistic,whisper-large-v3-turbo,42,42,1.00000,1.00000,1.00000

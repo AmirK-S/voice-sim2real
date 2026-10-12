@@ -187,7 +187,8 @@ def paired_bootstrap_ci(
 def mcnemar(b01: int, b10: int) -> dict:
     """Exact (binomial) two-sided McNemar test on discordant pairs.
 
-    ``b01``: items system A missed but B caught; ``b10``: A caught, B missed.
+    ``b01``: items A caught and B missed; ``b10``: items A missed and B caught
+    (the naming used by scripts/05_analyze.py). The test is symmetric.
     Under H0 each discordant pair is a fair coin. Returns
     ``{"b01", "b10", "n_discordant", "p_value"}`` (p = 1 when no discordant).
     """
@@ -250,7 +251,10 @@ def decision_flip(
     Returns ``{"systems", "human": {...}, "conditions": {cond: {...}}}`` where
     each entry has the observed ``mean`` per system, ``gap`` (A minus B),
     ``winner``; conditions add ``flip`` (observed winner differs from human)
-    and ``p_flip`` (bootstrap share of replicates in which the winners differ).
+    and ``share_sign_disagree`` (bootstrap share of replicates in which the two
+    gaps have opposite signs). This share is about 0.5 whenever both gaps are
+    near 0: it is neither a p-value nor the probability that the lab is wrong,
+    and the analysis tests the difference in differences instead.
     The human entry adds ``p_winner_stable``: how often the human winner holds
     under resampling, a hint of whether reality itself has a clear winner.
     """
@@ -301,7 +305,7 @@ def decision_flip(
         boot = g[idx].mean(axis=1)
         s = summary(cond)
         s["flip"] = s["winner"] != hs["winner"]
-        s["p_flip"] = float((np.sign(boot) != np.sign(boot_h)).mean())
+        s["share_sign_disagree"] = float((np.sign(boot) != np.sign(boot_h)).mean())
         s["paired_with_human"] = bool(g.size == gh.size)
         out["conditions"][name] = s
     return out
@@ -328,10 +332,12 @@ def ppi_mean(
     the "prediction" in Angelopoulos et al. (2023).
 
     Estimator: ``theta = lam * mean(f_unl) + mean(Y - lam * f_lab)`` with
-    variance ``lam^2 var(f_unl)/N + var(Y - lam f_lab)/n`` and a normal CI.
-    Classic PPI uses ``lam = 1``. With ``power_tuning`` (PPI++), ``lam`` is the
-    plug-in optimum ``cov(Y, f) / ((1 + n/N) var(f))`` clipped to [0, 1], so
-    PPI is never much worse than the human-only estimate.
+    variance ``lam^2 var(f_unl)/N + var(Y - lam f_lab)/n`` and a t interval
+    (n - 1 degrees of freedom; the human-only interval uses the same t
+    quantile). Classic PPI uses ``lam = 1``. With ``power_tuning`` (PPI++),
+    ``lam`` is the plug-in optimum ``cov(Y, f) / ((1 + n/N) var(f))``, not
+    clipped (Angelopoulos, Duchi and Zrnic do not cap it). See
+    ``ppi_mean_finite`` for the finite-population version used in the analysis.
 
     The synthetic bias (sim-to-real gap) is corrected by the rectifier
     ``mean(Y - f)``; PPI is valid whatever the bias, it only gains width when
@@ -348,13 +354,12 @@ def ppi_mean(
     n_l, n_u = y.size, fu.size
     if n_l < 2 or n_u < 2:
         raise ValueError("need at least 2 labeled and 2 unlabeled items")
-    z = float(_st.norm.ppf(1 - alpha / 2))
+    z = float(_st.t.ppf(1 - alpha / 2, n_l - 1))
 
     lam = 1.0
     if power_tuning:
         vf = np.var(np.concatenate([f, fu]), ddof=1)
         lam = 0.0 if vf == 0 else float(np.cov(y, f, ddof=1)[0, 1] / ((1 + n_l / n_u) * vf))
-        lam = float(np.clip(lam, 0.0, 1.0))
 
     rect = y - lam * f
     est = lam * fu.mean() + rect.mean()
@@ -388,3 +393,142 @@ def ppi_mean(
         "n_labeled": int(n_l),
         "n_unlabeled": int(n_u),
     }
+
+
+def ppi_mean_finite(
+    y_lab: np.ndarray,
+    f_lab: np.ndarray,
+    f_all_mean: float | np.ndarray,
+    N: int,
+    alpha: float = 0.05,
+    method: str = "ppi",
+) -> dict:
+    """PPI for the mean of a finite population of N items, vectorized over draws.
+
+    Setup: a synthetic score f is known for all N items (``f_all_mean`` is its
+    mean); the human score y is observed on a simple random sample of n items
+    drawn without replacement (``y_lab``, ``f_lab``: arrays of shape (n,) or
+    (draws, n)). The target is the mean of y over the N items.
+
+    Estimators (all with the finite-population correction ``1 - n/N`` and a t
+    quantile with n - 1 degrees of freedom; n - 2 for the cross-fit):
+      naive    mean(y_lab)
+      ppi      mean_all(f) + mean_lab(y - f)                    (lam = 1)
+      ppi++    lam * mean_all(f) + mean_lab(y - lam f), lam = cov(y, f) / var(f)
+               on the labeled sample (plug-in, not clipped)
+      ppi++cf  cross-fit PPI++: the labeled sample is split in two halves; the
+               lam estimated on one half is applied to the other half, and the two
+               half estimates are averaged (removes the optimism of reusing the
+               labels for lam)
+    For lam fixed, theta - truth = mean_lab(r) - mean_all(r) with r = y - lam f,
+    whose variance under SRSWOR is (1 - n/N) S_r^2 / n.
+    """
+    y = np.atleast_2d(np.asarray(y_lab, float))
+    f = np.atleast_2d(np.asarray(f_lab, float))
+    n = y.shape[1]
+    fpc = 1.0 - n / N
+    fm = np.broadcast_to(np.asarray(f_all_mean, float), (y.shape[0],))
+    if method == "naive":
+        est = y.mean(1)
+        se = np.sqrt(fpc * y.var(1, ddof=1) / n)
+        df = n - 1
+        lam = np.zeros(y.shape[0])
+    elif method in ("ppi", "ppi++"):
+        if method == "ppi":
+            lam = np.ones(y.shape[0])
+        else:
+            fc = f - f.mean(1, keepdims=True)
+            vf = (fc ** 2).sum(1) / (n - 1)
+            cov = (fc * (y - y.mean(1, keepdims=True))).sum(1) / (n - 1)
+            lam = np.where(vf > 0, cov / np.where(vf > 0, vf, 1), 0.0)
+        r = y - lam[:, None] * f
+        est = lam * fm + r.mean(1)
+        se = np.sqrt(fpc * r.var(1, ddof=1) / n)
+        df = n - 1
+    elif method == "ppi++cf":
+        h = n // 2
+        parts = [(slice(0, h), slice(h, n)), (slice(h, n), slice(0, h))]
+        ests, vars_ = [], []
+        lams = []
+        for fit, app in parts:
+            yf, ff = y[:, fit], f[:, fit]
+            fc = ff - ff.mean(1, keepdims=True)
+            vf = (fc ** 2).sum(1) / max(ff.shape[1] - 1, 1)
+            cov = (fc * (yf - yf.mean(1, keepdims=True))).sum(1) / max(ff.shape[1] - 1, 1)
+            lam_ = np.where(vf > 0, cov / np.where(vf > 0, vf, 1), 0.0)
+            r = y[:, app] - lam_[:, None] * f[:, app]
+            m = r.shape[1]
+            ests.append(lam_ * fm + r.mean(1))
+            vars_.append(r.var(1, ddof=1) / m)
+            lams.append(lam_)
+        est = (ests[0] + ests[1]) / 2
+        se = np.sqrt(fpc * (vars_[0] + vars_[1]) / 4)
+        df = n - 2
+        lam = (lams[0] + lams[1]) / 2
+    else:
+        raise ValueError(method)
+    t = float(_st.t.ppf(1 - alpha / 2, df))
+    return {"estimate": est, "lo": est - t * se, "hi": est + t * se, "width": 2 * t * se, "lam": lam}
+
+
+# ---------------------------------------------------------------------------
+# Bootstrap weights and multiplicity
+# ---------------------------------------------------------------------------
+
+
+def cluster_weights(clusters: Sequence, n_boot: int, seed: int = 0) -> np.ndarray:
+    """Bootstrap weight matrix (n_boot x n_items) that resamples clusters with replacement.
+
+    Each replicate draws as many clusters as there are, with replacement; an item's
+    weight is the number of times its cluster was drawn. A statistic that is a sum
+    over items becomes ``W @ x``. With every item its own cluster this is the ordinary
+    (multinomial) bootstrap.
+    """
+    codes, uniq = _codes(clusters)
+    k = len(uniq)
+    rng = np.random.default_rng(seed)
+    draws = rng.integers(0, k, size=(n_boot, k))
+    counts = np.zeros((n_boot, k))
+    np.add.at(counts, (np.repeat(np.arange(n_boot), k), draws.ravel()), 1)
+    return counts[:, codes]
+
+
+def _codes(x: Sequence) -> tuple[np.ndarray, list]:
+    uniq = sorted(set(x), key=str)
+    pos = {u: i for i, u in enumerate(uniq)}
+    return np.array([pos[v] for v in x]), uniq
+
+
+def boot_p(boot: np.ndarray, null: float = 0.0) -> float:
+    """Two-sided bootstrap p-value by CI inversion: 2 * min share on either side of the null,
+    with the (count + 1) / (B + 1) convention, so it is never reported as exactly 0."""
+    b = np.asarray(boot, float)
+    B = b.size
+    lo = ((b <= null).sum() + 1) / (B + 1)
+    hi = ((b >= null).sum() + 1) / (B + 1)
+    return float(min(1.0, 2 * min(lo, hi)))
+
+
+def holm(p: Sequence[float]) -> np.ndarray:
+    """Holm step-down adjusted p-values (family-wise error)."""
+    p = np.asarray(p, float)
+    order = np.argsort(p)
+    m = len(p)
+    adj = np.empty(m)
+    run = 0.0
+    for i, ix in enumerate(order):
+        run = max(run, min(1.0, (m - i) * p[ix]))
+        adj[ix] = run
+    return adj
+
+
+def bh(p: Sequence[float]) -> np.ndarray:
+    """Benjamini-Hochberg adjusted p-values (false discovery rate)."""
+    p = np.asarray(p, float)
+    m = len(p)
+    order = np.argsort(p)
+    ranked = p[order] * m / np.arange(1, m + 1)
+    adj = np.minimum.accumulate(ranked[::-1])[::-1]
+    out = np.empty(m)
+    out[order] = np.minimum(adj, 1.0)
+    return out

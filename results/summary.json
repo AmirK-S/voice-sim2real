@@ -1,310 +1,480 @@
 {
- "n_rows": 57080,
+ "n_rows": 73746,
  "voice_spread": [
   {
    "model": "parakeet-tdt-0.6b-v2",
    "condition": "clean",
-   "min": 0.014331946370781322,
-   "max": 0.05779010633379565,
-   "human": 0.01756819232547388,
-   "max_over_min": 4.032258064516129
+   "min": 0.013407304669440592,
+   "argmin": "kokoro:af_heart",
+   "max": 0.05224225612575127,
+   "argmax": "mms:eng",
+   "human": 0.016181229773462782,
+   "max_over_min": 3.896551724137931,
+   "ratio_lo": 3.0945945945945947,
+   "ratio_hi": 5.276657595249875
+  },
+  {
+   "model": "parakeet-tdt-0.6b-v2",
+   "condition": "g722-wb",
+   "min": 0.012713823393435044,
+   "argmin": "kokoro:am_michael",
+   "max": 0.05570966250577901,
+   "argmax": "mms:eng",
+   "human": 0.016181229773462782,
+   "max_over_min": 4.381818181818182,
+   "ratio_lo": 3.3835616438356166,
+   "ratio_hi": 6.176470588235294
+  },
+  {
+   "model": "parakeet-tdt-0.6b-v2",
+   "condition": "opus-nb",
+   "min": 0.013869625520110958,
+   "argmin": "kokoro:af_heart",
+   "max": 0.05570966250577901,
+   "argmax": "mms:eng",
+   "human": 0.019879796578825704,
+   "max_over_min": 4.016666666666667,
+   "ratio_lo": 3.1904611211573237,
+   "ratio_hi": 5.463495934959348
+  },
+  {
+   "model": "parakeet-tdt-0.6b-v2",
+   "condition": "opus-nb+loss5",
+   "min": 0.01502542764678687,
+   "argmin": "kokoro:af_heart",
+   "max": 0.05617198335644938,
+   "argmax": "mms:eng",
+   "human": 0.019417475728155338,
+   "max_over_min": 3.738461538461539,
+   "ratio_lo": 3.090909090909091,
+   "ratio_hi": 5.115441176470588
   },
   {
    "model": "parakeet-tdt-0.6b-v2",
    "condition": "phone",
-   "min": 0.01571890892279242,
-   "max": 0.055940822931114194,
-   "human": 0.01849283402681461,
-   "max_over_min": 3.5588235294117645
+   "min": 0.014794267221451687,
+   "argmin": "kokoro:af_heart",
+   "max": 0.05640314378178456,
+   "argmax": "mms:eng",
+   "human": 0.018030513176144243,
+   "max_over_min": 3.8125,
+   "ratio_lo": 3.026307245386193,
+   "ratio_hi": 5.381003039513677
   },
   {
    "model": "parakeet-tdt-0.6b-v2",
-   "condition": "phone+loss10",
-   "min": 0.01687471104946833,
-   "max": 0.061257512713823396,
-   "human": 0.020573277854831252,
-   "max_over_min": 3.6301369863013706
+   "condition": "phone+loss5",
+   "min": 0.01502542764678687,
+   "argmin": "kokoro:am_michael",
+   "max": 0.0584835876098012,
+   "argmax": "mms:eng",
+   "human": 0.018261673601479428,
+   "max_over_min": 3.8923076923076922,
+   "ratio_lo": 3.1066666666666665,
+   "ratio_hi": 5.522727272727273
   },
   {
    "model": "parakeet-tdt-0.6b-v2",
    "condition": "phone+muffle",
-   "min": 0.016181229773462782,
-   "max": 0.061488673139158574,
+   "min": 0.015487748497457236,
+   "argmin": "kokoro:af_heart",
+   "max": 0.060332871012482664,
+   "argmax": "mms:eng",
    "human": 0.021497919556171984,
-   "max_over_min": 3.8000000000000003
+   "max_over_min": 3.8955223880597014,
+   "ratio_lo": 3.0394127680311893,
+   "ratio_hi": 5.24490758567578
   },
   {
    "model": "parakeet-tdt-0.6b-v2",
    "condition": "phone+noise10",
-   "min": 0.02311604253351826,
-   "max": 0.0758206195099399,
-   "human": 0.03536754507628294,
-   "max_over_min": 3.2800000000000002
+   "min": 0.019648636153490523,
+   "argmin": "kokoro:am_michael",
+   "max": 0.07374017568192326,
+   "argmax": "mms:eng",
+   "human": 0.03629218677762367,
+   "max_over_min": 3.7529411764705882,
+   "ratio_lo": 3.059988095238095,
+   "ratio_hi": 4.757575757575757
   },
   {
    "model": "parakeet-tdt-0.6b-v2",
    "condition": "phone+noise5",
-   "min": 0.03629218677762367,
-   "max": 0.10841423948220065,
-   "human": 0.05894590846047157,
-   "max_over_min": 2.9872611464968153
+   "min": 0.02750809061488673,
+   "argmin": "kokoro:am_michael",
+   "max": 0.09223300970873786,
+   "argmax": "mms:eng",
+   "human": 0.06403143781784558,
+   "max_over_min": 3.3529411764705883,
+   "ratio_lo": 2.7884615384615383,
+   "ratio_hi": 4.117676179382643
   },
   {
    "model": "parakeet-tdt-0.6b-v2",
    "condition": "realistic",
-   "min": 0.025196486361534907,
-   "max": 0.0769764216366158,
-   "human": 0.03421174294960703,
-   "max_over_min": 3.0550458715596327
+   "min": 0.02473416551086454,
+   "argmin": "kokoro:am_michael",
+   "max": 0.07928802588996764,
+   "argmax": "mms:eng",
+   "human": 0.0372168284789644,
+   "max_over_min": 3.205607476635514,
+   "ratio_lo": 2.6209677419354844,
+   "ratio_hi": 3.989010989010989
   },
   {
    "model": "wav2vec2-base-960h",
    "condition": "clean",
-   "min": 0.026352288488210817,
-   "max": 0.1077207582061951,
-   "human": 0.03305594082293111,
-   "max_over_min": 4.087719298245615
+   "min": 0.023347202958853445,
+   "argmin": "kokoro:af_heart",
+   "max": 0.10494683310217291,
+   "argmax": "mms:eng",
+   "human": 0.03282478039759593,
+   "max_over_min": 4.495049504950495,
+   "ratio_lo": 3.6349171842650105,
+   "ratio_hi": 5.712328767123287
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "g722-wb",
+   "min": 0.028432732316227463,
+   "argmin": "kokoro:am_michael",
+   "max": 0.1130374479889043,
+   "argmax": "mms:eng",
+   "human": 0.03467406380027739,
+   "max_over_min": 3.975609756097561,
+   "ratio_lo": 3.335930670891608,
+   "ratio_hi": 4.940014851485149
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "opus-nb",
+   "min": 0.027739251040221916,
+   "argmin": "kokoro:af_heart",
+   "max": 0.12413314840499307,
+   "argmax": "mms:eng",
+   "human": 0.050855293573740176,
+   "max_over_min": 4.475,
+   "ratio_lo": 3.761538461538462,
+   "ratio_hi": 5.593406593406593
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "opus-nb+loss5",
+   "min": 0.03351826167360148,
+   "argmin": "kokoro:am_michael",
+   "max": 0.16134997688395747,
+   "argmax": "say:Daniel",
+   "human": 0.05825242718446602,
+   "max_over_min": 4.813793103448276,
+   "ratio_lo": 4.1437723347230495,
+   "ratio_hi": 5.919379817299458
   },
   {
    "model": "wav2vec2-base-960h",
    "condition": "phone",
-   "min": 0.02750809061488673,
-   "max": 0.14748035136384652,
-   "human": 0.048081368469717986,
-   "max_over_min": 5.3613445378151265
-  },
-  {
-   "model": "wav2vec2-base-960h",
-   "condition": "phone+loss10",
-   "min": 0.0319001386962552,
-   "max": 0.13106796116504854,
-   "human": 0.05547850208044383,
-   "max_over_min": 4.108695652173913
+   "min": 0.025427646786870088,
+   "argmin": "kokoro:af_heart",
+   "max": 0.12043458159963015,
+   "argmax": "mms:eng",
+   "human": 0.04184003698566805,
+   "max_over_min": 4.736363636363636,
+   "ratio_lo": 3.7986098621103124,
+   "ratio_hi": 6.0930912914398805
   },
   {
    "model": "wav2vec2-base-960h",
    "condition": "phone+loss5",
-   "min": 0.030282015718908924,
-   "max": 0.13337956541840038,
-   "human": 0.050855293573740176,
-   "max_over_min": 4.404580152671755
+   "min": 0.026583448913546002,
+   "argmin": "kokoro:af_heart",
+   "max": 0.12528895053166897,
+   "argmax": "mms:eng",
+   "human": 0.045538603791030974,
+   "max_over_min": 4.713043478260869,
+   "ratio_lo": 3.865371621621622,
+   "ratio_hi": 6.086988491048593
   },
   {
    "model": "wav2vec2-base-960h",
    "condition": "phone+muffle",
-   "min": 0.045538603791030974,
-   "max": 0.20527045769764216,
-   "human": 0.09269533055940823,
-   "max_over_min": 4.50761421319797
+   "min": 0.03906611188164586,
+   "argmin": "kokoro:af_heart",
+   "max": 0.2297734627831715,
+   "argmax": "say:Daniel",
+   "human": 0.07535829865926953,
+   "max_over_min": 5.881656804733728,
+   "ratio_lo": 4.939070675517376,
+   "ratio_hi": 7.134241277547718
   },
   {
    "model": "wav2vec2-base-960h",
    "condition": "phone+noise10",
-   "min": 0.18331021729079983,
-   "max": 0.48982894128525195,
-   "human": 0.32778548312528893,
-   "max_over_min": 2.6721311475409832
-  },
-  {
-   "model": "wav2vec2-base-960h",
-   "condition": "phone+noise20",
-   "min": 0.05016181229773463,
-   "max": 0.22122052704576978,
-   "human": 0.09315765141007859,
-   "max_over_min": 4.410138248847926
+   "min": 0.1144244105409154,
+   "argmin": "kokoro:af_heart",
+   "max": 0.39389736477115117,
+   "argmax": "say:Daniel",
+   "human": 0.2741562644475266,
+   "max_over_min": 3.4424242424242424,
+   "ratio_lo": 3.0847736211917076,
+   "ratio_hi": 3.83975
   },
   {
    "model": "wav2vec2-base-960h",
    "condition": "phone+noise5",
-   "min": 0.45168747110494684,
-   "max": 0.7096625057790107,
-   "human": 0.5501618122977346,
-   "max_over_min": 1.571136131013306
+   "min": 0.3305594082293111,
+   "argmin": "kokoro:af_heart",
+   "max": 0.6553398058252428,
+   "argmax": "say:Daniel",
+   "human": 0.5494683310217291,
+   "max_over_min": 1.9825174825174827,
+   "ratio_lo": 1.8688754901497615,
+   "ratio_hi": 2.1008628456655587
   },
   {
    "model": "wav2vec2-base-960h",
    "condition": "realistic",
-   "min": 0.18331021729079983,
-   "max": 0.4576976421636616,
-   "human": 0.2942672214516875,
-   "max_over_min": 2.4968474148802016
+   "min": 0.12667591308368006,
+   "argmin": "kokoro:af_heart",
+   "max": 0.4114655570966251,
+   "argmax": "say:Daniel",
+   "human": 0.26005547850208044,
+   "max_over_min": 3.248175182481752,
+   "ratio_lo": 2.837057646202017,
+   "ratio_hi": 3.702144749209604
   },
   {
    "model": "whisper-large-v3-turbo",
    "condition": "clean",
-   "min": 0.018261673601479428,
-   "max": 0.06934812760055478,
-   "human": 0.019417475728155338,
-   "max_over_min": 3.7974683544303796
+   "min": 0.016181229773462782,
+   "argmin": "kokoro:am_michael",
+   "max": 0.06588072122052704,
+   "argmax": "mms:eng",
+   "human": 0.019879796578825704,
+   "max_over_min": 4.071428571428572,
+   "ratio_lo": 3.2,
+   "ratio_hi": 5.863636363636362
   },
   {
    "model": "whisper-large-v3-turbo",
    "condition": "phone",
-   "min": 0.016412390198797967,
-   "max": 0.06842348589921406,
-   "human": 0.020804438280166437,
-   "max_over_min": 4.169014084507042
+   "min": 0.015487748497457236,
+   "argmin": "kokoro:am_michael",
+   "max": 0.07004160887656033,
+   "argmax": "mms:eng",
+   "human": 0.019648636153490523,
+   "max_over_min": 4.522388059701492,
+   "ratio_lo": 3.714285714285714,
+   "ratio_hi": 6.255966223698779
   },
   {
    "model": "whisper-large-v3-turbo",
    "condition": "phone+noise10",
-   "min": 0.02727693018955155,
-   "max": 0.09107720758206195,
-   "human": 0.04184003698566805,
-   "max_over_min": 3.3389830508474576
+   "min": 0.02288488210818308,
+   "argmin": "kokoro:am_michael",
+   "max": 0.09454461396208969,
+   "argmax": "mms:eng",
+   "human": 0.041146555709662504,
+   "max_over_min": 4.1313131313131315,
+   "ratio_lo": 3.3508771929824563,
+   "ratio_hi": 5.32001282051282
   },
   {
    "model": "whisper-large-v3-turbo",
    "condition": "realistic",
-   "min": 0.030975496994914472,
-   "max": 0.08992140545538604,
-   "human": 0.04230235783633842,
-   "max_over_min": 2.9029850746268657
+   "min": 0.026352288488210817,
+   "argmin": "kokoro:am_michael",
+   "max": 0.09754969949144707,
+   "argmax": "mms:eng",
+   "human": 0.043226999537679146,
+   "max_over_min": 3.7017543859649127,
+   "ratio_lo": 3.1269811656005686,
+   "ratio_hi": 4.479611844737895
   }
+ ],
+ "keyword_instances_scored": 105,
+ "keyword_sentences_scored": 78,
+ "keyword_instances_benign_excluded": 6,
+ "call_scripts_without_keyword": [
+  "I slipped in the shower and I think my leg is broken.",
+  "I tripped on the rug and hit my head."
  ],
  "human_wer": [
   {
    "model": "parakeet-tdt-0.6b-v2",
    "condition": "clean",
-   "wer": 0.01756819232547388,
-   "lo": 0.012885383266939564,
-   "hi": 0.022748943015676606
+   "wer": 0.016181229773462782,
+   "lo": 0.011702585000945669,
+   "hi": 0.021078959414973154
   },
   {
    "model": "wav2vec2-base-960h",
    "condition": "clean",
-   "wer": 0.03305594082293111,
-   "lo": 0.02622211910286156,
-   "hi": 0.04017016048934938
+   "wer": 0.03282478039759593,
+   "lo": 0.0265676576281627,
+   "hi": 0.03904455672944419
   },
   {
    "model": "whisper-large-v3-turbo",
    "condition": "clean",
+   "wer": 0.019879796578825704,
+   "lo": 0.014245578425267403,
+   "hi": 0.025872241760092222
+  },
+  {
+   "model": "parakeet-tdt-0.6b-v2",
+   "condition": "g722-wb",
+   "wer": 0.016181229773462782,
+   "lo": 0.011502240797961244,
+   "hi": 0.021295892661595962
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "g722-wb",
+   "wer": 0.03467406380027739,
+   "lo": 0.027859505062230523,
+   "hi": 0.041622812318206255
+  },
+  {
+   "model": "parakeet-tdt-0.6b-v2",
+   "condition": "opus-nb",
+   "wer": 0.019879796578825704,
+   "lo": 0.014870675826343,
+   "hi": 0.025365691530659356
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "opus-nb",
+   "wer": 0.050855293573740176,
+   "lo": 0.04163732748169542,
+   "hi": 0.060390043425602384
+  },
+  {
+   "model": "parakeet-tdt-0.6b-v2",
+   "condition": "opus-nb+loss5",
    "wer": 0.019417475728155338,
-   "lo": 0.014648638403701248,
-   "hi": 0.024699611243596497
+   "lo": 0.014377740932617667,
+   "hi": 0.02484038643085686
+  },
+  {
+   "model": "wav2vec2-base-960h",
+   "condition": "opus-nb+loss5",
+   "wer": 0.05825242718446602,
+   "lo": 0.04776716073621338,
+   "hi": 0.06869047828599001
   },
   {
    "model": "parakeet-tdt-0.6b-v2",
    "condition": "phone",
-   "wer": 0.01849283402681461,
-   "lo": 0.013649387897134015,
-   "hi": 0.023938074698009845
+   "wer": 0.018030513176144243,
+   "lo": 0.013081021108951119,
+   "hi": 0.02342678319066718
   },
   {
    "model": "wav2vec2-base-960h",
    "condition": "phone",
-   "wer": 0.048081368469717986,
-   "lo": 0.03985507246376811,
-   "hi": 0.05650786245041717
+   "wer": 0.04184003698566805,
+   "lo": 0.03399757230770253,
+   "hi": 0.04975279482173569
   },
   {
    "model": "whisper-large-v3-turbo",
    "condition": "phone",
-   "wer": 0.020804438280166437,
-   "lo": 0.015785803325546542,
-   "hi": 0.026496761711452193
+   "wer": 0.019648636153490523,
+   "lo": 0.01434515070778359,
+   "hi": 0.025444332911447643
   },
   {
    "model": "parakeet-tdt-0.6b-v2",
-   "condition": "phone+loss10",
-   "wer": 0.020573277854831252,
-   "lo": 0.015186290940607753,
-   "hi": 0.02660458932697933
-  },
-  {
-   "model": "wav2vec2-base-960h",
-   "condition": "phone+loss10",
-   "wer": 0.05547850208044383,
-   "lo": 0.046287753666520236,
-   "hi": 0.06510670123653768
+   "condition": "phone+loss5",
+   "wer": 0.018261673601479428,
+   "lo": 0.013305788337278369,
+   "hi": 0.023550342669945174
   },
   {
    "model": "wav2vec2-base-960h",
    "condition": "phone+loss5",
-   "wer": 0.050855293573740176,
-   "lo": 0.04258157361279435,
-   "hi": 0.05930978692076559
+   "wer": 0.045538603791030974,
+   "lo": 0.037278546081190835,
+   "hi": 0.05379675216690114
   },
   {
    "model": "parakeet-tdt-0.6b-v2",
    "condition": "phone+muffle",
    "wer": 0.021497919556171984,
-   "lo": 0.01657334695729729,
-   "hi": 0.02699417075090993
+   "lo": 0.0164382768899036,
+   "hi": 0.02683829589395296
   },
   {
    "model": "wav2vec2-base-960h",
    "condition": "phone+muffle",
-   "wer": 0.09269533055940823,
-   "lo": 0.08019172925294839,
-   "hi": 0.10586019968023903
+   "wer": 0.07535829865926953,
+   "lo": 0.06350284272671462,
+   "hi": 0.0885861576153532
   },
   {
    "model": "parakeet-tdt-0.6b-v2",
    "condition": "phone+noise10",
-   "wer": 0.03536754507628294,
-   "lo": 0.027883966719136496,
-   "hi": 0.04351830531890399
+   "wer": 0.03629218677762367,
+   "lo": 0.02914796977835957,
+   "hi": 0.04389089521658554
   },
   {
    "model": "wav2vec2-base-960h",
    "condition": "phone+noise10",
-   "wer": 0.32778548312528893,
-   "lo": 0.2931894593601251,
-   "hi": 0.36361528483407196
+   "wer": 0.2741562644475266,
+   "lo": 0.2389233066831162,
+   "hi": 0.3126420766841318
   },
   {
    "model": "whisper-large-v3-turbo",
    "condition": "phone+noise10",
-   "wer": 0.04184003698566805,
-   "lo": 0.034004048194445975,
-   "hi": 0.05026469009027148
-  },
-  {
-   "model": "wav2vec2-base-960h",
-   "condition": "phone+noise20",
-   "wer": 0.09315765141007859,
-   "lo": 0.07998178840541091,
-   "hi": 0.10668236487037776
+   "wer": 0.041146555709662504,
+   "lo": 0.03125581859877744,
+   "hi": 0.052162624280478694
   },
   {
    "model": "parakeet-tdt-0.6b-v2",
    "condition": "phone+noise5",
-   "wer": 0.05894590846047157,
-   "lo": 0.047906907116000555,
-   "hi": 0.07052356930813129
+   "wer": 0.06403143781784558,
+   "lo": 0.05292845867340389,
+   "hi": 0.07639297874899967
   },
   {
    "model": "wav2vec2-base-960h",
    "condition": "phone+noise5",
-   "wer": 0.5501618122977346,
-   "lo": 0.5052927951689272,
-   "hi": 0.5960615078214837
+   "wer": 0.5494683310217291,
+   "lo": 0.5100679425190355,
+   "hi": 0.5909966096853159
   },
   {
    "model": "parakeet-tdt-0.6b-v2",
    "condition": "realistic",
-   "wer": 0.03421174294960703,
-   "lo": 0.027287481738006977,
-   "hi": 0.04178655451313355
+   "wer": 0.0372168284789644,
+   "lo": 0.029863162854668637,
+   "hi": 0.045562977099236644
   },
   {
    "model": "wav2vec2-base-960h",
    "condition": "realistic",
-   "wer": 0.2942672214516875,
-   "lo": 0.2624517272242053,
-   "hi": 0.3276175558585873
+   "wer": 0.26005547850208044,
+   "lo": 0.23194506926040503,
+   "hi": 0.29066806582399235
   },
   {
    "model": "whisper-large-v3-turbo",
    "condition": "realistic",
-   "wer": 0.04230235783633842,
-   "lo": 0.03440228211689713,
-   "hi": 0.051146497246241485
+   "wer": 0.043226999537679146,
+   "lo": 0.03445808759625037,
+   "hi": 0.05286402112095715
   }
  ],
- "n_flips": 3,
- "n_confident_flips": 0,
- "n_flip_cells": 120
+ "decisions_voice_level": 126,
+ "did_nominal_p05": 81,
+ "did_holm_p05": 60,
+ "flips": 1,
+ "confident_flips": 0,
+ "cells_run": {
+  "parakeet-tdt-0.6b-v2": 10,
+  "wav2vec2-base-960h": 10,
+  "whisper-large-v3-turbo": 4
+ }
 }

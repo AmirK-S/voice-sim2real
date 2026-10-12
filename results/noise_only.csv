@@ -1,0 +1,301 @@
+clip,noise_group,hyp,model,hyp_norm,n_words
+0,street,,parakeet-tdt-0.6b-v2,,0
+1,rain,,parakeet-tdt-0.6b-v2,,0
+2,crowd,Ha ha ha ha ha ha.,parakeet-tdt-0.6b-v2,ha ha ha ha ha ha,6
+3,home,,parakeet-tdt-0.6b-v2,,0
+4,street,,parakeet-tdt-0.6b-v2,,0
+5,rain,,parakeet-tdt-0.6b-v2,,0
+6,crowd,,parakeet-tdt-0.6b-v2,,0
+7,home,,parakeet-tdt-0.6b-v2,,0
+8,street,,parakeet-tdt-0.6b-v2,,0
+9,rain,,parakeet-tdt-0.6b-v2,,0
+10,crowd,,parakeet-tdt-0.6b-v2,,0
+11,home,,parakeet-tdt-0.6b-v2,,0
+12,street,,parakeet-tdt-0.6b-v2,,0
+13,rain,,parakeet-tdt-0.6b-v2,,0
+14,crowd,,parakeet-tdt-0.6b-v2,,0
+15,home,,parakeet-tdt-0.6b-v2,,0
+16,street,,parakeet-tdt-0.6b-v2,,0
+17,rain,,parakeet-tdt-0.6b-v2,,0
+18,crowd,,parakeet-tdt-0.6b-v2,,0
+19,home,,parakeet-tdt-0.6b-v2,,0
+20,street,,parakeet-tdt-0.6b-v2,,0
+21,rain,,parakeet-tdt-0.6b-v2,,0
+22,crowd,,parakeet-tdt-0.6b-v2,,0
+23,home,,parakeet-tdt-0.6b-v2,,0
+24,street,,parakeet-tdt-0.6b-v2,,0
+25,rain,,parakeet-tdt-0.6b-v2,,0
+26,crowd,,parakeet-tdt-0.6b-v2,,0
+27,home,,parakeet-tdt-0.6b-v2,,0
+28,street,,parakeet-tdt-0.6b-v2,,0
+29,rain,,parakeet-tdt-0.6b-v2,,0
+30,crowd,,parakeet-tdt-0.6b-v2,,0
+31,home,,parakeet-tdt-0.6b-v2,,0
+32,street,,parakeet-tdt-0.6b-v2,,0
+33,rain,,parakeet-tdt-0.6b-v2,,0
+34,crowd,,parakeet-tdt-0.6b-v2,,0
+35,home,,parakeet-tdt-0.6b-v2,,0
+36,street,,parakeet-tdt-0.6b-v2,,0
+37,rain,,parakeet-tdt-0.6b-v2,,0
+38,crowd,,parakeet-tdt-0.6b-v2,,0
+39,home,,parakeet-tdt-0.6b-v2,,0
+40,street,,parakeet-tdt-0.6b-v2,,0
+41,rain,,parakeet-tdt-0.6b-v2,,0
+42,crowd,Um,parakeet-tdt-0.6b-v2,,0
+43,home,,parakeet-tdt-0.6b-v2,,0
+44,street,,parakeet-tdt-0.6b-v2,,0
+45,rain,,parakeet-tdt-0.6b-v2,,0
+46,crowd,,parakeet-tdt-0.6b-v2,,0
+47,home,,parakeet-tdt-0.6b-v2,,0
+48,street,,parakeet-tdt-0.6b-v2,,0
+49,rain,,parakeet-tdt-0.6b-v2,,0
+50,crowd,,parakeet-tdt-0.6b-v2,,0
+51,home,,parakeet-tdt-0.6b-v2,,0
+52,street,,parakeet-tdt-0.6b-v2,,0
+53,rain,,parakeet-tdt-0.6b-v2,,0
+54,crowd,,parakeet-tdt-0.6b-v2,,0
+55,home,,parakeet-tdt-0.6b-v2,,0
+56,street,,parakeet-tdt-0.6b-v2,,0
+57,rain,,parakeet-tdt-0.6b-v2,,0
+58,crowd,,parakeet-tdt-0.6b-v2,,0
+59,home,,parakeet-tdt-0.6b-v2,,0
+60,street,,parakeet-tdt-0.6b-v2,,0
+61,rain,,parakeet-tdt-0.6b-v2,,0
+62,crowd,,parakeet-tdt-0.6b-v2,,0
+63,home,,parakeet-tdt-0.6b-v2,,0
+64,street,,parakeet-tdt-0.6b-v2,,0
+65,rain,,parakeet-tdt-0.6b-v2,,0
+66,crowd,,parakeet-tdt-0.6b-v2,,0
+67,home,,parakeet-tdt-0.6b-v2,,0
+68,street,,parakeet-tdt-0.6b-v2,,0
+69,rain,,parakeet-tdt-0.6b-v2,,0
+70,crowd,,parakeet-tdt-0.6b-v2,,0
+71,home,,parakeet-tdt-0.6b-v2,,0
+72,street,,parakeet-tdt-0.6b-v2,,0
+73,rain,,parakeet-tdt-0.6b-v2,,0
+74,crowd,,parakeet-tdt-0.6b-v2,,0
+75,home,,parakeet-tdt-0.6b-v2,,0
+76,street,,parakeet-tdt-0.6b-v2,,0
+77,rain,,parakeet-tdt-0.6b-v2,,0
+78,crowd,,parakeet-tdt-0.6b-v2,,0
+79,home,,parakeet-tdt-0.6b-v2,,0
+80,street,,parakeet-tdt-0.6b-v2,,0
+81,rain,,parakeet-tdt-0.6b-v2,,0
+82,crowd,,parakeet-tdt-0.6b-v2,,0
+83,home,,parakeet-tdt-0.6b-v2,,0
+84,street,,parakeet-tdt-0.6b-v2,,0
+85,rain,,parakeet-tdt-0.6b-v2,,0
+86,crowd,,parakeet-tdt-0.6b-v2,,0
+87,home,,parakeet-tdt-0.6b-v2,,0
+88,street,,parakeet-tdt-0.6b-v2,,0
+89,rain,,parakeet-tdt-0.6b-v2,,0
+90,crowd,"Oh, ready for",parakeet-tdt-0.6b-v2,0 ready for,3
+91,home,,parakeet-tdt-0.6b-v2,,0
+92,street,,parakeet-tdt-0.6b-v2,,0
+93,rain,,parakeet-tdt-0.6b-v2,,0
+94,crowd,,parakeet-tdt-0.6b-v2,,0
+95,home,,parakeet-tdt-0.6b-v2,,0
+96,street,,parakeet-tdt-0.6b-v2,,0
+97,rain,,parakeet-tdt-0.6b-v2,,0
+98,crowd,,parakeet-tdt-0.6b-v2,,0
+99,home,,parakeet-tdt-0.6b-v2,,0
+0,street,,wav2vec2-base-960h,,0
+1,rain,,wav2vec2-base-960h,,0
+2,crowd,,wav2vec2-base-960h,,0
+3,home,,wav2vec2-base-960h,,0
+4,street,ACA,wav2vec2-base-960h,aca,1
+5,rain,,wav2vec2-base-960h,,0
+6,crowd,THRE,wav2vec2-base-960h,thre,1
+7,home,,wav2vec2-base-960h,,0
+8,street,,wav2vec2-base-960h,,0
+9,rain,,wav2vec2-base-960h,,0
+10,crowd,A AA,wav2vec2-base-960h,a aa,2
+11,home,,wav2vec2-base-960h,,0
+12,street,BAA,wav2vec2-base-960h,baa,1
+13,rain,,wav2vec2-base-960h,,0
+14,crowd,,wav2vec2-base-960h,,0
+15,home,,wav2vec2-base-960h,,0
+16,street,,wav2vec2-base-960h,,0
+17,rain,,wav2vec2-base-960h,,0
+18,crowd,,wav2vec2-base-960h,,0
+19,home,,wav2vec2-base-960h,,0
+20,street,,wav2vec2-base-960h,,0
+21,rain,,wav2vec2-base-960h,,0
+22,crowd,BA A,wav2vec2-base-960h,ba a,2
+23,home,,wav2vec2-base-960h,,0
+24,street,,wav2vec2-base-960h,,0
+25,rain,,wav2vec2-base-960h,,0
+26,crowd,,wav2vec2-base-960h,,0
+27,home,,wav2vec2-base-960h,,0
+28,street,,wav2vec2-base-960h,,0
+29,rain,,wav2vec2-base-960h,,0
+30,crowd,AIT AN WO WOD WE,wav2vec2-base-960h,ait an wo wod we,5
+31,home,,wav2vec2-base-960h,,0
+32,street,,wav2vec2-base-960h,,0
+33,rain,,wav2vec2-base-960h,,0
+34,crowd,,wav2vec2-base-960h,,0
+35,home,,wav2vec2-base-960h,,0
+36,street,,wav2vec2-base-960h,,0
+37,rain,,wav2vec2-base-960h,,0
+38,crowd,,wav2vec2-base-960h,,0
+39,home,,wav2vec2-base-960h,,0
+40,street,,wav2vec2-base-960h,,0
+41,rain,,wav2vec2-base-960h,,0
+42,crowd,AIN I,wav2vec2-base-960h,ain i,2
+43,home,,wav2vec2-base-960h,,0
+44,street,,wav2vec2-base-960h,,0
+45,rain,,wav2vec2-base-960h,,0
+46,crowd,,wav2vec2-base-960h,,0
+47,home,,wav2vec2-base-960h,,0
+48,street,,wav2vec2-base-960h,,0
+49,rain,,wav2vec2-base-960h,,0
+50,crowd,RANHE,wav2vec2-base-960h,ranhe,1
+51,home,,wav2vec2-base-960h,,0
+52,street,,wav2vec2-base-960h,,0
+53,rain,,wav2vec2-base-960h,,0
+54,crowd,,wav2vec2-base-960h,,0
+55,home,,wav2vec2-base-960h,,0
+56,street,,wav2vec2-base-960h,,0
+57,rain,,wav2vec2-base-960h,,0
+58,crowd,E ME EE E,wav2vec2-base-960h,e me ee e,4
+59,home,,wav2vec2-base-960h,,0
+60,street,,wav2vec2-base-960h,,0
+61,rain,,wav2vec2-base-960h,,0
+62,crowd,,wav2vec2-base-960h,,0
+63,home,,wav2vec2-base-960h,,0
+64,street,,wav2vec2-base-960h,,0
+65,rain,,wav2vec2-base-960h,,0
+66,crowd,TA,wav2vec2-base-960h,ta,1
+67,home,,wav2vec2-base-960h,,0
+68,street,IND,wav2vec2-base-960h,ind,1
+69,rain,,wav2vec2-base-960h,,0
+70,crowd,Y O,wav2vec2-base-960h,y 0,2
+71,home,,wav2vec2-base-960h,,0
+72,street,,wav2vec2-base-960h,,0
+73,rain,,wav2vec2-base-960h,,0
+74,crowd,AAT AN AN AN,wav2vec2-base-960h,aat an an an,4
+75,home,,wav2vec2-base-960h,,0
+76,street,ESSSSSSOSSO,wav2vec2-base-960h,essssssosso,1
+77,rain,,wav2vec2-base-960h,,0
+78,crowd,A P P,wav2vec2-base-960h,a p p,3
+79,home,,wav2vec2-base-960h,,0
+80,street,,wav2vec2-base-960h,,0
+81,rain,,wav2vec2-base-960h,,0
+82,crowd,O WEN I CA,wav2vec2-base-960h,0 wen i ca,4
+83,home,,wav2vec2-base-960h,,0
+84,street,,wav2vec2-base-960h,,0
+85,rain,,wav2vec2-base-960h,,0
+86,crowd,A,wav2vec2-base-960h,a,1
+87,home,,wav2vec2-base-960h,,0
+88,street,OOS,wav2vec2-base-960h,oos,1
+89,rain,,wav2vec2-base-960h,,0
+90,crowd,LU AN  ME A E,wav2vec2-base-960h,lu an me a e,5
+91,home,,wav2vec2-base-960h,,0
+92,street,,wav2vec2-base-960h,,0
+93,rain,,wav2vec2-base-960h,,0
+94,crowd,,wav2vec2-base-960h,,0
+95,home,,wav2vec2-base-960h,,0
+96,street,AA A A,wav2vec2-base-960h,aa a a,3
+97,rain,,wav2vec2-base-960h,,0
+98,crowd,A,wav2vec2-base-960h,a,1
+99,home,,wav2vec2-base-960h,,0
+0,street,.,whisper-large-v3-turbo,,0
+1,rain,Thank you.,whisper-large-v3-turbo,thank you,2
+2,crowd,Thank you.,whisper-large-v3-turbo,thank you,2
+3,home,.,whisper-large-v3-turbo,,0
+4,street,.,whisper-large-v3-turbo,,0
+5,rain,Thank you.,whisper-large-v3-turbo,thank you,2
+6,crowd,Ah!,whisper-large-v3-turbo,ah,1
+7,home,.,whisper-large-v3-turbo,,0
+8,street,.,whisper-large-v3-turbo,,0
+9,rain,.,whisper-large-v3-turbo,,0
+10,crowd,.,whisper-large-v3-turbo,,0
+11,home,.,whisper-large-v3-turbo,,0
+12,street,.,whisper-large-v3-turbo,,0
+13,rain,.,whisper-large-v3-turbo,,0
+14,crowd,.,whisper-large-v3-turbo,,0
+15,home,.,whisper-large-v3-turbo,,0
+16,street,.,whisper-large-v3-turbo,,0
+17,rain,.,whisper-large-v3-turbo,,0
+18,crowd,Thank you.,whisper-large-v3-turbo,thank you,2
+19,home,.,whisper-large-v3-turbo,,0
+20,street,.,whisper-large-v3-turbo,,0
+21,rain,.,whisper-large-v3-turbo,,0
+22,crowd,Ha ha ha!,whisper-large-v3-turbo,ha ha ha,3
+23,home,.,whisper-large-v3-turbo,,0
+24,street,Thank you.,whisper-large-v3-turbo,thank you,2
+25,rain,.,whisper-large-v3-turbo,,0
+26,crowd,Thank you.,whisper-large-v3-turbo,thank you,2
+27,home,.,whisper-large-v3-turbo,,0
+28,street,.,whisper-large-v3-turbo,,0
+29,rain,Thank you.,whisper-large-v3-turbo,thank you,2
+30,crowd,.,whisper-large-v3-turbo,,0
+31,home,.,whisper-large-v3-turbo,,0
+32,street,¶¶,whisper-large-v3-turbo,,0
+33,rain,.,whisper-large-v3-turbo,,0
+34,crowd,Thank you.,whisper-large-v3-turbo,thank you,2
+35,home,.,whisper-large-v3-turbo,,0
+36,street,.,whisper-large-v3-turbo,,0
+37,rain,Thank you.,whisper-large-v3-turbo,thank you,2
+38,crowd,Thank you.,whisper-large-v3-turbo,thank you,2
+39,home,.,whisper-large-v3-turbo,,0
+40,street,.,whisper-large-v3-turbo,,0
+41,rain,.,whisper-large-v3-turbo,,0
+42,crowd,Um...,whisper-large-v3-turbo,,0
+43,home,.,whisper-large-v3-turbo,,0
+44,street,Thank you.,whisper-large-v3-turbo,thank you,2
+45,rain,Thank you.,whisper-large-v3-turbo,thank you,2
+46,crowd,Thank you.,whisper-large-v3-turbo,thank you,2
+47,home,.,whisper-large-v3-turbo,,0
+48,street,.,whisper-large-v3-turbo,,0
+49,rain,.,whisper-large-v3-turbo,,0
+50,crowd,Whee!,whisper-large-v3-turbo,whee,1
+51,home,Thank you.,whisper-large-v3-turbo,thank you,2
+52,street,Thank you.,whisper-large-v3-turbo,thank you,2
+53,rain,.,whisper-large-v3-turbo,,0
+54,crowd,Thank you.,whisper-large-v3-turbo,thank you,2
+55,home,.,whisper-large-v3-turbo,,0
+56,street,.,whisper-large-v3-turbo,,0
+57,rain,Thank you.,whisper-large-v3-turbo,thank you,2
+58,crowd,Ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha,whisper-large-v3-turbo,ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha,223
+59,home,.,whisper-large-v3-turbo,,0
+60,street,.,whisper-large-v3-turbo,,0
+61,rain,Thank you.,whisper-large-v3-turbo,thank you,2
+62,crowd,Thank you.,whisper-large-v3-turbo,thank you,2
+63,home,.,whisper-large-v3-turbo,,0
+64,street,.,whisper-large-v3-turbo,,0
+65,rain,Thank you.,whisper-large-v3-turbo,thank you,2
+66,crowd,. . .,whisper-large-v3-turbo,,0
+67,home,Thank you.,whisper-large-v3-turbo,thank you,2
+68,street,.,whisper-large-v3-turbo,,0
+69,rain,.,whisper-large-v3-turbo,,0
+70,crowd,Oh,whisper-large-v3-turbo,0,1
+71,home,.,whisper-large-v3-turbo,,0
+72,street,.,whisper-large-v3-turbo,,0
+73,rain,.,whisper-large-v3-turbo,,0
+74,crowd,Thank you.,whisper-large-v3-turbo,thank you,2
+75,home,.,whisper-large-v3-turbo,,0
+76,street,.,whisper-large-v3-turbo,,0
+77,rain,.,whisper-large-v3-turbo,,0
+78,crowd,Oh,whisper-large-v3-turbo,0,1
+79,home,.,whisper-large-v3-turbo,,0
+80,street,.,whisper-large-v3-turbo,,0
+81,rain,Thank you.,whisper-large-v3-turbo,thank you,2
+82,crowd,Thank you.,whisper-large-v3-turbo,thank you,2
+83,home,.,whisper-large-v3-turbo,,0
+84,street,Thank you.,whisper-large-v3-turbo,thank you,2
+85,rain,.,whisper-large-v3-turbo,,0
+86,crowd,.,whisper-large-v3-turbo,,0
+87,home,.,whisper-large-v3-turbo,,0
+88,street,.,whisper-large-v3-turbo,,0
+89,rain,.,whisper-large-v3-turbo,,0
+90,crowd,!,whisper-large-v3-turbo,,0
+91,home,.,whisper-large-v3-turbo,,0
+92,street,.,whisper-large-v3-turbo,,0
+93,rain,.,whisper-large-v3-turbo,,0
+94,crowd,Thank you.,whisper-large-v3-turbo,thank you,2
+95,home,.,whisper-large-v3-turbo,,0
+96,street,¶¶,whisper-large-v3-turbo,,0
+97,rain,.,whisper-large-v3-turbo,,0
+98,crowd,Weeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee,whisper-large-v3-turbo,weeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee,1
+99,home,.,whisper-large-v3-turbo,,0

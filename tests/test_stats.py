@@ -108,9 +108,9 @@ def test_decision_flip_detects_flipped_voice():
     assert r["human"]["winner"] == "A"
     assert r["human"]["p_winner_stable"] > 0.99
     assert not r["conditions"]["voice_same"]["flip"]
-    assert r["conditions"]["voice_same"]["p_flip"] < 0.01
+    assert r["conditions"]["voice_same"]["share_sign_disagree"] < 0.01
     assert r["conditions"]["voice_flip"]["flip"]
-    assert r["conditions"]["voice_flip"]["p_flip"] > 0.99
+    assert r["conditions"]["voice_flip"]["share_sign_disagree"] > 0.99
     assert r["conditions"]["voice_flip"]["paired_with_human"]
 
 
@@ -120,7 +120,7 @@ def test_decision_flip_near_tie_is_uncertain():
     diff = rng.gamma(2, 0.05, n)
     data = {"human": _scores(rng, n, 0.10, 0.10, diff), "tts": _scores(rng, n, 0.10, 0.10, diff)}
     r = S.decision_flip(data, n=2000, seed=0)
-    assert 0.1 < r["conditions"]["tts"]["p_flip"] < 0.9
+    assert 0.1 < r["conditions"]["tts"]["share_sign_disagree"] < 0.9
 
 
 # --- PPI --------------------------------------------------------------------
@@ -170,6 +170,39 @@ def test_ppi_power_tuning_with_useless_proxy():
         r = S.ppi_mean(y, f, fu, power_tuning=True)
         hits += r["lo"] <= 0.2 <= r["hi"]
         ratios.append(r["width_ratio"])
-        assert 0 <= r["lam"] <= 1
+        assert abs(r["lam"]) < 1.5  # plug-in lam, not clipped
     assert hits / reps >= 0.90
     assert np.median(ratios) < 1.1
+
+
+def test_ppi_finite_population_coverage_all_methods():
+    """Finite population of 250 items; label n by SRSWOR; every method covers about 95 %."""
+    rng = np.random.default_rng(7)
+    N = 250
+    diff = rng.gamma(1.5, 0.05, N)
+    y = np.clip(diff + rng.normal(0, 0.03, N), 0, None)
+    f = np.clip(0.8 * diff + 0.02 + rng.normal(0, 0.03, N), 0, None)
+    truth = y.mean()
+    for n in (25, 50):
+        lab = np.array([rng.choice(N, n, replace=False) for _ in range(2000)])
+        for meth in ("naive", "ppi", "ppi++", "ppi++cf"):
+            r = S.ppi_mean_finite(y[lab], f[lab], f.mean(), N, method=meth)
+            cov = np.mean((r["lo"] <= truth) & (truth <= r["hi"]))
+            assert 0.91 <= cov <= 0.99, (n, meth, cov)
+
+
+def test_cluster_weights_rows_sum_to_items_in_expectation():
+    clusters = np.repeat(np.arange(10), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+    W = S.cluster_weights(clusters, 4000, seed=1)
+    assert W.shape == (4000, len(clusters))
+    # each cluster is drawn 1 time on average, so an item's mean weight is 1
+    assert np.allclose(W.mean(0), 1, atol=0.05)
+    # items of one cluster always share a weight
+    assert np.all(W[:, 0] >= 0) and np.all(W[:, 1] == W[:, 2])
+
+
+def test_holm_and_bh():
+    p = [0.01, 0.04, 0.03, 0.5]
+    assert np.allclose(S.holm(p), [0.04, 0.09, 0.09, 0.5])
+    assert np.allclose(S.bh(p), [0.04, 0.0533333, 0.0533333, 0.5], atol=1e-6)
+    assert S.boot_p(np.ones(9999)) == 2 / 10000

@@ -58,11 +58,15 @@ def resolve(model_id: str) -> str:
 @lru_cache(maxsize=1)
 def _whisper_normalizer():
     """Whisper's English normalizer from transformers (number words -> digits, contractions,
-    fillers). The British-to-American spelling map is not shipped locally, so it is empty."""
+    fillers), with Whisper's British-to-American spelling map (1,739 entries, vendored from
+    openai-whisper 20250625, MIT licence, as whisper_english_spelling.json)."""
     try:
+        import json
+
         from transformers.models.whisper.english_normalizer import EnglishTextNormalizer
 
-        return EnglishTextNormalizer({})
+        spelling = json.loads((Path(__file__).parent / "whisper_english_spelling.json").read_text())
+        return EnglishTextNormalizer(spelling)
     except Exception:  # pragma: no cover, fallback keeps scoring usable
         return None
 

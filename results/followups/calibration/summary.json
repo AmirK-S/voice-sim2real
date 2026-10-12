@@ -1,0 +1,38 @@
+{
+  "q2_reference_full_250": {
+    "clean": {
+      "diff": 0.0036985668053629217,
+      "lo": 0.0012299594385924214,
+      "hi": 0.006666820064427058,
+      "decision": "B"
+    },
+    "phone": {
+      "diff": 0.0016181229773462784,
+      "lo": -0.002336560473196723,
+      "hi": 0.00571711031020504,
+      "decision": "none"
+    },
+    "phone+noise10": {
+      "diff": 0.0048543689320388345,
+      "lo": -0.001546286429310424,
+      "hi": 0.012198387666798096,
+      "decision": "none"
+    },
+    "realistic": {
+      "diff": 0.006010171058714748,
+      "lo": -0.0004313343183580866,
+      "hi": 0.012878471530817935,
+      "decision": "none"
+    }
+  },
+  "settings": {
+    "q1_bootstrap": 2000,
+    "q2_splits_per_n": 1000,
+    "q2_boot_eval": 1000,
+    "q2_boot_joint_linear": 500,
+    "q3_samples": 2000,
+    "q2_cal_speakers": 16,
+    "q2_eval_speakers": 24,
+    "seed": 0
+  }
+}

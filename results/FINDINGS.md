@@ -13,7 +13,7 @@ Run of 12-13/10/2026, local, on an Apple Silicon Mac. 73,746 scored transcriptio
 
 ## Setup
 
-- **LibriSpeech:** 250 test-clean sentences from 40 speakers. Each sentence has the human recording and 7 TTS renderings: Kokoro af_heart and am_michael, Piper lessac and ryan, Meta MMS-TTS, macOS Samantha and Daniel.
+- **LibriSpeech:** 250 test-clean sentences from 40 speakers. Each sentence has the human recording and 7 TTS renderings: Kokoro af_heart and am_michael, Piper lessac and ryan, Meta MMS-TTS, macOS Samantha and Daniel. The 7 voices come from 4 engines: one Kokoro model (2 voices), Piper (2 VITS voice models), MMS-TTS (a VITS model) and macOS (2 voices). They are not 7 independent draws (`followups/literature_checks`).
 - **Rate-matched voices:** the same 7 TTS voices re-synthesized so that each sentence lasts as long as the human recording (median duration ratio 0.99 to 1.00; the macOS voices only reach 0.90 and 0.92 because `say -r` does not scale its pauses).
 - **Caller set:** 122 written caller scripts (64 emergency, 16 fall-help, 16 fall-ok, 26 non-emergency), read by the 7 TTS voices. No human audio.
 - **ASR models:**
@@ -44,7 +44,7 @@ Run of 12-13/10/2026, local, on an Apple Silicon Mac. 73,746 scored transcriptio
   - **CIs:** LibriSpeech CIs are 95 % **speaker-cluster** bootstrap intervals (40 speakers resampled, 10,000 replicates). In a simulation on this data, the old sentence-level bootstrap covered the human realistic WER only 87.5 % of the time; the speaker bootstrap covered it 94.3 %.
   - **p-values:** bootstrap CI-inversion p-values; the smallest reportable value is about 2e-4. Families of tests carry Holm (family-wise) or Benjamini-Hochberg (BH, false discovery rate) adjustments, named where used.
   - **Gap:** synthetic WER minus human WER on the same sentences, same channel, same model.
-  - **DiD:** a lab-vs-reality comparison is tested by the **difference in differences**. That is the gap between two ASR models on a synthetic voice minus the same gap on human audio, bootstrapped per sentence.
+  - **DiD:** a lab-vs-reality comparison is tested by the **difference in differences**. That is the gap between two ASR models on a synthetic voice minus the same gap on human audio. Correction (literature check, 13/10/2026): an earlier version said "bootstrapped per sentence"; the code (`05_analyze.flips`) resamples speaker clusters, like every other LibriSpeech CI.
 
 ## Findings
 
@@ -70,6 +70,7 @@ The comparison is Whisper vs Parakeet: 7 voices x 4 conditions = 28 voice-level 
 - Averaging all voices gives the right winner on clean audio: +0.48 [0.17, 0.82].
 - It also declares Parakeet significantly better on all three phone or noisy conditions, where real speech shows no winner.
 - Its DiD is never significant, for example +0.15 [-0.48, +0.74] on realistic. Averaging 7 renderings of each sentence shrinks the lab's CI, not its bias.
+- Correction after the literature check (`followups/literature_checks`, 13/10/2026). The CIs above hold the 7 voices fixed and resample only speakers. Resampling the voices as well (BOOT-BOTH, Deutsch et al.) widens the interval of the mean 1.6x to 2.3x. The mean still declares Parakeet better on phone+noise10 (+0.86: [0.38, 1.47] with voices drawn flat, [0.34, 1.64] with engines then voices) and on realistic (+0.75: [0.20, 1.38] and [0.17, 1.54]). On phone it is borderline (+0.44: [0.02, 0.97] and [-0.01, 1.14]). The lab offset stays non-significant (realistic +0.15 [-0.63, +0.94], flat). The human data cannot settle the question. No condition is equivalent to 0 within 0.5 points either side (TOST). At 80 % power, the smallest human gap this sample can detect is about 1.0 point on the noisy conditions, above the lab's 0.75 to 0.86. **The claim that the lab manufactures certainty where real speech shows no winner is therefore withdrawn as worded.** What the data support: the v2 interval for the mean ignored voice-to-voice variance, and the averaged lab declares a winner that 250 human sentences from 40 speakers can neither confirm nor rule out. That winner points the same way as the human point estimate. No voice and no average made a confident wrong-sign decision on any of the 18 decisions per voice.
 
 **Large-gap pairs** (Whisper or Parakeet vs wav2vec2, 98 decisions). No voice flips the winner, but the size of the gap is distorted in both directions:
 - Lab gap divided by real gap ranges from 0.37 to 3.72.
@@ -132,7 +133,7 @@ The worst voice is MMS in every clean cell, so the spread mostly measures one TT
 - **Under realistic** (real damage +22.7 points):
   - Kokoro af_heart understates the damage by 12.4 points [9.8, 15.1];
   - macOS Daniel overstates it by 11.5 points [7.8, 14.9];
-  - the 7-voice mean still understates it by 4.0 [1.4, 6.8].
+  - the 7-voice mean still understates it by 4.0 [1.4, 6.8]. Correction (literature check): this is not robust to resampling the voices as well as the speakers, [-2.3, +9.2] (`followups/literature_checks`).
 - **On the plain phone line:** real damage is +0.9 points; Kokoro af_heart shows +0.2 and the macOS voices +3.7 to +4.1.
 - **Under muffling:** real damage is +4.3; Kokoro shows +1.6 to +2.0 and Daniel +16.0.
 
@@ -200,6 +201,8 @@ Recall is scored on the 105 keyword instances in the 78 emergency and fall-help 
 
 On real speech, none of the models produced a runaway: no hypothesis was longer than 1.5 times its reference, except one clip each for Whisper and wav2vec2 on clean audio.
 
+Correction (literature check): the main run decoded these clips with Whisper's raw decoder (`asr._whisper_batch`), without its no-speech gate or temperature fallback. `followups/phantom` shows that the gate never fires for large-v3-turbo (no_speech_prob about 1e-10 on every clip), so the gated rate is the same. The fallback was not tested.
+
 The v1 claim "Whisper did not hallucinate" rested on a test that could not detect hallucination, and is withdrawn. For an emergency line, text produced on silence or noise matters as much as recall.
 
 ### 7. Same-family bias: no evidence on clean audio; an ambiguous signal under noise
@@ -239,15 +242,16 @@ The aim is to estimate the human-speech WER over the 250 sentences from two inpu
 - The plug-in power-tuned version, no longer clipped at 1, is the narrowest but under-covers at n = 10 (76 to 90 %).
 - The new cross-fit variant recovers most of the coverage (85 to 94 %) but loses the width gain at n = 10.
 - Below about 25 labels, use classic PPI.
+- Cross-check (literature check): the reference implementation `ppi_py` (ppi-python 0.2.3) gives identical point estimates and the same variance formula once its choices are aligned (normal quantile, no finite-population correction, lambda clipped to [0, 1]). It also shows the same pattern on our draws: at n = 10, PPI covers 91 to 97 % and clipped PPI++ 73 to 84 % (`followups/literature_checks`).
 
-**In practice, for a scripted test set:** record about 25 of the scripts with real people and run every script through TTS. That gives a valid interval on the real-speech metric, 9 to 23 % narrower than the 25 human recordings alone. This relies on each human recording having a synthetic twin of the identical script, so it does not transfer to unscripted real calls.
+**In practice, for a scripted test set:** record about 25 of the scripts with real people and run every script through TTS. Correction (literature check): the simulation drew 25 sentences at random from 40 readers, which gave 19 distinct readers on average (17 to 22), so this needs about 20 different speakers drawn from the target callers. If one person records all 25 scripts, the interval covers that person's WER, not callers'. That gives a valid interval on the real-speech metric, 9 to 23 % narrower than the 25 human recordings alone. This relies on each human recording having a synthetic twin of the identical script, so it does not transfer to unscripted real calls.
 
 ## What did not work, was cut, or is still a limitation
 
 - **Training-domain leakage (not fixable here).**
   - The human baseline is in-domain for wav2vec2 and probably for the other models.
   - The fix is an out-of-domain human reference, for example:
-    - FLEURS en_us (CC BY 4.0), which was not authorized for download in this run;
+    - FLEURS en_us (CC BY 4.0), which was not authorized for download in this run (update: since run as `followups/fleurs`; out of domain for wav2vec2 and, per its model card, for Parakeet; unknown for Whisper);
     - or 30 to 60 caller scripts recorded by Amir over a real phone call, which would also give the caller set its first human baseline.
   - Until then, wav2vec2 results are an in-domain control, and gap magnitudes against human speech are upper bounds.
 - **Whisper ran 4 of 10 conditions** (no g722-wb, opus-nb, muffle or stress conditions) because of GPU time. Its keyword and channel claims cover those 4 conditions only. To complete it, run `scripts/04_run_experiment.py --model whisper --conditions g722-wb,opus-nb,phone+muffle,phone+noise5,phone+loss5,opus-nb+loss5`. It is cached and takes about 40 minutes per condition.

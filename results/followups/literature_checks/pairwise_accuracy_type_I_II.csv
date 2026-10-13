@@ -1,0 +1,121 @@
+corpus,voice,scope,rows,n_decisions,pairwise_accuracy,acc_lo,acc_hi,swap_rate,type_I,type_II,confident_wrong_sign,both_sig_right_sign,both_null
+librispeech,kokoro:af_heart,all pairs,all rows,18,1.0000,0.8333,1.0000,0.0000,0,2,0,13,3
+librispeech,kokoro:af_heart,all pairs,human CI excludes 0,15,1.0000,0.9333,1.0000,0.0000,0,2,0,13,0
+librispeech,kokoro:af_heart,close pair (Whisper vs Parakeet),all rows,4,1.0000,0.2500,1.0000,0.0000,0,1,0,0,3
+librispeech,kokoro:af_heart,close pair (Whisper vs Parakeet),human CI excludes 0,1,1.0000,0.0000,1.0000,0.0000,0,1,0,0,0
+librispeech,kokoro:af_heart,large-gap pairs,all rows,14,1.0000,0.9286,1.0000,0.0000,0,1,0,13,0
+librispeech,kokoro:af_heart,large-gap pairs,human CI excludes 0,14,1.0000,0.9286,1.0000,0.0000,0,1,0,13,0
+librispeech,kokoro:am_michael,all pairs,all rows,18,1.0000,0.8333,1.0000,0.0000,0,1,0,14,3
+librispeech,kokoro:am_michael,all pairs,human CI excludes 0,15,1.0000,0.9333,1.0000,0.0000,0,1,0,14,0
+librispeech,kokoro:am_michael,close pair (Whisper vs Parakeet),all rows,4,1.0000,0.2500,1.0000,0.0000,0,1,0,0,3
+librispeech,kokoro:am_michael,close pair (Whisper vs Parakeet),human CI excludes 0,1,1.0000,0.0000,1.0000,0.0000,0,1,0,0,0
+librispeech,kokoro:am_michael,large-gap pairs,all rows,14,1.0000,1.0000,1.0000,0.0000,0,0,0,14,0
+librispeech,kokoro:am_michael,large-gap pairs,human CI excludes 0,14,1.0000,1.0000,1.0000,0.0000,0,0,0,14,0
+librispeech,piper:en_US-lessac-medium,all pairs,all rows,18,1.0000,0.8333,1.0000,0.0000,1,1,0,14,2
+librispeech,piper:en_US-lessac-medium,all pairs,human CI excludes 0,15,1.0000,0.9333,1.0000,0.0000,0,1,0,14,0
+librispeech,piper:en_US-lessac-medium,close pair (Whisper vs Parakeet),all rows,4,1.0000,0.2500,1.0000,0.0000,1,1,0,0,2
+librispeech,piper:en_US-lessac-medium,close pair (Whisper vs Parakeet),human CI excludes 0,1,1.0000,0.0000,1.0000,0.0000,0,1,0,0,0
+librispeech,piper:en_US-lessac-medium,large-gap pairs,all rows,14,1.0000,1.0000,1.0000,0.0000,0,0,0,14,0
+librispeech,piper:en_US-lessac-medium,large-gap pairs,human CI excludes 0,14,1.0000,1.0000,1.0000,0.0000,0,0,0,14,0
+librispeech,piper:en_US-ryan-medium,all pairs,all rows,18,1.0000,0.8889,1.0000,0.0000,3,0,0,15,0
+librispeech,piper:en_US-ryan-medium,all pairs,human CI excludes 0,15,1.0000,1.0000,1.0000,0.0000,0,0,0,15,0
+librispeech,piper:en_US-ryan-medium,close pair (Whisper vs Parakeet),all rows,4,1.0000,0.5000,1.0000,0.0000,3,0,0,1,0
+librispeech,piper:en_US-ryan-medium,close pair (Whisper vs Parakeet),human CI excludes 0,1,1.0000,1.0000,1.0000,0.0000,0,0,0,1,0
+librispeech,piper:en_US-ryan-medium,large-gap pairs,all rows,14,1.0000,1.0000,1.0000,0.0000,0,0,0,14,0
+librispeech,piper:en_US-ryan-medium,large-gap pairs,human CI excludes 0,14,1.0000,1.0000,1.0000,0.0000,0,0,0,14,0
+librispeech,mms:eng,all pairs,all rows,18,1.0000,0.8889,1.0000,0.0000,3,0,0,15,0
+librispeech,mms:eng,all pairs,human CI excludes 0,15,1.0000,1.0000,1.0000,0.0000,0,0,0,15,0
+librispeech,mms:eng,close pair (Whisper vs Parakeet),all rows,4,1.0000,0.5000,1.0000,0.0000,3,0,0,1,0
+librispeech,mms:eng,close pair (Whisper vs Parakeet),human CI excludes 0,1,1.0000,1.0000,1.0000,0.0000,0,0,0,1,0
+librispeech,mms:eng,large-gap pairs,all rows,14,1.0000,1.0000,1.0000,0.0000,0,0,0,14,0
+librispeech,mms:eng,large-gap pairs,human CI excludes 0,14,1.0000,1.0000,1.0000,0.0000,0,0,0,14,0
+librispeech,say:Samantha,all pairs,all rows,18,1.0000,0.8889,1.0000,0.0000,2,1,0,14,1
+librispeech,say:Samantha,all pairs,human CI excludes 0,15,1.0000,0.9333,1.0000,0.0000,0,1,0,14,0
+librispeech,say:Samantha,close pair (Whisper vs Parakeet),all rows,4,1.0000,0.5000,1.0000,0.0000,2,1,0,0,1
+librispeech,say:Samantha,close pair (Whisper vs Parakeet),human CI excludes 0,1,1.0000,0.0000,1.0000,0.0000,0,1,0,0,0
+librispeech,say:Samantha,large-gap pairs,all rows,14,1.0000,1.0000,1.0000,0.0000,0,0,0,14,0
+librispeech,say:Samantha,large-gap pairs,human CI excludes 0,14,1.0000,1.0000,1.0000,0.0000,0,0,0,14,0
+librispeech,say:Daniel,all pairs,all rows,18,0.8889,0.8333,1.0000,0.1111,0,1,0,14,3
+librispeech,say:Daniel,all pairs,human CI excludes 0,15,0.9333,0.9333,1.0000,0.0667,0,1,0,14,0
+librispeech,say:Daniel,close pair (Whisper vs Parakeet),all rows,4,0.5000,0.2500,1.0000,0.5000,0,1,0,0,3
+librispeech,say:Daniel,close pair (Whisper vs Parakeet),human CI excludes 0,1,0.0000,0.0000,1.0000,1.0000,0,1,0,0,0
+librispeech,say:Daniel,large-gap pairs,all rows,14,1.0000,1.0000,1.0000,0.0000,0,0,0,14,0
+librispeech,say:Daniel,large-gap pairs,human CI excludes 0,14,1.0000,1.0000,1.0000,0.0000,0,0,0,14,0
+librispeech,mean[speaker_only],all pairs,all rows,18,1.0000,0.8889,1.0000,0.0000,3,0,0,15,0
+librispeech,mean[speaker_only],all pairs,human CI excludes 0,15,1.0000,1.0000,1.0000,0.0000,0,0,0,15,0
+librispeech,mean[speaker_only],close pair (Whisper vs Parakeet),all rows,4,1.0000,0.5000,1.0000,0.0000,3,0,0,1,0
+librispeech,mean[speaker_only],close pair (Whisper vs Parakeet),human CI excludes 0,1,1.0000,1.0000,1.0000,0.0000,0,0,0,1,0
+librispeech,mean[speaker_only],large-gap pairs,all rows,14,1.0000,1.0000,1.0000,0.0000,0,0,0,14,0
+librispeech,mean[speaker_only],large-gap pairs,human CI excludes 0,14,1.0000,1.0000,1.0000,0.0000,0,0,0,14,0
+librispeech,mean[both_flat],all pairs,all rows,18,1.0000,0.8889,1.0000,0.0000,3,0,0,15,0
+librispeech,mean[both_flat],all pairs,human CI excludes 0,15,1.0000,1.0000,1.0000,0.0000,0,0,0,15,0
+librispeech,mean[both_flat],close pair (Whisper vs Parakeet),all rows,4,1.0000,0.5000,1.0000,0.0000,3,0,0,1,0
+librispeech,mean[both_flat],close pair (Whisper vs Parakeet),human CI excludes 0,1,1.0000,1.0000,1.0000,0.0000,0,0,0,1,0
+librispeech,mean[both_flat],large-gap pairs,all rows,14,1.0000,1.0000,1.0000,0.0000,0,0,0,14,0
+librispeech,mean[both_flat],large-gap pairs,human CI excludes 0,14,1.0000,1.0000,1.0000,0.0000,0,0,0,14,0
+librispeech,mean[both_nested],all pairs,all rows,18,1.0000,0.8889,1.0000,0.0000,2,1,0,14,1
+librispeech,mean[both_nested],all pairs,human CI excludes 0,15,1.0000,0.9333,1.0000,0.0000,0,1,0,14,0
+librispeech,mean[both_nested],close pair (Whisper vs Parakeet),all rows,4,1.0000,0.5000,1.0000,0.0000,2,1,0,0,1
+librispeech,mean[both_nested],close pair (Whisper vs Parakeet),human CI excludes 0,1,1.0000,0.0000,1.0000,0.0000,0,1,0,0,0
+librispeech,mean[both_nested],large-gap pairs,all rows,14,1.0000,1.0000,1.0000,0.0000,0,0,0,14,0
+librispeech,mean[both_nested],large-gap pairs,human CI excludes 0,14,1.0000,1.0000,1.0000,0.0000,0,0,0,14,0
+fleurs,kokoro:af_heart,all pairs,all rows,8,0.7500,0.7500,1.0000,0.2500,0,1,0,6,1
+fleurs,kokoro:af_heart,all pairs,human CI excludes 0,7,0.8571,0.8571,1.0000,0.1429,0,1,0,6,0
+fleurs,kokoro:af_heart,close pair (Whisper vs Parakeet),all rows,2,0.0000,0.0000,1.0000,1.0000,0,1,0,0,1
+fleurs,kokoro:af_heart,close pair (Whisper vs Parakeet),human CI excludes 0,1,0.0000,0.0000,1.0000,1.0000,0,1,0,0,0
+fleurs,kokoro:af_heart,large-gap pairs,all rows,6,1.0000,1.0000,1.0000,0.0000,0,0,0,6,0
+fleurs,kokoro:af_heart,large-gap pairs,human CI excludes 0,6,1.0000,1.0000,1.0000,0.0000,0,0,0,6,0
+fleurs,kokoro:am_michael,all pairs,all rows,8,0.8750,0.7500,1.0000,0.1250,1,1,0,6,0
+fleurs,kokoro:am_michael,all pairs,human CI excludes 0,7,1.0000,0.8571,1.0000,0.0000,0,1,0,6,0
+fleurs,kokoro:am_michael,close pair (Whisper vs Parakeet),all rows,2,0.5000,0.0000,1.0000,0.5000,1,1,0,0,0
+fleurs,kokoro:am_michael,close pair (Whisper vs Parakeet),human CI excludes 0,1,1.0000,0.0000,1.0000,0.0000,0,1,0,0,0
+fleurs,kokoro:am_michael,large-gap pairs,all rows,6,1.0000,1.0000,1.0000,0.0000,0,0,0,6,0
+fleurs,kokoro:am_michael,large-gap pairs,human CI excludes 0,6,1.0000,1.0000,1.0000,0.0000,0,0,0,6,0
+fleurs,piper:en_US-lessac-medium,all pairs,all rows,8,0.7500,0.7500,1.0000,0.2500,1,1,0,6,0
+fleurs,piper:en_US-lessac-medium,all pairs,human CI excludes 0,7,0.8571,0.8571,1.0000,0.1429,0,1,0,6,0
+fleurs,piper:en_US-lessac-medium,close pair (Whisper vs Parakeet),all rows,2,0.0000,0.0000,1.0000,1.0000,1,1,0,0,0
+fleurs,piper:en_US-lessac-medium,close pair (Whisper vs Parakeet),human CI excludes 0,1,0.0000,0.0000,1.0000,1.0000,0,1,0,0,0
+fleurs,piper:en_US-lessac-medium,large-gap pairs,all rows,6,1.0000,1.0000,1.0000,0.0000,0,0,0,6,0
+fleurs,piper:en_US-lessac-medium,large-gap pairs,human CI excludes 0,6,1.0000,1.0000,1.0000,0.0000,0,0,0,6,0
+fleurs,piper:en_US-ryan-medium,all pairs,all rows,8,1.0000,0.7500,1.0000,0.0000,0,1,0,6,1
+fleurs,piper:en_US-ryan-medium,all pairs,human CI excludes 0,7,1.0000,0.8571,1.0000,0.0000,0,1,0,6,0
+fleurs,piper:en_US-ryan-medium,close pair (Whisper vs Parakeet),all rows,2,1.0000,0.0000,1.0000,0.0000,0,1,0,0,1
+fleurs,piper:en_US-ryan-medium,close pair (Whisper vs Parakeet),human CI excludes 0,1,1.0000,0.0000,1.0000,0.0000,0,1,0,0,0
+fleurs,piper:en_US-ryan-medium,large-gap pairs,all rows,6,1.0000,1.0000,1.0000,0.0000,0,0,0,6,0
+fleurs,piper:en_US-ryan-medium,large-gap pairs,human CI excludes 0,6,1.0000,1.0000,1.0000,0.0000,0,0,0,6,0
+fleurs,mms:eng,all pairs,all rows,8,1.0000,0.8750,1.0000,0.0000,1,0,0,7,0
+fleurs,mms:eng,all pairs,human CI excludes 0,7,1.0000,1.0000,1.0000,0.0000,0,0,0,7,0
+fleurs,mms:eng,close pair (Whisper vs Parakeet),all rows,2,1.0000,0.5000,1.0000,0.0000,1,0,0,1,0
+fleurs,mms:eng,close pair (Whisper vs Parakeet),human CI excludes 0,1,1.0000,1.0000,1.0000,0.0000,0,0,0,1,0
+fleurs,mms:eng,large-gap pairs,all rows,6,1.0000,1.0000,1.0000,0.0000,0,0,0,6,0
+fleurs,mms:eng,large-gap pairs,human CI excludes 0,6,1.0000,1.0000,1.0000,0.0000,0,0,0,6,0
+fleurs,say:Samantha,all pairs,all rows,8,0.8750,0.7500,1.0000,0.1250,0,1,0,6,1
+fleurs,say:Samantha,all pairs,human CI excludes 0,7,1.0000,0.8571,1.0000,0.0000,0,1,0,6,0
+fleurs,say:Samantha,close pair (Whisper vs Parakeet),all rows,2,0.5000,0.0000,1.0000,0.5000,0,1,0,0,1
+fleurs,say:Samantha,close pair (Whisper vs Parakeet),human CI excludes 0,1,1.0000,0.0000,1.0000,0.0000,0,1,0,0,0
+fleurs,say:Samantha,large-gap pairs,all rows,6,1.0000,1.0000,1.0000,0.0000,0,0,0,6,0
+fleurs,say:Samantha,large-gap pairs,human CI excludes 0,6,1.0000,1.0000,1.0000,0.0000,0,0,0,6,0
+fleurs,say:Daniel,all pairs,all rows,8,0.8750,0.7500,1.0000,0.1250,0,1,0,6,1
+fleurs,say:Daniel,all pairs,human CI excludes 0,7,1.0000,0.8571,1.0000,0.0000,0,1,0,6,0
+fleurs,say:Daniel,close pair (Whisper vs Parakeet),all rows,2,0.5000,0.0000,1.0000,0.5000,0,1,0,0,1
+fleurs,say:Daniel,close pair (Whisper vs Parakeet),human CI excludes 0,1,1.0000,0.0000,1.0000,0.0000,0,1,0,0,0
+fleurs,say:Daniel,large-gap pairs,all rows,6,1.0000,1.0000,1.0000,0.0000,0,0,0,6,0
+fleurs,say:Daniel,large-gap pairs,human CI excludes 0,6,1.0000,1.0000,1.0000,0.0000,0,0,0,6,0
+fleurs,mean[speaker_only],all pairs,all rows,8,0.8750,0.8750,1.0000,0.1250,0,0,0,7,1
+fleurs,mean[speaker_only],all pairs,human CI excludes 0,7,1.0000,1.0000,1.0000,0.0000,0,0,0,7,0
+fleurs,mean[speaker_only],close pair (Whisper vs Parakeet),all rows,2,0.5000,0.5000,1.0000,0.5000,0,0,0,1,1
+fleurs,mean[speaker_only],close pair (Whisper vs Parakeet),human CI excludes 0,1,1.0000,1.0000,1.0000,0.0000,0,0,0,1,0
+fleurs,mean[speaker_only],large-gap pairs,all rows,6,1.0000,1.0000,1.0000,0.0000,0,0,0,6,0
+fleurs,mean[speaker_only],large-gap pairs,human CI excludes 0,6,1.0000,1.0000,1.0000,0.0000,0,0,0,6,0
+fleurs,mean[both_flat],all pairs,all rows,8,0.8750,0.7500,1.0000,0.1250,0,1,0,6,1
+fleurs,mean[both_flat],all pairs,human CI excludes 0,7,1.0000,0.8571,1.0000,0.0000,0,1,0,6,0
+fleurs,mean[both_flat],close pair (Whisper vs Parakeet),all rows,2,0.5000,0.0000,1.0000,0.5000,0,1,0,0,1
+fleurs,mean[both_flat],close pair (Whisper vs Parakeet),human CI excludes 0,1,1.0000,0.0000,1.0000,0.0000,0,1,0,0,0
+fleurs,mean[both_flat],large-gap pairs,all rows,6,1.0000,1.0000,1.0000,0.0000,0,0,0,6,0
+fleurs,mean[both_flat],large-gap pairs,human CI excludes 0,6,1.0000,1.0000,1.0000,0.0000,0,0,0,6,0
+fleurs,mean[both_nested],all pairs,all rows,8,0.8750,0.7500,1.0000,0.1250,0,1,0,6,1
+fleurs,mean[both_nested],all pairs,human CI excludes 0,7,1.0000,0.8571,1.0000,0.0000,0,1,0,6,0
+fleurs,mean[both_nested],close pair (Whisper vs Parakeet),all rows,2,0.5000,0.0000,1.0000,0.5000,0,1,0,0,1
+fleurs,mean[both_nested],close pair (Whisper vs Parakeet),human CI excludes 0,1,1.0000,0.0000,1.0000,0.0000,0,1,0,0,0
+fleurs,mean[both_nested],large-gap pairs,all rows,6,1.0000,1.0000,1.0000,0.0000,0,0,0,6,0
+fleurs,mean[both_nested],large-gap pairs,human CI excludes 0,6,1.0000,1.0000,1.0000,0.0000,0,0,0,6,0

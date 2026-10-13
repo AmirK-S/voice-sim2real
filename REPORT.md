@@ -26,3 +26,7 @@ I got curious about the sim-to-real gap in voice-agent testing: simulated caller
 - Offline ASR on single utterances, simulated codecs and noise, Whisper on 4 of 10 channels, and nobody listened to the clips.
 
 Code, tables and all caveats: `README.md` and `results/FINDINGS.md`. Happy to be told where this does not match what you see with real traffic.
+
+## Corrections
+
+**13/10/2026, on item 1.** The interval behind "averaging voices manufactured certainty" resampled speakers but held the 7 voices fixed. Resampling the voices too (BOOT-BOTH, the standard fix when the test items are themselves a sample; Deutsch, Dror and Roth, TACL 2021) makes it about twice as wide. The average still favours Parakeet on the noisy channels, in the same direction as the human estimate, and the lab-minus-real difference is not significant. The 250 human sentences are too few to confirm or rule out a gap of this size: about 1 point is detectable at 80 % power, and the lab says 0.75 to 0.86. So "manufactured certainty" overstates what the data show. The correct reading: the averaged lab claims a winner that the human sample cannot check, and its v2 interval was too narrow. No voice, and no average, ever picked the wrong winner with confidence. Details: `results/followups/literature_checks/NOTES.md`.

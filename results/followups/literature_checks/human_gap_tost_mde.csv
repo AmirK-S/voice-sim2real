@@ -1,0 +1,7 @@
+corpus,condition,human_gap,ci95_lo,ci95_hi,ci90_lo,ci90_hi,delta,equivalent_within_delta,boot_se,mde80_unadjusted
+librispeech,clean,0.00370,0.00123,0.00667,0.00160,0.00616,0.00500,False,0.00139,0.00390
+librispeech,phone,0.00162,-0.00234,0.00572,-0.00173,0.00509,0.00500,False,0.00206,0.00576
+librispeech,phone+noise10,0.00485,-0.00155,0.01220,-0.00066,0.01089,0.00500,False,0.00351,0.00982
+librispeech,realistic,0.00601,-0.00043,0.01288,0.00048,0.01176,0.00500,False,0.00342,0.00959
+fleurs,clean,0.00139,-0.00358,0.00632,-0.00279,0.00552,0.00500,False,0.00254,0.00710
+fleurs,realistic,0.01228,0.00361,0.02103,0.00489,0.01948,0.00500,False,0.00443,0.01241

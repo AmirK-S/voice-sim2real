@@ -5,8 +5,8 @@
 **Do synthetic callers change which model wins?** A local, reproducible measurement of one slice of the sim-to-real gap in voice-agent evaluation: the same scripts read by real people and by 7 TTS voices, sent through simulated phone channels, transcribed by 3 public ASR models. About 74,000 scored transcriptions.
 
 **TL;DR**
-- No single synthetic voice confidently flipped the winner between two close models, but **averaging voices made the lab confident where real speech shows no winner**.
-- The voice changes **how big** a difference looks: from 0.37x to 3.72x the real gap.
+- No single synthetic voice confidently flipped the winner between two close models. **Averaging voices gave a winner on noisy channels that the human sample is too small to confirm or rule out.** The v2 interval for that average was too narrow because it held the voices fixed. (Corrected 13/10/2026: the earlier wording, "confident where real speech shows no winner", overstated it; see `results/followups/literature_checks`.)
+- The voice changes **how big** a difference looks: from 0.37x to 3.72x the real gap (descriptive extremes over many cells, all in pairs with the in-domain wav2vec2 control).
 - Some voices hide **about half the damage** that noise does to real speech.
 - Whisper produced text on **33 of 100 clips of pure noise**.
 - About 25 real recordings plus synthetic runs (PPI) give a valid estimate of real-speech WER, with a tighter interval than the recordings alone.

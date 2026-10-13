@@ -137,7 +137,8 @@ def _whisper_batch(arrays: list[np.ndarray]) -> list[str]:
     transcribe() pads the clip's own log-mel with zeros in the normalized log-mel domain;
     here the padding is the log-mel of digital silence. On noise-only clips this changes
     Whisper's phantom rate from 34 to 94 of 100 (results/followups/phantom/v2/NOTES.md).
-    The effect on speech WER is not measured."""
+    On speech it moves WER by at most 0.35 points but changes some close-comparison
+    significance results (results/followups/whisper_std/NOTES.md)."""
     import mlx.core as mx
     from mlx_whisper.audio import N_FRAMES, N_SAMPLES, log_mel_spectrogram, pad_or_trim
     from mlx_whisper.decoding import DecodingOptions, decode

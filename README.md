@@ -5,8 +5,8 @@
 **Do synthetic callers change which model wins?** A local, reproducible measurement of one slice of the sim-to-real gap in voice-agent evaluation: the same scripts read by real people and by 7 TTS voices, sent through simulated phone channels, transcribed by 3 public ASR models. About 74,000 scored transcriptions.
 
 **TL;DR** (reconciled 13/10/2026 after the follow-ups; see `CLAIMS-STATUS.md`)
-- No single synthetic voice confidently flipped the winner between two close models, on LibriSpeech or FLEURS, and no voice or average picked the wrong winner with confidence.
-- **Averaging voices gave intervals that were too narrow**, because the voices were held fixed. With voices resampled and a multiple-testing correction, the average still favours Parakeet on 2 of 3 noisy conditions, in the human estimate's direction, which 250 human sentences can neither confirm nor rule out. A lab bias is neither shown nor excluded. (Corrected: the first wording, "manufactured certainty", overstated it.)
+- No single synthetic voice confidently flipped the winner between two close models, on LibriSpeech or FLEURS, and no voice or average picked the wrong winner with confidence. Whether a single voice's lab-vs-reality difference survives correction depends on how Whisper is decoded: none with the main run's decoder, 3 of 28 with Whisper's standard `transcribe()` (MMS and Piper ryan, exaggerating Parakeet's lead).
+- **Averaging voices gave intervals that were too narrow**, because the voices were held fixed. With voices resampled and a multiple-testing correction, the average still favours Parakeet on 2 of 3 noisy conditions (3 of 3 with Whisper's standard `transcribe()`), in the human estimate's direction, which 250 human sentences can neither confirm nor rule out. A lab bias is neither shown nor excluded. (Corrected: the first wording, "manufactured certainty", overstated it.)
 - The voice changes **how big** a difference looks: 0.37x to 3.72x the real gap on LibriSpeech (descriptive extremes, all in pairs with the in-domain wav2vec2 control); 0.26x to 0.92x on FLEURS, where the lab always understates.
 - **The lab is optimistic about noise.** Kokoro hides about half the damage noise does to LibriSpeech speech; against FLEURS readers, voices understate it in 43 of 49 cells, and every voice except MMS is easier than humans.
 - **Whisper writes text on 95 to 100 % of noise clips after a phone line** with its standard `transcribe` settings (mlx-whisper 0.4.3; its no-speech gate never fired). A default Silero VAD cuts that to 2 to 3 %. (Corrected: the first figure, 33 of 100, came from a raw decoder with non-standard padding.)
@@ -70,8 +70,8 @@ All numbers in WER percentage points ("points") with 95 % CIs; details in `resul
 
 | Question | Result |
 |---|---|
-| Does a single synthetic voice flip the winner between Whisper and Parakeet? | No confident flip. Real speech only has a winner on clean audio (Parakeet by 0.37 [0.12, 0.67]). No voice's lab-vs-reality difference survives Holm correction across 28 decisions. |
-| Does averaging 7 voices help? | It picks the right winner on clean audio. On the 3 phone and noisy conditions it declares Parakeet better where the human CI includes 0; with voices resampled and Holm over the 4 conditions, on 2 of 3. The human sample cannot confirm or rule out gaps of that size, and the lab offset is not significant, so this is over-precision; a bias is neither shown nor excluded (`results/followups/literature_checks`, `results/followups/calibration`). |
+| Does a single synthetic voice flip the winner between Whisper and Parakeet? | No confident flip. Real speech only has a winner on clean audio (Parakeet by 0.37 [0.12, 0.67]; 0.25 [0.04, 0.52] with Whisper's standard `transcribe()`). No voice's lab-vs-reality difference survives Holm correction across 28 decisions with the main run's decoder; with standard Whisper 3 do (MMS clean and phone+noise10, Piper ryan clean), all overstating Parakeet's lead (`results/followups/whisper_std`). |
+| Does averaging 7 voices help? | It picks the right winner on clean audio. On the 3 phone and noisy conditions it declares Parakeet better where the human CI includes 0; with voices resampled and Holm over the 4 conditions, on 2 of 3 (3 of 3 with standard Whisper). The human sample cannot confirm or rule out gaps of that size, and the lab offset is not significant, so this is over-precision; a bias is neither shown nor excluded (`results/followups/literature_checks`, `results/followups/calibration`). |
 | Large gaps (Whisper or Parakeet vs wav2vec2) | Winner never flips, but the lab's gap ranges from 0.37x to 3.72x the real gap. Realistic channel: real Whisper vs wav2vec2 gap 21.7 points; lab says 9.6 (Kokoro) to 35.8 (macOS Daniel). |
 | Synthetic vs human WER, clean audio | LibriSpeech: Kokoro -0.2 to -0.4 points (easier than humans), Piper ryan +0.8 to +1.4, Meta MMS +3.6 to +4.6 (harder; a third to two thirds of it flagged rendering errors, not checked by listening). FLEURS: every voice except MMS is easier than humans. |
 | Cost of noise | Kokoro shows about half the WER increase that the same noise causes on human speech (Whisper phone+noise10: real +2.13, Kokoro error -1.18 [-2.11, -0.31]). On FLEURS every voice understates it (43 of 49 cells). |
@@ -81,11 +81,11 @@ All numbers in WER percentage points ("points") with 95 % CIs; details in `resul
 
 ## Follow-ups
 
-Four follow-ups ran after the main run, plus published statistical checks, and some of them correct the first write-up:
+Four follow-ups ran after the main run, plus published statistical checks and a re-transcription with Whisper's standard settings, and some of them correct the first write-up:
 - [`FOLLOWUPS.md`](FOLLOWUPS.md): what each follow-up found (calibration and active selection, FLEURS, TTS rendering errors, phantom speech and guards), with limits and the closest prior work.
 - [`CLAIMS-STATUS.md`](CLAIMS-STATUS.md): every claim of the report and the follow-ups, marked holds, weakened, replaced or new, with its source file.
 - [`RELATED-WORK.md`](RELATED-WORK.md): where this sits in the literature (149 checked references), and what is and is not new.
-- Code and outputs: `results/followups/{calibration,fleurs,tts_errors,phantom,literature_checks}/`, each with a `NOTES.md`.
+- Code and outputs: `results/followups/{calibration,fleurs,tts_errors,phantom,literature_checks,whisper_std}/`, each with a `NOTES.md`.
 
 ## Charts
 
@@ -102,7 +102,7 @@ Tables behind every number: `results/tables/` (18 CSV files) and `results/summar
 
 - **Behaviour is absent.** Every voice reads the identical script. The behavioural half of the gap is probably the larger one, and it is not here.
 - **The human baseline is in-domain.** LibriSpeech is wav2vec2's training domain and likely part of the others' training data. FLEURS has since been run (`results/followups/fleurs`): against it the voices look easier and the lab more optimistic, so LibriSpeech-based gaps are neither upper nor lower bounds (corrected 13/10/2026; an earlier version said "upper bounds"). Real phone recordings of the caller scripts remain the fix.
-- **Whisper decoding.** The main run decoded Whisper with a raw decoder whose window padding differs from `transcribe()` for clips under 30 s. Model comparisons use the same decoder on both sides, but absolute Whisper WERs may differ from off-the-shelf Whisper; not measured.
+- **Whisper decoding.** The main run decoded Whisper with a raw decoder whose window padding differs from `transcribe()` for clips under 30 s. Re-decoded with standard `transcribe()` (`results/followups/whisper_std`): Whisper WERs move by at most 0.35 points (human -0.12 to -0.25, not significant), but that is enough to change which close-comparison results pass the significance threshold (see above). FLEURS and the rate-matched voices still use the raw decoder.
 - **Small human sample for close comparisons.** 250 sentences from 40 speakers detect a Whisper vs Parakeet gap of about 1 point at 80 % power on the noisy channels, so "no winner" means "cannot tell".
 - **Offline ASR on single utterances.** No streaming, endpointing, barge-in or turn-taking.
 - **Simulated channels.** The handset filter approximates P.48 and the concealment is modelled on G.711 Appendix I, not bit-exact. ESC-50 noise approximates street and room noise.

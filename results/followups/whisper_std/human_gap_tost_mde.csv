@@ -1,0 +1,9 @@
+whisper,corpus,condition,human_gap,ci95_lo,ci95_hi,ci90_lo,ci90_hi,delta,equivalent_within_delta,boot_se,mde80_unadjusted
+whisper-large-v3-turbo-std,librispeech,clean,0.00254,0.00044,0.00516,0.00068,0.00468,0.00500,True,0.00123,0.00343
+whisper-large-v3-turbo-std,librispeech,phone,0.00046,-0.00313,0.00407,-0.00252,0.00345,0.00500,True,0.00184,0.00514
+whisper-large-v3-turbo-std,librispeech,phone+noise10,0.00231,-0.00315,0.00805,-0.00235,0.00702,0.00500,False,0.00284,0.00795
+whisper-large-v3-turbo-std,librispeech,realistic,0.00416,-0.00313,0.01170,-0.00206,0.01041,0.00500,False,0.00379,0.01062
+whisper-large-v3-turbo,librispeech,clean,0.00370,0.00123,0.00667,0.00160,0.00616,0.00500,False,0.00139,0.00390
+whisper-large-v3-turbo,librispeech,phone,0.00162,-0.00234,0.00572,-0.00173,0.00509,0.00500,False,0.00206,0.00576
+whisper-large-v3-turbo,librispeech,phone+noise10,0.00485,-0.00155,0.01220,-0.00066,0.01089,0.00500,False,0.00351,0.00982
+whisper-large-v3-turbo,librispeech,realistic,0.00601,-0.00043,0.01288,0.00048,0.01176,0.00500,False,0.00342,0.00959

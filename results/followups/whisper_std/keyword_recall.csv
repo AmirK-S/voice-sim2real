@@ -1,0 +1,13 @@
+model,condition,renderings,kw_total,kw_hits,recall,call_misses,lo,hi
+parakeet-tdt-0.6b-v2,clean,546,735,715,0.97279,4,0.95879,0.98571
+parakeet-tdt-0.6b-v2,phone,546,735,711,0.96735,4,0.94918,0.98383
+parakeet-tdt-0.6b-v2,phone+noise10,546,735,701,0.95374,9,0.93484,0.97170
+parakeet-tdt-0.6b-v2,realistic,546,735,695,0.94558,9,0.92602,0.96429
+whisper-large-v3-turbo,clean,546,735,716,0.97415,5,0.96143,0.98613
+whisper-large-v3-turbo,phone,546,735,716,0.97415,3,0.96054,0.98701
+whisper-large-v3-turbo,phone+noise10,546,735,709,0.96463,7,0.94767,0.98058
+whisper-large-v3-turbo,realistic,546,735,702,0.95510,7,0.93694,0.97230
+whisper-large-v3-turbo-std,clean,546,735,720,0.97959,3,0.96782,0.99029
+whisper-large-v3-turbo-std,phone,546,735,713,0.97007,4,0.95418,0.98489
+whisper-large-v3-turbo-std,phone+noise10,546,735,711,0.96735,6,0.95109,0.98231
+whisper-large-v3-turbo-std,realistic,546,735,704,0.95782,6,0.93915,0.97551

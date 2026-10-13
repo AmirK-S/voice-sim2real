@@ -1,6 +1,6 @@
 # Follow-ups
 
-After sharing `REPORT.md` I kept pulling on the thread. Four follow-ups ran on the same data and the same laptop, plus a pass of published statistical checks. Here is what came out, with limits. Some of it corrects the report; those corrections are now marked in `REPORT.md` itself. Every number and its source file is in `CLAIMS-STATUS.md`; prior work is in `RELATED-WORK.md` (bracketed numbers).
+After sharing `REPORT.md` I kept pulling on the thread. Four follow-ups ran on the same data and the same laptop, plus a pass of published statistical checks and a re-transcription with Whisper's standard settings (section 5). Here is what came out, with limits. Some of it corrects the report; those corrections are now marked in `REPORT.md` itself. Every number and its source file is in `CLAIMS-STATUS.md`; prior work is in `RELATED-WORK.md` (bracketed numbers).
 
 ## 1. Calibration with a few human recordings, and active selection
 
@@ -42,6 +42,15 @@ After sharing `REPORT.md` I kept pulling on the thread. Four follow-ups ran on t
 - **Limits.** The default-pipeline arms cover 200 clips, four noise types at one level; "the gate never fires" is shown for mlx-whisper 0.4.3 only (openai-whisper and faster-whisper not tested). Silero ran offline on whole clips, not streaming. Main-run Whisper speech WERs used the same non-standard padding; the effect is not measured (one GPU run on 250 human clips would settle it).
 - **Closest prior work.** Barański et al. [71] (large-v3, 40.3 % of non-speech files, "thank you" dominant, Silero the best simple guard); Calm-Whisper [72] (99.97 % on UrbanSound8K, consistent with 95 to 100 %); Careless Whisper [70] for the harm motivation. What may be new: the padding mechanism, the inert gate for turbo, and Parakeet's short-clip rate.
 
+## 5. Whisper standard settings check
+
+**Decision-relevant number: with Whisper's standard `transcribe()`, 3 of 28 single-voice lab-vs-reality differences survive Holm (0 with the main run's decoder), and the 7-voice average is significant on 3 of 3 noisy conditions (2 of 3 before).**
+
+- **What I asked.** The main run decoded Whisper with a raw decoder whose padding differs from `transcribe()`; the phantom follow-up showed that padding matters on non-speech. Does it matter on speech?
+- **What came out.** Barely for WER: human -0.12 to -0.25 points (no CI excludes 0; 215 to 242 of 250 transcripts identical), voices -0.12 to +0.35. But the two shifts go in opposite directions, so the close comparison moves: the real Parakeet lead on clean shrinks from 0.37 [0.12, 0.67] to 0.25 [0.04, 0.52] and the lab's grows. Three voice differences now survive correction, MMS clean +1.46 [0.74, 2.22], MMS phone+noise10 +1.92 [0.88, 2.95] and Piper ryan clean +0.95 [0.34, 1.62] points, all overstating Parakeet's lead; none flips the winner. The average, voices resampled, is +0.52 to +0.96 points on the noisy conditions, all significant after Holm. The lab offset rises to +0.34 to +0.73 points and still includes 0 once voices are resampled, so a bias is still neither shown nor excluded. Large gaps (21.9 real vs 9.4 to 35.7 lab), Kokoro's noise understatement (-0.95 [-1.81, -0.11]) and keyword recall (95.8 %, 6 call misses on realistic) hold.
+- **What it means.** The significance of the close-comparison claims is fragile to a decoding choice a user would not think about; their direction is not.
+- **Limits.** mlx-whisper 0.4.3 only; FLEURS and rate-matched voices not re-decoded.
+
 ## What still holds, in one paragraph
 
-No single voice confidently flipped Whisper vs Parakeet, on either corpus, and no voice or average picked the wrong winner with confidence. The voice changes how big a large gap looks. Kokoro hides about half of the noise damage on LibriSpeech, and every voice understates it on FLEURS. A synthetic run cannot stand in for the real WER level, the real cost of noise, or a close model comparison; a few real recordings with PPI fix the level, not the comparison.
+No single voice confidently flipped Whisper vs Parakeet, on either corpus, and no voice or average picked the wrong winner with confidence, under either Whisper decoder; whether a voice's exaggeration of the gap passes a multiple-testing correction depends on the decoder. The voice changes how big a large gap looks. Kokoro hides about half of the noise damage on LibriSpeech, and every voice understates it on FLEURS. A synthetic run cannot stand in for the real WER level, the real cost of noise, or a close model comparison; a few real recordings with PPI fix the level, not the comparison.

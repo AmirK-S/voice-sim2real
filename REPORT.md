@@ -7,6 +7,7 @@
 > 4. **"Gaps against humans are upper bounds" (limits)** is withdrawn: against a harder human set the lab looked more optimistic, not less.
 > 5. **Scope added** to item 2 (descriptive range, in-domain control), to the PPI point (about 20 distinct speakers, WER level only) and to the limits (non-standard Whisper padding in the main run).
 > 6. **Prior work.** The design itself is not new; see the last line under "Limits".
+> 7. **Whisper standard settings (item 1).** Re-transcribing with `transcribe()` defaults moved Whisper's WER by at most 0.35 points, but shrank the real clean gap to 0.25 [0.04, 0.52], made 3 of 28 single-voice differences survive correction (MMS and Piper ryan, all overstating Parakeet's lead, none a flip) and made the average significant on 3 of 3 noisy conditions; a bias is still neither shown nor excluded (`results/followups/whisper_std`).
 >
 > Full reconciliation: `CLAIMS-STATUS.md`. Follow-ups in plain words: `FOLLOWUPS.md`.
 

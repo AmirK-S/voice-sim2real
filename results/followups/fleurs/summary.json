@@ -1,0 +1,45 @@
+{
+ "n_sentences": 250,
+ "n_words": 5050,
+ "gender": {
+  "FEMALE": 177,
+  "MALE": 73
+ },
+ "human_minutes": 35.075,
+ "mismatch_words": 26,
+ "mismatch_sentences": 23,
+ "mismatch_share_words": 0.005148514851485149,
+ "n_names_or_digits": 155,
+ "gap_agreement": {
+  "n_cells": 70,
+  "spearman": 0.4572090989326348,
+  "spearman_p": 6.922115589023012e-05,
+  "same_sign": 33,
+  "fleurs_sig_harder": 7,
+  "fleurs_sig_easier": 63,
+  "ls_sig_harder": 26,
+  "ls_sig_easier": 16,
+  "median_fleurs_minus_ls": -0.04454277227722772,
+  "share_fleurs_below_ls": 0.9571428571428572
+ },
+ "ls_speaker_over_sentence_ci_width": {
+  "median": 1.0605191150534288,
+  "q10": 0.9023577265145631,
+  "q90": 1.284096157279431
+ },
+ "holm": {
+  "Parakeet vs wav2vec2": 27,
+  "Whisper vs Parakeet": 0,
+  "Whisper vs wav2vec2": 14
+ },
+ "holm_n": {
+  "Parakeet vs wav2vec2": 28,
+  "Whisper vs Parakeet": 14,
+  "Whisper vs wav2vec2": 14
+ },
+ "large_gap_ratio_range": [
+  0.25934658134051863,
+  0.9227272727272726
+ ],
+ "large_gap_flips": 0
+}

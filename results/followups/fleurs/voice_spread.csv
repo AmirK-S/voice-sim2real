@@ -1,0 +1,11 @@
+model,condition,best,best_wer,worst,worst_wer,worst_over_best,lo,hi,ls_worst_over_best
+whisper-large-v3-turbo,clean,say:Daniel,0.0166,mms:eng,0.1016,6.1071,5.1939,8.5084,4.0714
+whisper-large-v3-turbo,realistic,kokoro:af_heart,0.0265,mms:eng,0.1251,4.7164,3.9645,5.9714,3.7018
+parakeet-tdt-0.6b-v2,clean,say:Daniel,0.0180,mms:eng,0.0923,5.1209,4.1842,6.8551,3.8965
+parakeet-tdt-0.6b-v2,phone,say:Daniel,0.0200,mms:eng,0.0943,4.7129,4.0373,6.3000,3.8125
+parakeet-tdt-0.6b-v2,phone+noise10,kokoro:am_michael,0.0218,mms:eng,0.1059,4.8636,3.9923,6.1724,3.7529
+parakeet-tdt-0.6b-v2,realistic,kokoro:am_michael,0.0246,mms:eng,0.1103,4.4919,3.7208,5.5785,3.2056
+wav2vec2-base-960h,clean,kokoro:af_heart,0.0764,mms:eng,0.2129,2.7850,2.5465,3.1532,4.4950
+wav2vec2-base-960h,phone,kokoro:am_michael,0.0792,mms:eng,0.2271,2.8675,2.6114,3.2411,4.7364
+wav2vec2-base-960h,phone+noise10,kokoro:af_heart,0.1768,say:Daniel,0.4933,2.7895,2.6096,2.9869,3.4424
+wav2vec2-base-960h,realistic,kokoro:af_heart,0.2057,say:Daniel,0.5087,2.4726,2.3216,2.6439,3.2482

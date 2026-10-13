@@ -1,0 +1,4 @@
+model,clips_in_cache,same_text,same_normalized
+whisper,2459,2459,2459
+wav2vec2,2708,2708,2708
+parakeet,2708,2708,2708

@@ -1,0 +1,126 @@
+{
+ "Whisper | all 250 | raw": {
+  "worst_over_best": 6.107142857142857,
+  "lo": 5.1938693219223175,
+  "hi": 8.508395029085136,
+  "worst": "mms:eng",
+  "best": "say:Daniel"
+ },
+ "Whisper | all 250 | ls": {
+  "worst_over_best": 5.227272727272727,
+  "lo": 4.2342194998737055,
+  "hi": 6.985512422360248,
+  "worst": "mms:eng",
+  "best": "say:Daniel"
+ },
+ "Whisper | 212 without digits | raw": {
+  "worst_over_best": 6.017543859649122,
+  "lo": 4.739118083003953,
+  "hi": 8.439159891598914,
+  "worst": "mms:eng",
+  "best": "say:Daniel"
+ },
+ "Whisper | 212 without digits | ls": {
+  "worst_over_best": 5.166666666666667,
+  "lo": 4.3022975623423925,
+  "hi": 7.279144305307095,
+  "worst": "mms:eng",
+  "best": "say:Samantha"
+ },
+ "Parakeet | all 250 | raw": {
+  "worst_over_best": 5.120879120879121,
+  "lo": 4.18421052631579,
+  "hi": 6.855124223602484,
+  "worst": "mms:eng",
+  "best": "say:Daniel"
+ },
+ "Parakeet | all 250 | ls": {
+  "worst_over_best": 4.404255319148937,
+  "lo": 3.6194584913611463,
+  "hi": 5.774684675215472,
+  "worst": "mms:eng",
+  "best": "say:Daniel"
+ },
+ "Parakeet | 212 without digits | raw": {
+  "worst_over_best": 4.815384615384615,
+  "lo": 3.868421052631579,
+  "hi": 6.574529459901799,
+  "worst": "mms:eng",
+  "best": "say:Daniel"
+ },
+ "Parakeet | 212 without digits | ls": {
+  "worst_over_best": 4.567164179104478,
+  "lo": 3.783132530120482,
+  "hi": 6.381003039513677,
+  "worst": "mms:eng",
+  "best": "say:Daniel"
+ },
+ "significance_counts": {
+  "Parakeet | 212 without digits": {
+   "raw": {
+    "easier": 6,
+    "harder": 1
+   },
+   "ls": {
+    "easier": 5,
+    "ns": 1,
+    "harder": 1
+   }
+  },
+  "Parakeet | 38 with digits": {
+   "raw": {
+    "easier": 5,
+    "ns": 1,
+    "harder": 1
+   },
+   "ls": {
+    "ns": 3,
+    "easier": 3,
+    "harder": 1
+   }
+  },
+  "Parakeet | all 250": {
+   "raw": {
+    "easier": 6,
+    "harder": 1
+   },
+   "ls": {
+    "easier": 5,
+    "ns": 1,
+    "harder": 1
+   }
+  },
+  "Whisper | 212 without digits": {
+   "raw": {
+    "easier": 6,
+    "harder": 1
+   },
+   "ls": {
+    "easier": 6,
+    "harder": 1
+   }
+  },
+  "Whisper | 38 with digits": {
+   "raw": {
+    "easier": 5,
+    "ns": 1,
+    "harder": 1
+   },
+   "ls": {
+    "ns": 3,
+    "easier": 3,
+    "harder": 1
+   }
+  },
+  "Whisper | all 250": {
+   "raw": {
+    "easier": 6,
+    "harder": 1
+   },
+   "ls": {
+    "easier": 6,
+    "harder": 1
+   }
+  }
+ }
+}

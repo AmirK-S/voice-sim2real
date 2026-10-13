@@ -1,0 +1,8 @@
+{
+ "n_items": 60,
+ "n_flagged_items": 30,
+ "n_unflagged_items": 30,
+ "population_R2_flagged_words": 241,
+ "population_unflagged_error_words": 731,
+ "instructions": "Play each clip. Judge only the bracketed word: render_error if the voice mispronounces, garbles, skips or runs it into the next word so that a careful human listener would not hear the reference word; fine if it is said clearly; unsure otherwise. Do not open key.csv."
+}

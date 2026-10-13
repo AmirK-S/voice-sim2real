@@ -1,0 +1,5 @@
+k,ari_vs_true_speakers,median_width_proxy_over_true,median_width_sentence_over_true,q10_proxy_over_true,q90_proxy_over_true,n_cells
+10,0.2211,0.9165,1.0256,0.6682,1.1143,28
+20,0.3651,0.9358,1.0256,0.7662,1.1566,28
+40,0.7397,0.9984,1.0256,0.9197,1.0801,28
+80,0.6569,1.0374,1.0256,0.9080,1.1282,28

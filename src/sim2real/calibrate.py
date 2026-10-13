@@ -158,6 +158,30 @@ def two_sample_rectified(y_cal: np.ndarray, f_cal: np.ndarray, f_eval_mean: floa
     return {"est": float(est), "lo": float(est - t * se), "hi": float(est + t * se)}
 
 
+def two_sample_rectified_cf(y_cal: np.ndarray, f_cal: np.ndarray, f_eval_mean: float, n_eval: int,
+                            alpha: float = 0.05) -> dict:
+    """Cross-fit PPI++ for the two-sample setting: the calibration labels are split in two
+    halves (in their random draw order); the plug-in lambda of one half is applied to the other
+    half, and the two half estimates are averaged. Removes the optimism of fitting lambda on
+    the same labels. Variance: (S_r0^2/m0 + S_r1^2/m1)/4 + S_r^2/N_eval (S_r pooled over both
+    halves); t with n - 2 df."""
+    n = y_cal.size
+    h = n // 2
+    parts = [(slice(0, h), slice(h, n)), (slice(h, n), slice(0, h))]
+    ests, v, rs = [], [], []
+    for fit, app in parts:
+        lam = ppipp_lambda(y_cal[fit], f_cal[fit])
+        r = y_cal[app] - lam * f_cal[app]
+        ests.append(lam * f_eval_mean + r.mean())
+        v.append(r.var(ddof=1) / r.size)
+        rs.append(r - r.mean())
+    est = (ests[0] + ests[1]) / 2
+    s2 = np.concatenate(rs).var(ddof=2)
+    se = np.sqrt((v[0] + v[1]) / 4 + s2 / n_eval)
+    t = _st.t.ppf(1 - alpha / 2, n - 2)
+    return {"est": float(est), "lo": float(est - t * se), "hi": float(est + t * se)}
+
+
 def ppipp_lambda(y_cal: np.ndarray, f_cal: np.ndarray) -> float:
     """Plug-in PPI++ weight cov(y, f) / var(f) on the calibration sample (not clipped)."""
     vf = np.var(f_cal, ddof=1)

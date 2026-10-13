@@ -114,8 +114,17 @@ def full_reference(D: cal.LibriData, c: str) -> dict:
     d = D.E[("human", c, WH)] - D.E[("human", c, PA)]
     boot = (W @ d) / (W @ D.n)
     lo, hi = np.percentile(boot, [2.5, 97.5])
-    return {"diff": float(d.sum() / D.n.sum()), "lo": float(lo), "hi": float(hi),
-            "decision": str(cal.decide(lo, hi))}
+    out = {"diff": float(d.sum() / D.n.sum()), "lo": float(lo), "hi": float(hi),
+           "decision": str(cal.decide(lo, hi))}
+    # lab offset: 7-voice-mean model difference minus the human one (difference in differences),
+    # on all 250 sentences, speaker-cluster bootstrap. This is the "bias" of the plain average
+    # relative to the 250-sentence human estimate, with its sampling uncertainty.
+    ds = cal.synth_mean(D, c, WH) - cal.synth_mean(D, c, PA)
+    did = ds - d
+    bd = (W @ did) / (W @ D.n)
+    out.update({"lab_diff": float(ds.sum() / D.n.sum()), "lab_offset_did": float(did.sum() / D.n.sum()),
+                "lab_offset_lo": float(np.percentile(bd, 2.5)), "lab_offset_hi": float(np.percentile(bd, 97.5))})
+    return out
 
 
 def q2(D: cal.LibriData) -> tuple[pd.DataFrame, pd.DataFrame, dict]:
@@ -165,6 +174,8 @@ def q2(D: cal.LibriData) -> tuple[pd.DataFrame, pd.DataFrame, dict]:
                               ("PPI++", cal.ppipp_lambda(dY[lab], dFbar[lab]))):
                 r = cal.two_sample_rectified(dY[lab], dFbar[lab], fm, ev.size, lam=lam)
                 res[name] = (r["est"], r["lo"], r["hi"])
+            r = cal.two_sample_rectified_cf(dY[lab], dFbar[lab], fm, ev.size)
+            res["PPI++ cross-fit"] = (r["est"], r["lo"], r["hi"])
             for meth, (e, lo, hi) in res.items():
                 rows.append({"condition": c, "n_cal": n, "rep": rep, "method": meth, "estimate": e,
                              "lo": lo, "hi": hi, "truth_eval": truth, "decision": str(cal.decide(lo, hi)),
@@ -182,7 +193,10 @@ def q2(D: cal.LibriData) -> tuple[pd.DataFrame, pd.DataFrame, dict]:
     summ = reps.groupby(["condition", "n_cal", "method"]).agg(
         ref_full=("ref_full", "first"), decision_acc_vs_full=("acc_full", "mean"),
         decision_acc_vs_eval=("acc_eval", "mean"), share_declares_winner=("declares_winner", "mean"),
-        share_wrong_or_false_winner=("wrong_winner", "mean"), coverage=("covered", "mean"),
+        share_wrong_or_false_winner=("wrong_winner", "mean"),
+        share_winner_whisper=("decision", lambda s: float((s == "A").mean())),
+        share_winner_parakeet=("decision", lambda s: float((s == "B").mean())),
+        coverage=("covered", "mean"),
         bias=("err", "mean"), rmse=("err", lambda e: float(np.sqrt(np.mean(e ** 2)))),
         median_width=("width", "median"), mean_truth=("truth_eval", "mean"),
         share_eval_ref_none=("ref_eval", lambda s: float((s == "none").mean()))).reset_index()
@@ -192,7 +206,8 @@ def q2(D: cal.LibriData) -> tuple[pd.DataFrame, pd.DataFrame, dict]:
     return reps, summ, refs
 
 
-METHODS = ["plain average", "fidelity-weighted", "linear-corrected", "human only", "PPI", "PPI++"]
+METHODS = ["plain average", "fidelity-weighted", "linear-corrected", "human only", "PPI", "PPI++",
+           "PPI++ cross-fit"]
 
 
 # --------------------------------------------------------------------------- Q3
@@ -222,6 +237,10 @@ def q3(D: cal.LibriData) -> tuple[pd.DataFrame, pd.DataFrame]:
                 strata = cal.make_strata(u, 5)
                 nh = cal.neyman_allocation(strata, u, n)
                 res[f"stratified {sname}, PPI"] = cal.stratified_ppi(y, f, strata, nh, rng, R3)
+                if n >= 20:  # 5 strata x 4 labels
+                    nh4 = cal.neyman_allocation(strata, u, n, min_per=4)
+                    res[f"stratified {sname} (min 4 per stratum), PPI"] = cal.stratified_ppi(
+                        y, f, strata, nh4, np.random.default_rng(SEED + 1000 * ti + n + 500_000), R3)
                 res[f"Poisson IPW {sname}, PPI"] = cal.poisson_ipw_ppi(y, f, cal.poisson_probs(u, n), rng, R3)
             for d, r in res.items():
                 cov = (r["lo"] <= truth) & (truth <= r["hi"])
@@ -294,7 +313,7 @@ def fig_fidelity(t: pd.DataFrame) -> None:
 
 
 MARK = {"plain average": "o", "fidelity-weighted": "s", "linear-corrected": "D", "human only": "^",
-        "PPI": "v", "PPI++": "P"}
+        "PPI": "v", "PPI++": "P", "PPI++ cross-fit": "X"}
 
 
 def fig_weighting(summ: pd.DataFrame) -> None:
@@ -305,7 +324,7 @@ def fig_weighting(summ: pd.DataFrame) -> None:
             h = g[g.method == meth].sort_values("n_cal")
             for i, col in enumerate(["decision_acc_vs_full", "coverage"]):
                 axes[i, j].plot(h["n_cal"], h[col], marker=MARK[meth], color=CAT[k], lw=1.5, ms=5, label=meth)
-        axes[0, j].set_title(f"{c}\n(human: {'Parakeet better' if g['ref_full'].iloc[0] == 'B' else 'no winner'})",
+        axes[0, j].set_title(f"{c}\n(human: {'Parakeet better' if g['ref_full'].iloc[0] == 'B' else 'CI includes 0'})",
                              fontsize=9)
         axes[1, j].axhline(0.95, color=INK2, lw=0.8, ls="--")
         axes[1, j].set_xticks([10, 25, 50])

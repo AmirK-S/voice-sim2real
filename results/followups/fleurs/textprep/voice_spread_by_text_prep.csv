@@ -1,0 +1,13 @@
+model,subset,text,best,best_wer,worst,worst_wer,worst_over_best,worst_over_best_excl_mms
+whisper-large-v3-turbo,all 250,raw_text,say:Daniel,0.0166,mms:eng,0.1016,6.1071,1.5000
+whisper-large-v3-turbo,all 250,ls_text,say:Daniel,0.0174,mms:eng,0.0911,5.2273,1.7727
+whisper-large-v3-turbo,212 without digits,raw_text,say:Daniel,0.0133,mms:eng,0.0803,6.0175,1.5439
+whisper-large-v3-turbo,212 without digits,ls_text,say:Samantha,0.0155,mms:eng,0.0798,5.1667,1.7121
+whisper-large-v3-turbo,38 with digits,raw_text,kokoro:am_michael,0.0231,mms:eng,0.2182,9.4444,2.1111
+whisper-large-v3-turbo,38 with digits,ls_text,say:Daniel,0.0282,mms:eng,0.1528,5.4091,1.9545
+parakeet-tdt-0.6b-v2,all 250,raw_text,say:Daniel,0.0180,mms:eng,0.0923,5.1209,1.4945
+parakeet-tdt-0.6b-v2,all 250,ls_text,say:Daniel,0.0186,mms:eng,0.0820,4.4043,1.7128
+parakeet-tdt-0.6b-v2,212 without digits,raw_text,say:Daniel,0.0152,mms:eng,0.0733,4.8154,1.4308
+parakeet-tdt-0.6b-v2,212 without digits,ls_text,say:Daniel,0.0157,mms:eng,0.0716,4.5672,1.7313
+parakeet-tdt-0.6b-v2,38 with digits,raw_text,say:Daniel,0.0334,mms:eng,0.1964,5.8846,1.6538
+parakeet-tdt-0.6b-v2,38 with digits,ls_text,say:Daniel,0.0347,mms:eng,0.1386,4.0000,1.6667

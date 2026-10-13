@@ -1,0 +1,212 @@
+{
+ "break_even": {
+  "human W-P realistic": 1.4163783160322954,
+  "mean-voice DiD realistic": 1.0126146788990826,
+  "non-MMS gaps: min": 1.9408502772643252,
+  "non-MMS gaps significant at 2x": 59,
+  "non-MMS gaps": 60,
+  "damage cells significant (CI) at 1x": 43,
+  "damage cells significant at 1.5x": 42,
+  "damage cells significant at 2x": 36,
+  "damage cells": 49
+ },
+ "headline_by_grouping": [
+  {
+   "grouping": "sentence (as reported)",
+   "n_clusters": 250,
+   "human W-P clean": "[0.00139, -0.00358, 0.00632]",
+   "human W-P realistic": "[0.01228, 0.00361, 0.02103]",
+   "mean-voice DiD realistic": "[-0.00883, -0.01786, -0.00011]",
+   "mean-voice W-P realistic": "[0.00345, 0.00045, 0.00645]",
+   "non-MMS gap cells easier": "[60.0, 60.0, 60.0]",
+   "damage cells understate / overstate": "[43.0, 0.0, 49.0]"
+  },
+  {
+   "grouping": "consecutive sentence ids",
+   "n_clusters": 76,
+   "human W-P clean": "[0.00139, -0.00334, 0.00635]",
+   "human W-P realistic": "[0.01228, 0.00476, 0.01997]",
+   "mean-voice DiD realistic": "[-0.00883, -0.01732, -0.00029]",
+   "mean-voice W-P realistic": "[0.00345, 0.00059, 0.0064]",
+   "non-MMS gap cells easier": "[60.0, 60.0, 60.0]",
+   "damage cells understate / overstate": "[44.0, 0.0, 49.0]"
+  },
+  {
+   "grouping": "proxy speakers k=10",
+   "n_clusters": 10,
+   "human W-P clean": "[0.00139, -0.00287, 0.00452]",
+   "human W-P realistic": "[0.01228, 0.00501, 0.01931]",
+   "mean-voice DiD realistic": "[-0.00883, -0.01597, -0.00021]",
+   "mean-voice W-P realistic": "[0.00345, 0.00118, 0.00662]",
+   "non-MMS gap cells easier": "[60.0, 60.0, 60.0]",
+   "damage cells understate / overstate": "[44.0, 0.0, 49.0]"
+  },
+  {
+   "grouping": "proxy speakers k=20",
+   "n_clusters": 20,
+   "human W-P clean": "[0.00139, -0.00289, 0.00531]",
+   "human W-P realistic": "[0.01228, 0.00446, 0.0194]",
+   "mean-voice DiD realistic": "[-0.00883, -0.0159, -0.00069]",
+   "mean-voice W-P realistic": "[0.00345, 0.00094, 0.00674]",
+   "non-MMS gap cells easier": "[60.0, 60.0, 60.0]",
+   "damage cells understate / overstate": "[43.0, 0.0, 49.0]"
+  },
+  {
+   "grouping": "proxy speakers k=40",
+   "n_clusters": 40,
+   "human W-P clean": "[0.00139, -0.00339, 0.00603]",
+   "human W-P realistic": "[0.01228, 0.00567, 0.0197]",
+   "mean-voice DiD realistic": "[-0.00883, -0.01642, -0.00171]",
+   "mean-voice W-P realistic": "[0.00345, 0.00076, 0.00639]",
+   "non-MMS gap cells easier": "[60.0, 60.0, 60.0]",
+   "damage cells understate / overstate": "[43.0, 0.0, 49.0]"
+  }
+ ],
+ "proxy_validation_librispeech": [
+  {
+   "k": 10,
+   "ari_vs_true_speakers": 0.22106571203927838,
+   "median_width_proxy_over_true": 0.9165038629952427,
+   "median_width_sentence_over_true": 1.0256235138274807,
+   "q10_proxy_over_true": 0.6682170665073295,
+   "q90_proxy_over_true": 1.1143085648078017,
+   "n_cells": 28
+  },
+  {
+   "k": 20,
+   "ari_vs_true_speakers": 0.36510699220430537,
+   "median_width_proxy_over_true": 0.9358055456319241,
+   "median_width_sentence_over_true": 1.0256235138274807,
+   "q10_proxy_over_true": 0.7662207561453344,
+   "q90_proxy_over_true": 1.1565790559011646,
+   "n_cells": 28
+  },
+  {
+   "k": 40,
+   "ari_vs_true_speakers": 0.7396990907081598,
+   "median_width_proxy_over_true": 0.9983608991363879,
+   "median_width_sentence_over_true": 1.0256235138274807,
+   "q10_proxy_over_true": 0.9196995801846519,
+   "q90_proxy_over_true": 1.0800906201426774,
+   "n_cells": 28
+  },
+  {
+   "k": 80,
+   "ari_vs_true_speakers": 0.6568530265431513,
+   "median_width_proxy_over_true": 1.0374429177426785,
+   "median_width_sentence_over_true": 1.0256235138274807,
+   "q10_proxy_over_true": 0.9079913165063915,
+   "q90_proxy_over_true": 1.128245265899903,
+   "n_cells": 28
+  }
+ ],
+ "librispeech_same_70_cells": {
+  "speaker_cluster_ci": {
+   "harder": 26,
+   "easier": 16,
+   "ns": 28
+  },
+  "sentence_ci": {
+   "harder": 27,
+   "easier": 18,
+   "ns": 25
+  },
+  "n": 70
+ },
+ "damage_by_own_snr": {
+  "best": {
+   "cells": 49,
+   "understate_bh": 35,
+   "overstate_bh": 0,
+   "snr_range_db": [
+    42.40107521896441,
+    59.890473714218686
+   ],
+   "parakeet-tdt-0.6b-v2 | realistic | kokoro:af_heart": {
+    "human_damage": 0.0345489443378119,
+    "synth_damage": 0.007037747920665387,
+    "error": -0.027511196417146513,
+    "lo": -0.042188602637779384,
+    "hi": -0.01328252254370204
+   },
+   "parakeet-tdt-0.6b-v2 | realistic | synthetic_mean": {
+    "human_damage": 0.0345489443378119,
+    "synth_damage": 0.013435700575815737,
+    "error": -0.021113243761996164,
+    "lo": -0.035215811893498025,
+    "hi": -0.007608178290991892
+   },
+   "whisper-large-v3-turbo | realistic | kokoro:af_heart": {
+    "human_damage": 0.052463211772232884,
+    "synth_damage": 0.003198976327575176,
+    "error": -0.04926423544465771,
+    "lo": -0.07445537743973882,
+    "hi": -0.027244202686269595
+   }
+  },
+  "middle": {
+   "cells": 49,
+   "understate_bh": 38,
+   "overstate_bh": 0,
+   "snr_range_db": [
+    38.813265322051,
+    42.36737255376211
+   ],
+   "parakeet-tdt-0.6b-v2 | realistic | kokoro:af_heart": {
+    "human_damage": 0.034235229155162895,
+    "synth_damage": 0.0027609055770292656,
+    "error": -0.03147432357813363,
+    "lo": -0.04740216202986049,
+    "hi": -0.017089305402425578
+   },
+   "parakeet-tdt-0.6b-v2 | realistic | synthetic_mean": {
+    "human_damage": 0.034235229155162895,
+    "synth_damage": 0.014514475033525279,
+    "error": -0.019720754121637617,
+    "lo": -0.03476585753445896,
+    "hi": -0.006482242118606186
+   },
+   "whisper-large-v3-turbo | realistic | kokoro:af_heart": {
+    "human_damage": 0.03810049696300387,
+    "synth_damage": 0.0033130866924351186,
+    "error": -0.03478741027056875,
+    "lo": -0.049918323295763324,
+    "hi": -0.02108079635551273
+   }
+  },
+  "worst": {
+   "cells": 49,
+   "understate_bh": 42,
+   "overstate_bh": 0,
+   "snr_range_db": [
+    23.480253477653925,
+    38.69492823128461
+   ],
+   "parakeet-tdt-0.6b-v2 | realistic | kokoro:af_heart": {
+    "human_damage": 0.03341288782816229,
+    "synth_damage": 0.0011933174224343676,
+    "error": -0.032219570405727926,
+    "lo": -0.05044523752238886,
+    "hi": -0.01590005678591709
+   },
+   "parakeet-tdt-0.6b-v2 | realistic | synthetic_mean": {
+    "human_damage": 0.03341288782816229,
+    "synth_damage": 0.010654619843163994,
+    "error": -0.022758267984998297,
+    "lo": -0.03952001324588015,
+    "hi": -0.008026735942263332
+   },
+   "whisper-large-v3-turbo | realistic | kokoro:af_heart": {
+    "human_damage": 0.045346062052505964,
+    "synth_damage": 0.00954653937947494,
+    "error": -0.03579952267303102,
+    "lo": -0.052759285233288815,
+    "hi": -0.020370618264006237
+   }
+  }
+ },
+ "own_snr_by_gender_median": {
+  "FEMALE": 40.92752026449304,
+  "MALE": 39.57604523350963
+ }
+}

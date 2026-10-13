@@ -2,6 +2,12 @@
 
 Script: `scripts/07_tts_errors.py` (CPU only, reads `results/utterances.csv`, runs no ASR). All CIs are 95 % speaker-cluster bootstrap intervals (40 speakers, 10,000 replicates) unless stated otherwise. "Points" means WER percentage points. Nobody listened to any audio for this follow-up.
 
+**Revised after review (13/10/2026), wording only; no number changed.**
+- The 30-item hand check is a plausibility check, not a validation: it reuses the transcripts that define the flag, was made without audio, by the person who designed the flag. A blind listening kit for a second person is now in `listening_kit/` (section 3); it has not been run.
+- The cleaned keyword McNemar result is true by construction and is no longer presented as a finding (section 6). The headline keyword recall stays the raw one.
+- The cleaned-gap CIs are conditional on the flagged set, which was selected from the same errors (section 4).
+- R3sym removes different human words for each voice, so each voice is compared with a slightly different human baseline (section 4).
+
 ## Method
 
 **Flag rules** (LibriSpeech subset, 250 sentences, 4,326 reference words, clean audio, per voice):
@@ -12,7 +18,7 @@ Script: `scripts/07_tts_errors.py` (CPU only, reads `results/utterances.csv`, ru
 
 **Caller set (keywords).** There is no human audio, so other voices stand in for the human reference. A keyword instance (voice, script, keyword) is flagged when every model of the rule misses it on the voice's clean clip and at least 4 of the 6 other voices have it recognized by every model of the rule.
 
-**Precision.** 30 flagged words were drawn from R2 (stratified by voice, seed 0; 23 of them are also R3). I labelled each from the reference text, the TTS input text and the three transcripts. Labels: `tts` means the evidence is consistent with a rendering error, `unclear` means it could be ASR or scoring, `not_tts` means clearly not a rendering error. The person who wrote the flag also did the labelling, from text only, without audio.
+**Plausibility check (called "precision" in the first version).** 30 flagged words were drawn from R2 (stratified by voice, seed 0; 23 of them are also R3). I labelled each from the reference text, the TTS input text and the three transcripts. Labels: `tts` means the evidence is consistent with a rendering error, `unclear` means it could be ASR or scoring, `not_tts` means clearly not a rendering error. The person who wrote the flag also did the labelling, from text only, without audio.
 
 ## Results
 
@@ -52,7 +58,7 @@ Percent of all errors (insertions included) that fall on flagged words, R3 then 
 - **Piper ryan, Parakeet:** 94 % [51, 300] (R3). The ratio is unstable because the gap is small.
 - **macOS Daniel, Parakeet:** 47 % [22, 183] (R3).
 
-### 3. Precision of the flag (hand check, 30 items, text only)
+### 3. Plausibility of the flag (hand check, 30 items, text only; not a validation)
 
 - **Labels:** 23 `tts`, 7 `unclear`, 0 `not_tts`.
 - **Strict precision** (unclear counted as wrong): 77 % [58, 90] (Clopper-Pearson).
@@ -67,7 +73,8 @@ Percent of all errors (insertions included) that fall on flagged words, R3 then 
   - 1 abbreviation: the TTS input says "hon" where the reference is scored as "honorable", and all models hear "hun".
 - At least 6 of the 23 (the 5 run-on readings and the abbreviation) come from this pipeline's TTS input text, not from the TTS acoustic model, and could be fixed upstream.
 - **Unclear items:** rare names (Uncas, Chelford), reductions that also occur in natural speech ("and" as "'n", dropped /h/), one possible accent effect (Daniel's "old" heard as "all"), and one possible language-model bias ("ruth" as "root" for the strong models, while wav2vec2 got it right).
-- **Limits:** one labeller, who also designed the flag; no audio; 30 items. The interval is wide, and the true precision could be well below 77 % if the unclear items are not rendering errors.
+- **Limits:** one labeller, who also designed the flag; no audio; 30 items; the labels are judged from the same three transcripts that define the flag, so agreement is partly built in. These figures say the flagged items look like rendering errors on paper. They are not a precision estimate. The interval is wide, and the true precision could be well below 77 % if the unclear items are not rendering errors.
+- **Blind listening kit (prepared, not run).** `scripts/07b_tts_listening_kit.py make` writes `listening_kit/sheet.csv`: 60 items in random order, the 30 flagged words above mixed with 30 words that Whisper or Parakeet got wrong on the same voices' clean clips but that R2 did not flag (same count per voice, seed 1), each with its clip and the reference sentence with the word in brackets. The key (`listening_kit/key.csv`) must stay closed for the listener; the clips are copied to `data/listening_kit/` (gitignored). After someone other than the flag's author fills the `judgement` column, `07b_tts_listening_kit.py score` gives the precision of the flag, the share of unflagged errors that are rendering errors, and a recall estimate using the population counts (241 R2-flagged words, 731 unflagged error words on the strong models). Until then, precision and recall of the flag are unknown.
 
 ### 4. Gaps on clean audio after cleaning (synthetic minus human, points)
 
@@ -88,7 +95,7 @@ Percent of all errors (insertions included) that fall on flagged words, R3 then 
 | macOS Daniel, Whisper | +0.18 [-0.55, +0.98] | -0.14 [-0.80, +0.56] | +0.05 [-0.60, +0.72] | -0.14 [-0.70, +0.43] |
 | macOS Daniel, Parakeet | +0.69 [0.04, 1.46] | +0.37 [-0.19, +1.00] | +0.56 [0.04, 1.15] | +0.37 [-0.05, +0.83] |
 
-wav2vec2 and all conditions are in `gap_cleaned.csv`. Reading the table:
+wav2vec2 and all conditions are in `gap_cleaned.csv`. Two cautions apply to every cleaned column. (1) The CIs are conditional on the flagged set: the flags were selected from the same errors they then remove, so the bootstrap does not include the variability of that selection, and the cleaned CIs are somewhat too narrow. (2) R3sym and R2sym remove a different set of human words for each voice (the mirror words depend on the voice), so each voice is compared with a slightly different human baseline; compare voices with that in mind. Reading the table:
 - **One-sided cleaning makes Kokoro look significantly easier than human speech.** After the symmetric cleaning, no Kokoro clean cell is significant for the strong models. That apparent advantage is a selection artifact, not a finding.
 - **MMS stays clearly harder** under every rule: +2.35 to +3.00 points for Whisper, +1.33 to +1.98 for Parakeet. Rendering errors explain roughly a third to a half of its gap, not all of it.
 - **Piper ryan, Whisper:** the gap stays significant after symmetric cleaning (+0.84 [0.20, 1.49]). For Parakeet it does not.
@@ -153,8 +160,10 @@ The "averaging manufactures certainty" finding survives cleaning.
 
 **Voice effects** (exact McNemar between voice pairs):
 - With Holm over the 126 voice-pair tests (the family that `05_analyze.py` actually uses), the counts reproduce v2 raw: Whisper 0, Parakeet 2, wav2vec2 16. After R3 they are 0, 0 and 15.
-- With Holm per model over 42 tests (what FINDINGS section 4 says it does), the raw counts are Whisper 7, Parakeet 6 and wav2vec2 19. After R3 they are 0, 0 and 18.
-- So for the strong models, every significant voice effect on keyword recall is carried by the flagged instances.
+- With Holm per model over 42 tests, the raw counts are Whisper 7, Parakeet 6 and wav2vec2 19. After R3 they are 0, 0 and 18.
+- **The drop to 0 after cleaning is true by construction, not a finding.** A keyword instance is flagged exactly when the voice misses it while the other voices get it, which is the definition of a discordant pair in these McNemar tests. Removing flagged instances removes discordant pairs, so losing significance is guaranteed. What the counts do show is descriptive: for the strong models the significant voice effects rest on a handful of instances that every model misses on one voice.
+- **Daniel's "help".** All 6 flagged Daniel instances are "help" heard as "hell" by every model. This may be a property of the British voice that real British callers share, not a synthesis artifact; without listening it should not be counted as a rendering error. The headline recall is therefore the raw one (Daniel clean: Whisper 94.3 % [88.0, 97.9], Parakeet 92.4 % [85.5, 96.7]); the cleaned values above are an upper bound.
+- **Side finding (v2 text corrected):** FINDINGS section 4 said "Holm across the 42 voice pairs of each model", but the code uses one Holm family across all 3 models. FINDINGS now states the actual family and gives the per-model counts.
 - **Side finding:** the FINDINGS wording ("Holm across the 42 voice pairs of each model") does not match the code (one Holm family across all 3 models). Under the stated per-model family, the strong models would show 7 and 6 significant voice pairs, not 0 and 2.
 
 **Caveats:**
@@ -167,7 +176,7 @@ The "averaging manufactures certainty" finding survives cleaning.
 - **Lower bound on recall.** The flag needs every model of the rule to fail, so rendering errors that only one model trips on are missed, and the counts are lower bounds on rendering errors.
 - **Selection bias.** The one-sided cleaning is biased in the synthetic voice's favour; use the symmetric (R3sym / R2sym) gaps.
 - **In-domain models.** The human-correct condition leans on models trained on LibriSpeech (wav2vec2, probably Parakeet), so "human right" is easier to satisfy than it would be on out-of-domain human speech.
-- **Precision check.** The precision rests on 30 text-only judgements by one labeller; nobody listened to audio.
+- **No validation yet.** The plausibility check rests on 30 text-only judgements by the flag's own author, from the flag's own evidence; nobody listened to audio. The blind listening kit is ready but not run.
 - **Flags from clean audio only.** Flags are derived from clean audio and applied to every condition; under noise, other words may become rendering-sensitive.
 - **Rate-matched voices.** They are flagged too (`flag_summary.csv`, `gap_cleaned.csv`), but they are not discussed here.
 
@@ -179,5 +188,6 @@ The "averaging manufactures certainty" finding survives cleaning.
 - `voice_spread_cleaned.csv`, `channel_damage_cleaned.csv`.
 - `keyword_flags.csv`, `keyword_recall_cleaned.csv`, `keyword_mcnemar_cleaned.csv`.
 - `hand_check_sample.csv` (generated by the script), `hand_check_labels.csv` (hand labels), `hand_check.csv` (merged).
+- `listening_kit/sheet.csv`, `listening_kit/key.csv`, `listening_kit/README.json` (blind listening check, `scripts/07b_tts_listening_kit.py`).
 - `summary.json`.
 - `fig1_flagged_share.png`, `fig2_gap_cleaned.png`, `fig3_keyword_recall_cleaned.png`.

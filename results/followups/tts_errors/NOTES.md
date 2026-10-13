@@ -118,7 +118,7 @@ wav2vec2 and all conditions are in `gap_cleaned.csv`. Two cautions apply to ever
 - phone+noise10: +0.78 [0.50, 1.07];
 - realistic: +0.73 [0.37, 1.09].
 
-The "averaging manufactures certainty" finding survives cleaning.
+The averaged-lab pattern survives cleaning. (Correction 13/10/2026: an earlier version called it "averaging manufactures certainty"; that wording is withdrawn, see `../literature_checks` and `../../../CLAIMS-STATUS.md`, R1d.)
 
 **Large-gap pairs (vs wav2vec2).**
 - The lab/real gap ratio ranges from 0.378 to 3.72 raw, 0.377 to 3.80 after R3, 0.377 to 3.77 after R3sym, and 0.379 to 4.60 after R2. Under R2 the maximum moves to MMS, Whisper vs wav2vec2 on clean audio.

@@ -2,6 +2,8 @@
 
 Run of 12-13/10/2026, local, on an Apple Silicon Mac. 73,746 scored transcriptions, plus 300 noise-only transcriptions. This version replaces the v1 findings (commit 54793f5) after a statistics review and a method review; every number below comes from the v2 rerun. The list of fixes is at the end.
 
+**Update (13/10/2026).** Follow-ups have since run on the same data (`followups/calibration`, `fleurs`, `tts_errors`, `phantom`, `literature_checks`; summary in `../FOLLOWUPS.md`). Where they change a statement below, the statement carries a marked correction. The reconciled list of claims is `../CLAIMS-STATUS.md`.
+
 ## What this measures, and what it does not
 
 **It measures the acoustic half of the sim-to-real gap on read speech.** The same scripts are read by real people and by 7 TTS voices, sent through simulated phone channels and transcribed by 3 public ASR models standing in for the voice agent's ear.
@@ -48,7 +50,7 @@ Run of 12-13/10/2026, local, on an Apple Silicon Mac. 73,746 scored transcriptio
 
 ## Findings
 
-### 1. For two close ASR models, no single voice reliably distorts the comparison except MMS; the lab overstates certainty mainly when voices are averaged
+### 1. For two close ASR models, no single voice reliably distorts the comparison except MMS; averaging voices gives intervals that are too narrow (corrected title)
 
 The comparison is Whisper vs Parakeet: 7 voices x 4 conditions = 28 voice-level decisions.
 
@@ -62,24 +64,28 @@ The comparison is Whisper vs Parakeet: 7 voices x 4 conditions = 28 voice-level 
   - MMS in all 4 conditions, for example +1.60 [0.52, 2.62] points on phone+noise10;
   - Piper ryan on phone: +0.67 [0.16, 1.20].
 - **None survives Holm correction**; the smallest adjusted p is 0.16.
-- MMS consistently exaggerates Parakeet's advantage, because its rendering errors hurt Whisper more.
+- MMS consistently exaggerates Parakeet's advantage. A likely explanation is that its rendering errors hurt Whisper more, but this is not tested: the shared-error filter of `followups/tts_errors` removes only errors common to both models, and the MMS DiD is unchanged after it.
 
 **Flips.** A flip now requires a real winner, so only clean audio qualifies. One voice flips the point estimate: macOS Daniel at -0.14 [-0.73, +0.49], which picks no one. Its DiD is -0.51 [-1.16, +0.14]. It is not a confident flip and its DiD is not significant.
 
-**The 7-voice mean.** This is the "lab manufactures certainty" effect in the form the data supports.
+**The 7-voice mean.** (Corrected: an earlier version called this the "lab manufactures certainty" effect; see the corrections below.)
 - Averaging all voices gives the right winner on clean audio: +0.48 [0.17, 0.82].
-- It also declares Parakeet significantly better on all three phone or noisy conditions, where real speech shows no winner.
-- Its DiD is never significant, for example +0.15 [-0.48, +0.74] on realistic. Averaging 7 renderings of each sentence shrinks the lab's CI, not its bias.
+- It also declares Parakeet significantly better on all three phone or noisy conditions, where the human CI includes 0 (corrected wording: an earlier version said "where real speech shows no winner").
+- Its DiD is never significant, for example +0.15 [-0.48, +0.74] on realistic. Averaging 7 renderings of each sentence shrinks the lab's CI.
+- Correction after review (`followups/calibration`): "where real speech shows no winner" means the 250-sentence human CI includes 0, not that the true difference is 0. On all three of these conditions the human point estimate also favours Parakeet (phone +0.16 [-0.23, +0.57], phone+noise10 +0.49 [-0.16, +1.22], realistic +0.60 [-0.04, +1.29]), and the lab offset (DiD of the 7-voice mean) has a CI that includes 0 (+0.28 [-0.13, +0.68], +0.38 [-0.39, +1.05], +0.15 [-0.48, +0.74]). What the data show is a precision mismatch: the averaged lab reports an interval far narrower than its real uncertainty against human speech. A bias is neither shown nor excluded: all offset point estimates are positive and the upper bounds reach about 1 point.
 - Correction after the literature check (`followups/literature_checks`, 13/10/2026). The CIs above hold the 7 voices fixed and resample only speakers. Resampling the voices as well (BOOT-BOTH, Deutsch et al.) widens the interval of the mean 1.6x to 2.3x. The mean still declares Parakeet better on phone+noise10 (+0.86: [0.38, 1.47] with voices drawn flat, [0.34, 1.64] with engines then voices) and on realistic (+0.75: [0.20, 1.38] and [0.17, 1.54]). On phone it is borderline (+0.44: [0.02, 0.97] and [-0.01, 1.14]). The lab offset stays non-significant (realistic +0.15 [-0.63, +0.94], flat). The human data cannot settle the question. No condition is equivalent to 0 within 0.5 points either side (TOST). At 80 % power, the smallest human gap this sample can detect is about 1.0 point on the noisy conditions, above the lab's 0.75 to 0.86. **The claim that the lab manufactures certainty where real speech shows no winner is therefore withdrawn as worded.** What the data support: the v2 interval for the mean ignored voice-to-voice variance, and the averaged lab declares a winner that 250 human sentences from 40 speakers can neither confirm nor rule out. That winner points the same way as the human point estimate. No voice and no average made a confident wrong-sign decision on any of the 18 decisions per voice.
+- Correction (reconciliation, 13/10/2026). The single voices were Holm-corrected over 28 decisions; the 7-voice mean was not corrected at all (blank `did_p_holm` on its rows of `tables/decision_flips.csv`). With voices resampled (flat) and Holm over the 4 conditions, the mean's adjusted p is about 0.002 on phone+noise10, 0.019 on realistic, 0.07 on phone and 0.07 on clean: significant on 2 of the 3 noisy conditions, not 3. On FLEURS (`followups/fleurs`) the human sample shows Parakeet ahead on realistic, +1.23 [0.36, 2.10], fragile to reader clustering; the mean agrees in sign at about a quarter of the size, +0.34 [0.04, 0.64], and includes 0 once voices are resampled, [-0.12, +0.89]. All Whisper numbers in this section, human side included, used the raw decoder of section 6; the DiDs are internally consistent, but absolute Whisper values may differ from off-the-shelf Whisper.
 
 **Large-gap pairs** (Whisper or Parakeet vs wav2vec2, 98 decisions). No voice flips the winner, but the size of the gap is distorted in both directions:
 - Lab gap divided by real gap ranges from 0.37 to 3.72.
 - On realistic, the real Whisper vs wav2vec2 gap is 21.7 points. The lab puts it at 9.6 points with Kokoro af_heart and 35.8 with macOS Daniel.
 - The DiD is Holm-significant in 18 of 28 decisions for Whisper and 42 of 70 for Parakeet.
 
-These pairs involve the in-domain control, whose human advantage is partly a training-domain advantage. Treat the direction as robust and the magnitudes as an upper bound.
+These pairs involve the in-domain control, whose human advantage is partly a training-domain advantage. Treat the direction as robust and the magnitudes as descriptive. (Corrected: an earlier version said "an upper bound". On FLEURS the lab always understates these gaps, 0.26x to 0.92x, mostly because wav2vec2 collapses on out-of-domain human speech; `followups/fleurs`.)
 
-### 2. Kokoro makes the lab easier than reality; most other voices make it harder
+### 2. Kokoro makes the lab easier than reality; most other voices make it harder (on LibriSpeech)
+
+Correction (13/10/2026): this holds on LibriSpeech only. Against FLEURS readers every voice except MMS is easier than humans, in 60 of 60 non-MMS cells, also with LibriSpeech-style TTS text (`followups/fleurs`). FLEURS readers who deviate from the text inflate human WER, which pushes in the same direction.
 
 Across all conditions and models:
 - The two Kokoro voices are significantly easier than human speech in 31 of 48 cells (30 after BH correction), and never harder.
@@ -158,7 +164,7 @@ Recall is scored on the 105 keyword instances in the 78 emergency and fall-help 
 | realistic | 95.5 % [93.7, 97.3] | 94.6 % [92.6, 96.5] | 55.2 % [49.5, 60.9] |
 | phone+noise5 | not run | 93.9 % [91.6, 96.1] | 31.8 % [25.5, 38.2] |
 
-**Voice effects** (exact McNemar, Holm across the 42 voice pairs of each model):
+**Voice effects** (exact McNemar). Correction after review: the code (`05_analyze.py`) applies Holm in one family of 126 tests (42 voice pairs x 3 models), not per model as an earlier version of this sentence said. The counts below use that 126-test family. With Holm per model (42 tests each), the counts are Whisper 7, Parakeet 6 and wav2vec2 19 of 42; `followups/tts_errors` shows that for the strong models these voice effects are carried by a few instances every model misses (Daniel's "help" heard as "hell", MMS garbling).
 - **wav2vec2:** 16 of 42 pairs differ. Under realistic, Kokoro af_heart reaches 79.0 % and Daniel 27.6 %: 56 discordant pairs against 2, Holm p = 1.5e-12.
 - **Parakeet:** 2 of 42 pairs differ.
 - **Whisper:** 0 of 42 pairs differ. Under realistic, Kokoro am_michael and Piper ryan get 105/105, and MMS and Daniel get 94/105 (89.5 % [82.0, 94.7]), but no pair survives correction.
@@ -181,7 +187,7 @@ Recall is scored on the 105 keyword instances in the 78 emergency and fall-help 
 
 **Meta MMS-TTS mis-renders words.**
 - 80 reference words (1.8 % of all words, in 58 of 250 sentences) are wrong for all three models on MMS clean audio and right for all three on human audio.
-- Removing these words halves the MMS gap: Whisper goes from +4.60 to +2.80 points, Parakeet from +3.61 to +1.79. MMS is a TTS fidelity failure, not a voice-bias measurement.
+- Removing these words halves the MMS gap: Whisper goes from +4.60 to +2.80 points, Parakeet from +3.61 to +1.79. MMS is a TTS fidelity failure, not a voice-bias measurement. Correction (`followups/tts_errors`): removing words on the synthetic side only is biased in the voice's favour. With symmetric cleaning MMS stays at +3.00 [2.10, 3.95] (Whisper) and +1.98 [1.31, 2.68] (Parakeet), so rendering errors explain a third to about two thirds of the gap depending on the rule, and the flag has been checked on paper only (30 items, no audio).
 - The same filter removes most of Piper ryan's gap: Whisper +1.39 to +0.68, Parakeet +0.76 to +0.05.
 - The filter is conservative (all three models must fail), so these counts are lower bounds on rendering errors.
 - Nobody listened to the clips: that check is still to do.
@@ -195,13 +201,15 @@ Recall is scored on the 105 keyword instances in the 78 emergency and fall-help 
 ### 6. Whisper hallucinates on noise alone
 
 100 clips of pure noise (street, rain, crowd, home) were sent through the phone line, at the noise level of phone+noise10:
-- **Whisper** returned text for 33 of them: "thank you" 26 times, and one runaway of 223 words ("ha ha ha ...") on a laughing clip.
+- **Whisper** returned text for 33 of them: "thank you" 26 times, and one runaway of 223 words ("ha ha ha ...") on a laughing clip. Correction (`followups/phantom/v2`, 13/10/2026): this is a raw-decoder rate (next paragraph). With Whisper's standard settings (`mlx_whisper.transcribe` 0.4.3 defaults), the same 100 clips give 95 [88.7, 98.4], 80 of them "thank you", and clips of random length (3 to 6 s) give 100 of 100 [96.4, 100]. The raw decoder's dependence on exact clip length (34 at 4.00 s, 59 at 4.01 s) is tied to its non-standard padding.
 - **Parakeet:** 2 of 100.
 - **wav2vec2:** 21 of 100, short fragments such as "aca" and "baa".
 
 On real speech, none of the models produced a runaway: no hypothesis was longer than 1.5 times its reference, except one clip each for Whisper and wav2vec2 on clean audio.
 
-Correction (literature check): the main run decoded these clips with Whisper's raw decoder (`asr._whisper_batch`), without its no-speech gate or temperature fallback. `followups/phantom` shows that the gate never fires for large-v3-turbo (no_speech_prob about 1e-10 on every clip), so the gated rate is the same. The fallback was not tested.
+Correction (literature check, updated by `followups/phantom/v2`): the main run decoded these clips with Whisper's raw decoder (`asr._whisper_batch`), without its no-speech gate or temperature fallback, and with a 30 s window padded with the log-mel of digital silence, unlike `transcribe()`. The padding is what matters: changing only it takes 34 to 94 of 100. The gate never fires for large-v3-turbo under mlx-whisper 0.4.3 (no_speech_prob about 1e-10 on every clip). Fallback has since been tested: it ran on 21 and 27 clips and removed no text. A default Silero VAD cuts the standard-settings rate to 2 and 3 of 100. Scope: 200 clips, four noise types at one level; openai-whisper and faster-whisper not tested.
+
+On a larger non-speech set (17 kinds, short and long clips; `followups/phantom/v2`), excluding the bot's echoed prompt, Parakeet produced text on 16.4 % of rows: about 30 % of 0.5 to 2 s clips and about 2 % of long ones. Its 2 of 100 here reflects long clips only. No model invented an emergency keyword on non-speech outside the echo (95 % upper bound about 2.2 per hour).
 
 The v1 claim "Whisper did not hallucinate" rested on a test that could not detect hallucination, and is withdrawn. For an emergency line, text produced on silence or noise matters as much as recall.
 
@@ -244,7 +252,7 @@ The aim is to estimate the human-speech WER over the 250 sentences from two inpu
 - Below about 25 labels, use classic PPI.
 - Cross-check (literature check): the reference implementation `ppi_py` (ppi-python 0.2.3) gives identical point estimates and the same variance formula once its choices are aligned (normal quantile, no finite-population correction, lambda clipped to [0, 1]). It also shows the same pattern on our draws: at n = 10, PPI covers 91 to 97 % and clipped PPI++ 73 to 84 % (`followups/literature_checks`).
 
-**In practice, for a scripted test set:** record about 25 of the scripts with real people and run every script through TTS. Correction (literature check): the simulation drew 25 sentences at random from 40 readers, which gave 19 distinct readers on average (17 to 22), so this needs about 20 different speakers drawn from the target callers. If one person records all 25 scripts, the interval covers that person's WER, not callers'. That gives a valid interval on the real-speech metric, 9 to 23 % narrower than the 25 human recordings alone. This relies on each human recording having a synthetic twin of the identical script, so it does not transfer to unscripted real calls.
+**In practice, for a scripted test set:** record about 25 of the scripts with real people and run every script through TTS. Correction (literature check, wording tightened 13/10/2026): the simulation drew 25 sentences at random from 40 readers, which gave 19 distinct readers on average (17 to 22), so it was validated with about 20 different speakers; fewer speakers were not tested. The gain is for the WER level only: for the Whisper minus Parakeet difference PPI gives no gain (`followups/calibration`). If one person records all 25 scripts, the interval covers that person's WER, not callers'. That gives a valid interval on the real-speech metric, 9 to 23 % narrower than the 25 human recordings alone. This relies on each human recording having a synthetic twin of the identical script, so it does not transfer to unscripted real calls.
 
 ## What did not work, was cut, or is still a limitation
 
@@ -253,7 +261,8 @@ The aim is to estimate the human-speech WER over the 250 sentences from two inpu
   - The fix is an out-of-domain human reference, for example:
     - FLEURS en_us (CC BY 4.0), which was not authorized for download in this run (update: since run as `followups/fleurs`; out of domain for wav2vec2 and, per its model card, for Parakeet; unknown for Whisper);
     - or 30 to 60 caller scripts recorded by Amir over a real phone call, which would also give the caller set its first human baseline.
-  - Until then, wav2vec2 results are an in-domain control, and gap magnitudes against human speech are upper bounds.
+  - Until then, wav2vec2 results are an in-domain control. (Corrected 13/10/2026: an earlier version added "gap magnitudes against human speech are upper bounds". FLEURS shows the error has no single direction: against it the voices look easier and the lab more optimistic.)
+- **Whisper decoding (added 13/10/2026).** Every Whisper WER here went through `asr._whisper_batch`, whose window padding differs from `transcribe()` for clips under 30 s. Comparisons use the same decoder on both sides; the effect on absolute speech WER is not measured.
 - **Whisper ran 4 of 10 conditions** (no g722-wb, opus-nb, muffle or stress conditions) because of GPU time. Its keyword and channel claims cover those 4 conditions only. To complete it, run `scripts/04_run_experiment.py --model whisper --conditions g722-wb,opus-nb,phone+muffle,phone+noise5,phone+loss5,opus-nb+loss5`. It is cached and takes about 40 minutes per condition.
 - **Rate-matched voices were run on clean audio only**, so the noise x rate interaction is correlational. The macOS voices only reached 90 to 92 % of the human duration.
 - **Nobody listened to the clips.** The MMS and Daniel verdicts rest on the shared-error filter and on the transcripts.

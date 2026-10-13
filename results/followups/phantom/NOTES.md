@@ -50,6 +50,7 @@ Each clip is 3 to 10 s long (random, two decimals) and is sent through the clean
 - **The other two models do not change:** wav2vec2 stays at 19 to 22 and Parakeet at 0 to 3 at every length.
 - **What this means for the main run:** its "33 of 100" figure is a low estimate for Whisper. For clips of arbitrary length the rate is about 60 % at that noise level, and 85 % over the kinds above.
 - **Cause not investigated:** I did not find why whole-second lengths matter.
+- **Correction (13/10/2026, `v2/NOTES.md` s0):** these are raw-decoder rates, and the length effect is tied to the raw decoder's non-standard window padding. With `mlx_whisper.transcribe` defaults the rate is 95 of 100 at 4.00 s and 100 of 100 at random lengths, so "about 60 %" understates what an off-the-shelf call gives.
 
 **Whisper's no-speech gate does nothing (for large-v3-turbo under mlx-whisper 0.4.3; token check in `v2/nsp_check.json`).** large-v3-turbo returns a no_speech_prob of about 1e-10 on every clip, speech or silence: the median is 8.6e-11 on non-speech and 6.0e-12 on speech. This holds through `mlx_whisper.transcribe` as well: a 5 s clip of zeros comes back as "Thank you." with no_speech_prob 1.1e-10. The default rule (skip when no_speech_prob > 0.6 and avg_logprob < -1) never fires: 85.0 % of non-speech clips still have text. The probability still ranks clips, so it is used below on a log scale.
 

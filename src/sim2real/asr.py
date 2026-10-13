@@ -129,9 +129,15 @@ def _whisper_long(audio: np.ndarray) -> str:
 
 
 def _whisper_batch(arrays: list[np.ndarray]) -> list[str]:
-    """Batched single-window decoding: mel computed exactly as mlx_whisper.transcribe does
-    (audio + 30 s of zero padding, first 3000 frames), greedy, timestamps on, no
-    temperature fallback and no no-speech gating (an empty or silent clip still decodes)."""
+    """Batched single-window decoding: log-mel of (audio + 30 s of zero samples), first
+    3000 frames, greedy, timestamps on, no temperature fallback and no no-speech gating
+    (an empty or silent clip still decodes).
+
+    Note (13/10/2026): this is NOT how mlx_whisper.transcribe pads clips shorter than 30 s.
+    transcribe() pads the clip's own log-mel with zeros in the normalized log-mel domain;
+    here the padding is the log-mel of digital silence. On noise-only clips this changes
+    Whisper's phantom rate from 34 to 94 of 100 (results/followups/phantom/v2/NOTES.md).
+    The effect on speech WER is not measured."""
     import mlx.core as mx
     from mlx_whisper.audio import N_FRAMES, N_SAMPLES, log_mel_spectrogram, pad_or_trim
     from mlx_whisper.decoding import DecodingOptions, decode

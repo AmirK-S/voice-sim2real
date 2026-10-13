@@ -1,0 +1,199 @@
+model,selection,kind,channel,n,with_text_before,with_text_after
+whisper,human full clips,bot_echo,phone,40,40,28
+whisper,human full clips,bot_echo,phone+loss,40,40,29
+whisper,human full clips,breathing,phone,40,26,9
+whisper,human full clips,breathing,phone+loss,40,25,8
+whisper,human full clips,comfort_noise,phone,40,40,0
+whisper,human full clips,crowd_events,phone,40,35,13
+whisper,human full clips,crowd_events,phone+loss,40,37,12
+whisper,human full clips,crying_baby,phone,40,31,11
+whisper,human full clips,crying_baby,phone+loss,40,29,8
+whisper,human full clips,digital_silence,phone,40,40,0
+whisper,human full clips,digital_silence,phone+loss,40,40,0
+whisper,human full clips,door_knock,phone,40,37,9
+whisper,human full clips,door_knock,phone+loss,40,38,10
+whisper,human full clips,dtmf,phone,40,27,4
+whisper,human full clips,dtmf,phone+loss,40,27,4
+whisper,human full clips,engine,phone,40,31,8
+whisper,human full clips,engine,phone+loss,40,31,10
+whisper,human full clips,keyboard,phone,40,40,20
+whisper,human full clips,keyboard,phone+loss,40,39,20
+whisper,human full clips,line_clicks,phone,40,40,0
+whisper,human full clips,line_clicks,phone+loss,40,40,0
+whisper,human full clips,line_hiss,phone,40,39,0
+whisper,human full clips,line_hiss,phone+loss,40,38,0
+whisper,human full clips,matched_noise,phone+noise10,40,35,5
+whisper,human full clips,matched_noise,realistic,40,27,5
+whisper,human full clips,near_silence,phone,40,40,0
+whisper,human full clips,near_silence,phone+loss,40,39,0
+whisper,human full clips,rain,phone,40,38,2
+whisper,human full clips,rain,phone+loss,40,39,2
+whisper,human full clips,sneezing,phone,40,39,12
+whisper,human full clips,sneezing,phone+loss,40,38,11
+whisper,human full clips,wind,phone,40,24,2
+whisper,human full clips,wind,phone+loss,40,26,2
+whisper,human full clips + 1-3 word segments,bot_echo,phone,40,40,40
+whisper,human full clips + 1-3 word segments,bot_echo,phone+loss,40,40,40
+whisper,human full clips + 1-3 word segments,breathing,phone,40,26,21
+whisper,human full clips + 1-3 word segments,breathing,phone+loss,40,25,19
+whisper,human full clips + 1-3 word segments,comfort_noise,phone,40,40,0
+whisper,human full clips + 1-3 word segments,crowd_events,phone,40,35,26
+whisper,human full clips + 1-3 word segments,crowd_events,phone+loss,40,37,26
+whisper,human full clips + 1-3 word segments,crying_baby,phone,40,31,19
+whisper,human full clips + 1-3 word segments,crying_baby,phone+loss,40,29,17
+whisper,human full clips + 1-3 word segments,digital_silence,phone,40,40,0
+whisper,human full clips + 1-3 word segments,digital_silence,phone+loss,40,40,0
+whisper,human full clips + 1-3 word segments,door_knock,phone,40,37,37
+whisper,human full clips + 1-3 word segments,door_knock,phone+loss,40,38,38
+whisper,human full clips + 1-3 word segments,dtmf,phone,40,27,22
+whisper,human full clips + 1-3 word segments,dtmf,phone+loss,40,27,22
+whisper,human full clips + 1-3 word segments,engine,phone,40,31,16
+whisper,human full clips + 1-3 word segments,engine,phone+loss,40,31,21
+whisper,human full clips + 1-3 word segments,keyboard,phone,40,40,40
+whisper,human full clips + 1-3 word segments,keyboard,phone+loss,40,39,39
+whisper,human full clips + 1-3 word segments,line_clicks,phone,40,40,11
+whisper,human full clips + 1-3 word segments,line_clicks,phone+loss,40,40,11
+whisper,human full clips + 1-3 word segments,line_hiss,phone,40,39,0
+whisper,human full clips + 1-3 word segments,line_hiss,phone+loss,40,38,0
+whisper,human full clips + 1-3 word segments,matched_noise,phone+noise10,40,35,11
+whisper,human full clips + 1-3 word segments,matched_noise,realistic,40,27,12
+whisper,human full clips + 1-3 word segments,near_silence,phone,40,40,0
+whisper,human full clips + 1-3 word segments,near_silence,phone+loss,40,39,0
+whisper,human full clips + 1-3 word segments,rain,phone,40,38,9
+whisper,human full clips + 1-3 word segments,rain,phone+loss,40,39,10
+whisper,human full clips + 1-3 word segments,sneezing,phone,40,39,31
+whisper,human full clips + 1-3 word segments,sneezing,phone+loss,40,38,32
+whisper,human full clips + 1-3 word segments,wind,phone,40,24,5
+whisper,human full clips + 1-3 word segments,wind,phone+loss,40,26,5
+wav2vec2,human full clips,bot_echo,phone,40,40,29
+wav2vec2,human full clips,bot_echo,phone+loss,40,40,29
+wav2vec2,human full clips,breathing,phone,40,27,17
+wav2vec2,human full clips,breathing,phone+loss,40,28,19
+wav2vec2,human full clips,comfort_noise,phone,40,0,0
+wav2vec2,human full clips,crowd_events,phone,40,21,7
+wav2vec2,human full clips,crowd_events,phone+loss,40,22,5
+wav2vec2,human full clips,crying_baby,phone,40,33,18
+wav2vec2,human full clips,crying_baby,phone+loss,40,32,15
+wav2vec2,human full clips,digital_silence,phone,40,0,0
+wav2vec2,human full clips,digital_silence,phone+loss,40,0,0
+wav2vec2,human full clips,door_knock,phone,40,28,3
+wav2vec2,human full clips,door_knock,phone+loss,40,29,5
+wav2vec2,human full clips,dtmf,phone,40,32,4
+wav2vec2,human full clips,dtmf,phone+loss,40,31,7
+wav2vec2,human full clips,engine,phone,40,0,0
+wav2vec2,human full clips,engine,phone+loss,40,1,0
+wav2vec2,human full clips,keyboard,phone,40,4,2
+wav2vec2,human full clips,keyboard,phone+loss,40,5,3
+wav2vec2,human full clips,line_clicks,phone,40,0,0
+wav2vec2,human full clips,line_clicks,phone+loss,40,0,0
+wav2vec2,human full clips,line_hiss,phone,40,0,0
+wav2vec2,human full clips,line_hiss,phone+loss,40,0,0
+wav2vec2,human full clips,matched_noise,phone+noise10,40,7,2
+wav2vec2,human full clips,matched_noise,realistic,40,7,1
+wav2vec2,human full clips,near_silence,phone,40,0,0
+wav2vec2,human full clips,near_silence,phone+loss,40,0,0
+wav2vec2,human full clips,rain,phone,40,0,0
+wav2vec2,human full clips,rain,phone+loss,40,0,0
+wav2vec2,human full clips,sneezing,phone,40,28,14
+wav2vec2,human full clips,sneezing,phone+loss,40,27,12
+wav2vec2,human full clips,wind,phone,40,1,0
+wav2vec2,human full clips,wind,phone+loss,40,1,0
+wav2vec2,human full clips + 1-3 word segments,bot_echo,phone,40,40,40
+wav2vec2,human full clips + 1-3 word segments,bot_echo,phone+loss,40,40,40
+wav2vec2,human full clips + 1-3 word segments,breathing,phone,40,27,17
+wav2vec2,human full clips + 1-3 word segments,breathing,phone+loss,40,28,18
+wav2vec2,human full clips + 1-3 word segments,comfort_noise,phone,40,0,0
+wav2vec2,human full clips + 1-3 word segments,crowd_events,phone,40,21,6
+wav2vec2,human full clips + 1-3 word segments,crowd_events,phone+loss,40,22,6
+wav2vec2,human full clips + 1-3 word segments,crying_baby,phone,40,33,14
+wav2vec2,human full clips + 1-3 word segments,crying_baby,phone+loss,40,32,12
+wav2vec2,human full clips + 1-3 word segments,digital_silence,phone,40,0,0
+wav2vec2,human full clips + 1-3 word segments,digital_silence,phone+loss,40,0,0
+wav2vec2,human full clips + 1-3 word segments,door_knock,phone,40,28,4
+wav2vec2,human full clips + 1-3 word segments,door_knock,phone+loss,40,29,4
+wav2vec2,human full clips + 1-3 word segments,dtmf,phone,40,32,8
+wav2vec2,human full clips + 1-3 word segments,dtmf,phone+loss,40,31,11
+wav2vec2,human full clips + 1-3 word segments,engine,phone,40,0,0
+wav2vec2,human full clips + 1-3 word segments,engine,phone+loss,40,1,1
+wav2vec2,human full clips + 1-3 word segments,keyboard,phone,40,4,2
+wav2vec2,human full clips + 1-3 word segments,keyboard,phone+loss,40,5,3
+wav2vec2,human full clips + 1-3 word segments,line_clicks,phone,40,0,0
+wav2vec2,human full clips + 1-3 word segments,line_clicks,phone+loss,40,0,0
+wav2vec2,human full clips + 1-3 word segments,line_hiss,phone,40,0,0
+wav2vec2,human full clips + 1-3 word segments,line_hiss,phone+loss,40,0,0
+wav2vec2,human full clips + 1-3 word segments,matched_noise,phone+noise10,40,7,3
+wav2vec2,human full clips + 1-3 word segments,matched_noise,realistic,40,7,2
+wav2vec2,human full clips + 1-3 word segments,near_silence,phone,40,0,0
+wav2vec2,human full clips + 1-3 word segments,near_silence,phone+loss,40,0,0
+wav2vec2,human full clips + 1-3 word segments,rain,phone,40,0,0
+wav2vec2,human full clips + 1-3 word segments,rain,phone+loss,40,0,0
+wav2vec2,human full clips + 1-3 word segments,sneezing,phone,40,28,17
+wav2vec2,human full clips + 1-3 word segments,sneezing,phone+loss,40,27,18
+wav2vec2,human full clips + 1-3 word segments,wind,phone,40,1,0
+wav2vec2,human full clips + 1-3 word segments,wind,phone+loss,40,1,0
+parakeet,human full clips,bot_echo,phone,40,40,23
+parakeet,human full clips,bot_echo,phone+loss,40,40,23
+parakeet,human full clips,breathing,phone,40,9,1
+parakeet,human full clips,breathing,phone+loss,40,9,1
+parakeet,human full clips,comfort_noise,phone,40,4,0
+parakeet,human full clips,crowd_events,phone,40,10,0
+parakeet,human full clips,crowd_events,phone+loss,40,10,0
+parakeet,human full clips,crying_baby,phone,40,18,6
+parakeet,human full clips,crying_baby,phone+loss,40,16,5
+parakeet,human full clips,digital_silence,phone,40,2,0
+parakeet,human full clips,digital_silence,phone+loss,40,2,0
+parakeet,human full clips,door_knock,phone,40,3,0
+parakeet,human full clips,door_knock,phone+loss,40,3,0
+parakeet,human full clips,dtmf,phone,40,8,1
+parakeet,human full clips,dtmf,phone+loss,40,9,1
+parakeet,human full clips,engine,phone,40,8,0
+parakeet,human full clips,engine,phone+loss,40,8,0
+parakeet,human full clips,keyboard,phone,40,5,0
+parakeet,human full clips,keyboard,phone+loss,40,5,0
+parakeet,human full clips,line_clicks,phone,40,3,0
+parakeet,human full clips,line_clicks,phone+loss,40,3,0
+parakeet,human full clips,line_hiss,phone,40,0,0
+parakeet,human full clips,line_hiss,phone+loss,40,1,0
+parakeet,human full clips,matched_noise,phone+noise10,40,6,0
+parakeet,human full clips,matched_noise,realistic,40,8,3
+parakeet,human full clips,near_silence,phone,40,5,0
+parakeet,human full clips,near_silence,phone+loss,40,5,0
+parakeet,human full clips,rain,phone,40,4,0
+parakeet,human full clips,rain,phone+loss,40,4,0
+parakeet,human full clips,sneezing,phone,40,13,1
+parakeet,human full clips,sneezing,phone+loss,40,12,0
+parakeet,human full clips,wind,phone,40,5,0
+parakeet,human full clips,wind,phone+loss,40,5,0
+parakeet,human full clips + 1-3 word segments,bot_echo,phone,40,40,40
+parakeet,human full clips + 1-3 word segments,bot_echo,phone+loss,40,40,40
+parakeet,human full clips + 1-3 word segments,breathing,phone,40,9,2
+parakeet,human full clips + 1-3 word segments,breathing,phone+loss,40,9,2
+parakeet,human full clips + 1-3 word segments,comfort_noise,phone,40,4,1
+parakeet,human full clips + 1-3 word segments,crowd_events,phone,40,10,2
+parakeet,human full clips + 1-3 word segments,crowd_events,phone+loss,40,10,2
+parakeet,human full clips + 1-3 word segments,crying_baby,phone,40,18,4
+parakeet,human full clips + 1-3 word segments,crying_baby,phone+loss,40,16,2
+parakeet,human full clips + 1-3 word segments,digital_silence,phone,40,2,0
+parakeet,human full clips + 1-3 word segments,digital_silence,phone+loss,40,2,0
+parakeet,human full clips + 1-3 word segments,door_knock,phone,40,3,0
+parakeet,human full clips + 1-3 word segments,door_knock,phone+loss,40,3,0
+parakeet,human full clips + 1-3 word segments,dtmf,phone,40,8,1
+parakeet,human full clips + 1-3 word segments,dtmf,phone+loss,40,9,1
+parakeet,human full clips + 1-3 word segments,engine,phone,40,8,0
+parakeet,human full clips + 1-3 word segments,engine,phone+loss,40,8,1
+parakeet,human full clips + 1-3 word segments,keyboard,phone,40,5,0
+parakeet,human full clips + 1-3 word segments,keyboard,phone+loss,40,5,0
+parakeet,human full clips + 1-3 word segments,line_clicks,phone,40,3,1
+parakeet,human full clips + 1-3 word segments,line_clicks,phone+loss,40,3,0
+parakeet,human full clips + 1-3 word segments,line_hiss,phone,40,0,0
+parakeet,human full clips + 1-3 word segments,line_hiss,phone+loss,40,1,0
+parakeet,human full clips + 1-3 word segments,matched_noise,phone+noise10,40,6,0
+parakeet,human full clips + 1-3 word segments,matched_noise,realistic,40,8,0
+parakeet,human full clips + 1-3 word segments,near_silence,phone,40,5,1
+parakeet,human full clips + 1-3 word segments,near_silence,phone+loss,40,5,1
+parakeet,human full clips + 1-3 word segments,rain,phone,40,4,0
+parakeet,human full clips + 1-3 word segments,rain,phone+loss,40,4,0
+parakeet,human full clips + 1-3 word segments,sneezing,phone,40,13,5
+parakeet,human full clips + 1-3 word segments,sneezing,phone+loss,40,12,5
+parakeet,human full clips + 1-3 word segments,wind,phone,40,5,0
+parakeet,human full clips + 1-3 word segments,wind,phone+loss,40,5,0

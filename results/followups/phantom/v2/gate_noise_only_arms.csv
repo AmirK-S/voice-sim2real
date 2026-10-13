@@ -1,0 +1,21 @@
+set,arm,n,with_text,rate,cp_lo,cp_hi,nsp_median,nsp_max,gate_fires,share_logprob_below_-1,share_compression_above_2.4,kw_clips,silero_triggers_on_noise,same_as_raw,languages,fallback_used
+main,"raw decoder (no gate, no fallback)",100,34,0.34,0.2482235015448442,0.44153326775095875,5.2144113679708504e-11,1.3937578868805645e-10,0.0,0.0,0.02,0.0,,,,
+main,raw decoder + default gate (post hoc),100,34,0.34,0.2482235015448442,0.44153326775095875,,,,,,,,,,
+main,raw decoder + Silero default (drop if no speech segment),100,0,0.0,0.0,0.03621669264517641,,,,,,,3.0,,,
+main,"raw decoder, transcribe-style log-mel zero padding",100,94,0.94,0.8739700654191771,0.9776651139286836,,,,,,,,36.0,,
+main,mlx_whisper.transcribe transcribe_defaults,100,95,0.95,0.8871650888945373,0.9835681208179479,,,,,,0.0,,35.0,"{""en"": 99, ""es"": 1}",21.0
+main,mlx_whisper.transcribe transcribe_defaults + Silero default,100,2,0.02,0.002431336823942542,0.07038393247107011,,,,,,,,,,
+main,mlx_whisper.transcribe transcribe_defaults_en,100,95,0.95,0.8871650888945373,0.9835681208179479,,,,,,0.0,,35.0,"{""en"": 100}",21.0
+main,mlx_whisper.transcribe transcribe_defaults_en + Silero default,100,2,0.02,0.002431336823942542,0.07038393247107011,,,,,,,,,,
+main,mlx_whisper.transcribe transcribe_en_hst2,100,95,0.95,0.8871650888945373,0.9835681208179479,,,,,,0.0,,37.0,"{""en"": 100}",15.0
+main,mlx_whisper.transcribe transcribe_en_hst2 + Silero default,100,2,0.02,0.002431336823942542,0.07038393247107011,,,,,,,,,,
+randlen,"raw decoder (no gate, no fallback)",100,56,0.56,0.45718749706331757,0.6591639762765418,5.808332807777372e-11,1.771983532128374e-10,0.0,0.27,0.02,0.0,,,,
+randlen,raw decoder + default gate (post hoc),100,56,0.56,0.45718749706331757,0.6591639762765418,,,,,,,,,,
+randlen,raw decoder + Silero default (drop if no speech segment),100,0,0.0,0.0,0.03621669264517641,,,,,,,3.0,,,
+randlen,"raw decoder, transcribe-style log-mel zero padding",100,91,0.91,0.8360177449703647,0.9580164043716077,,,,,,,,65.0,,
+randlen,mlx_whisper.transcribe transcribe_defaults,100,100,1.0,0.9637833073548235,1.0,,,,,,0.0,,56.0,"{""en"": 100}",27.0
+randlen,mlx_whisper.transcribe transcribe_defaults + Silero default,100,3,0.03,0.006229971538306393,0.08517605297428002,,,,,,,,,,
+randlen,mlx_whisper.transcribe transcribe_defaults_en,100,100,1.0,0.9637833073548235,1.0,,,,,,0.0,,56.0,"{""en"": 100}",27.0
+randlen,mlx_whisper.transcribe transcribe_defaults_en + Silero default,100,3,0.03,0.006229971538306393,0.08517605297428002,,,,,,,,,,
+randlen,mlx_whisper.transcribe transcribe_en_hst2,100,91,0.91,0.8360177449703647,0.9580164043716077,,,,,,0.0,,63.0,"{""en"": 100}",19.0
+randlen,mlx_whisper.transcribe transcribe_en_hst2 + Silero default,100,2,0.02,0.002431336823942542,0.07038393247107011,,,,,,,,,,

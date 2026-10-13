@@ -1,0 +1,67 @@
+model,selection,set,item,n,recognized,recognized_and_dropped,dropped_any,energy_s_median,words_lost_share
+whisper,human full clips,oneword,ambulance,28,14,14,27,0.375,
+whisper,human full clips,oneword,fire,28,21,19,25,0.3299999999999999,
+whisper,human full clips,oneword,hello,28,24,24,28,0.345,
+whisper,human full clips,oneword,help,28,13,13,28,0.24,
+whisper,human full clips,oneword,no,28,26,26,28,0.24,
+whisper,human full clips,oneword,police,28,26,24,26,0.28500000000000003,
+whisper,human full clips,oneword,stop,28,16,16,28,0.21,
+whisper,human full clips,oneword,yes,28,22,20,26,0.195,
+whisper,human full clips,segments,segment1,362,132,129,357,0.18,0.356353591160221
+whisper,human full clips,segments,segment2,326,248,218,290,0.36,0.5392749244712991
+whisper,human full clips,segments,segment3,312,283,216,244,0.51,0.5369978858350951
+whisper,human full clips + 1-3 word segments,oneword,ambulance,28,14,1,6,0.375,
+whisper,human full clips + 1-3 word segments,oneword,fire,28,21,0,3,0.3299999999999999,
+whisper,human full clips + 1-3 word segments,oneword,hello,28,24,0,0,0.345,
+whisper,human full clips + 1-3 word segments,oneword,help,28,13,2,6,0.24,
+whisper,human full clips + 1-3 word segments,oneword,no,28,26,0,0,0.24,
+whisper,human full clips + 1-3 word segments,oneword,police,28,26,0,0,0.28500000000000003,
+whisper,human full clips + 1-3 word segments,oneword,stop,28,16,3,4,0.21,
+whisper,human full clips + 1-3 word segments,oneword,yes,28,22,0,1,0.195,
+whisper,human full clips + 1-3 word segments,segments,segment1,362,132,17,86,0.18,0.04696132596685083
+whisper,human full clips + 1-3 word segments,segments,segment2,326,248,10,23,0.36,0.019637462235649546
+whisper,human full clips + 1-3 word segments,segments,segment3,312,283,7,11,0.51,0.008456659619450317
+wav2vec2,human full clips,oneword,ambulance,28,3,3,26,0.375,
+wav2vec2,human full clips,oneword,fire,28,14,12,24,0.3299999999999999,
+wav2vec2,human full clips,oneword,hello,28,5,5,28,0.345,
+wav2vec2,human full clips,oneword,help,28,5,5,28,0.24,
+wav2vec2,human full clips,oneword,no,28,16,16,28,0.24,
+wav2vec2,human full clips,oneword,police,28,1,1,26,0.28500000000000003,
+wav2vec2,human full clips,oneword,stop,28,1,1,28,0.21,
+wav2vec2,human full clips,oneword,yes,28,6,6,25,0.195,
+wav2vec2,human full clips,segments,segment1,362,50,49,354,0.18,0.13535911602209943
+wav2vec2,human full clips,segments,segment2,326,128,108,284,0.36,0.21450151057401812
+wav2vec2,human full clips,segments,segment3,312,166,123,240,0.51,0.24947145877378435
+wav2vec2,human full clips + 1-3 word segments,oneword,ambulance,28,3,0,5,0.375,
+wav2vec2,human full clips + 1-3 word segments,oneword,fire,28,14,0,1,0.3299999999999999,
+wav2vec2,human full clips + 1-3 word segments,oneword,hello,28,5,0,3,0.345,
+wav2vec2,human full clips + 1-3 word segments,oneword,help,28,5,0,6,0.24,
+wav2vec2,human full clips + 1-3 word segments,oneword,no,28,16,0,0,0.24,
+wav2vec2,human full clips + 1-3 word segments,oneword,police,28,1,0,4,0.28500000000000003,
+wav2vec2,human full clips + 1-3 word segments,oneword,stop,28,1,0,7,0.21,
+wav2vec2,human full clips + 1-3 word segments,oneword,yes,28,6,0,5,0.195,
+wav2vec2,human full clips + 1-3 word segments,segments,segment1,362,50,2,88,0.18,0.0055248618784530384
+wav2vec2,human full clips + 1-3 word segments,segments,segment2,326,128,2,41,0.36,0.004531722054380665
+wav2vec2,human full clips + 1-3 word segments,segments,segment3,312,166,1,28,0.51,0.0010570824524312897
+parakeet,human full clips,oneword,ambulance,28,17,17,28,0.375,
+parakeet,human full clips,oneword,fire,28,16,16,28,0.3299999999999999,
+parakeet,human full clips,oneword,hello,28,22,22,28,0.345,
+parakeet,human full clips,oneword,help,28,11,11,28,0.24,
+parakeet,human full clips,oneword,no,28,22,22,28,0.24,
+parakeet,human full clips,oneword,police,28,19,19,28,0.28500000000000003,
+parakeet,human full clips,oneword,stop,28,14,14,28,0.21,
+parakeet,human full clips,oneword,yes,28,14,14,28,0.195,
+parakeet,human full clips,segments,segment1,362,100,97,358,0.18,0.26795580110497236
+parakeet,human full clips,segments,segment2,326,227,224,321,0.36,0.527190332326284
+parakeet,human full clips,segments,segment3,312,267,218,260,0.51,0.5179704016913319
+parakeet,human full clips + 1-3 word segments,oneword,ambulance,28,17,0,2,0.375,
+parakeet,human full clips + 1-3 word segments,oneword,fire,28,16,0,3,0.3299999999999999,
+parakeet,human full clips + 1-3 word segments,oneword,hello,28,22,0,0,0.345,
+parakeet,human full clips + 1-3 word segments,oneword,help,28,11,1,5,0.24,
+parakeet,human full clips + 1-3 word segments,oneword,no,28,22,1,3,0.24,
+parakeet,human full clips + 1-3 word segments,oneword,police,28,19,0,1,0.28500000000000003,
+parakeet,human full clips + 1-3 word segments,oneword,stop,28,14,0,5,0.21,
+parakeet,human full clips + 1-3 word segments,oneword,yes,28,14,0,4,0.195,
+parakeet,human full clips + 1-3 word segments,segments,segment1,362,100,9,110,0.18,0.024861878453038673
+parakeet,human full clips + 1-3 word segments,segments,segment2,326,227,14,37,0.36,0.027190332326283987
+parakeet,human full clips + 1-3 word segments,segments,segment3,312,267,13,23,0.51,0.0200845665961945

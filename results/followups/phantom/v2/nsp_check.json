@@ -1,0 +1,40 @@
+{
+ "mlx_whisper_version": "0.4.3",
+ "n_vocab": 51866,
+ "num_languages": 100,
+ "no_speech_id": 50363,
+ "no_speech_token": "<|nospeech|>",
+ "sot_sequence": [
+  50258,
+  50259,
+  50360
+ ],
+ "p_no_speech_zeros_5s": 1.5426908361870773e-10,
+ "top_special_after_sot": [
+  [
+   0.5318545699119568,
+   "<|transcribe|>"
+  ],
+  [
+   0.15906913578510284,
+   "<|en|>"
+  ],
+  [
+   0.06426974385976791,
+   "<|ru|>"
+  ],
+  [
+   0.03219086676836014,
+   "<|ja|>"
+  ],
+  [
+   0.025967322289943695,
+   "<|pt|>"
+  ],
+  [
+   0.02364351972937584,
+   "<|es|>"
+  ]
+ ],
+ "token_at_no_speech_id": "<|nospeech|>"
+}

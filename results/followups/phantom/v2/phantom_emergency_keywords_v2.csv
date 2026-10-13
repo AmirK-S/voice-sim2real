@@ -1,0 +1,57 @@
+id,kind,cond,kw_invented,text,model
+bot_echo-03,bot_echo,phone+loss,smoke,Can you see any smoke or flames?,whisper
+bot_echo-04,bot_echo,phone+loss,ambulance,"Okay, I am sending an ambulance now.",whisper
+bot_echo-06,bot_echo,phone+loss,help,"Say on the line with me, help is on the way. Say on the line with me, help is on the way.",whisper
+bot_echo-08,bot_echo,phone+loss,smoke,Can you see any smoke or flames?,whisper
+bot_echo-15,bot_echo,phone+loss,smoke,Can you see any smoke or flames?,whisper
+bot_echo-20,bot_echo,phone+loss,help,Stay on the line with me. Help is on the way.,whisper
+bot_echo-21,bot_echo,phone+loss,ambulance,sending an ambulance,whisper
+bot_echo-26,bot_echo,phone+loss,help,Stay on the line with me. Help is on the way. Stay on the line with me. Help is on the way. Stay on the line with me. Help is on the way. Stay on the line.,whisper
+bot_echo-27,bot_echo,phone+loss,help,help is on the way.,whisper
+bot_echo-28,bot_echo,phone+loss,smoke,Can you see any smoke or flames?,whisper
+bot_echo-03,bot_echo,phone,smoke,Can you see any smoke or flames?,whisper
+bot_echo-04,bot_echo,phone,ambulance,"Okay, I am sending an ambulance now.",whisper
+bot_echo-06,bot_echo,phone,help,"Say on the line with me, help is on the way. Say on the line with me, help is on the way.",whisper
+bot_echo-08,bot_echo,phone,smoke,Can you see any smoke or flames?,whisper
+bot_echo-10,bot_echo,phone,help,Stay on the line with me. Help is on the way. Stay on the line with me. Help is on the way. Stay on the line with me.,whisper
+bot_echo-15,bot_echo,phone,smoke,Can you see any smoke or flames?,whisper
+bot_echo-20,bot_echo,phone,help,Stay on the line with me. Help is on the way.,whisper
+bot_echo-21,bot_echo,phone,ambulance,sending an ambulance,whisper
+bot_echo-26,bot_echo,phone,help,Stay on the line with me. Help is on the way. Stay on the line with me. Help is on the way. Stay on the line with me. Help is on the way. Stay on the line.,whisper
+bot_echo-27,bot_echo,phone,help,help is on the way.,whisper
+bot_echo-28,bot_echo,phone,smoke,Can you see any smoke or flames?,whisper
+bot_echo-03,bot_echo,phone+loss,smoke,CAN YOU SEE ANY SMOKE OR FLAME,wav2vec2
+bot_echo-06,bot_echo,phone+loss,help,SAY ON THE LINE WITH ME HELP IS ON THE WAY SAY ON THE LINE WITH ME HELP IS ON THE WA,wav2vec2
+bot_echo-08,bot_echo,phone+loss,smoke,CAN YOU SEE ANY SMOKE OR FLAMES CAN YOU SEE ANY SMOKE OR FLAMES CAN YOU SEE ANY SMOKE OR FLAMES CAN YOU SEE ANY SMOKE OR FLAMES,wav2vec2
+bot_echo-15,bot_echo,phone+loss,smoke,THEN YOU SEE ANY SMOKE OR BLAME,wav2vec2
+bot_echo-20,bot_echo,phone+loss,help,STAY ON THE LINE WITH ME HELP IS ON THE WAY,wav2vec2
+bot_echo-26,bot_echo,phone+loss,help,STAY ON THE LINE WITH ME HELP IS ON THE WAY STAY ON THE LINE WITH ME HELP IS ON THE WAY STAY ON THE LINE WITH ME HELP IS ON THE WAY STAY ON THE LIN,wav2vec2
+bot_echo-28,bot_echo,phone+loss,smoke,CAN'T YOU SEE I ANY SMOKE OR FLAME CAN'T YOU SEE T ANY SMOKE OR FLAME CAN'T YOU SEE IT ASMOKE OR FLAME CANT YOU SEE T ANY SMOKE OR FLAME CAN' YOU,wav2vec2
+bot_echo-03,bot_echo,phone,smoke,CAN'T YOU SEE IT ANY SMOKE OR FLAME,wav2vec2
+bot_echo-06,bot_echo,phone,help,SAY ON THE LINE WITH ME HELP IS ON THE WAY SAY ON THE LINE WITH ME HELP IS ON THE WA,wav2vec2
+bot_echo-08,bot_echo,phone,smoke,CAN YOU SEE ANY SMOKE OR FLAMES CAN YOU SEE ANY SMOKE OR FLAMES CAN YOU SEE ANY SMOKE OR FLAMES CAN YOU SEE ANY SMOKE OR FLAMES,wav2vec2
+bot_echo-10,bot_echo,phone,help,THEY ON THE LINE WITH ME HELP IT ON THE WAY THEY ON THE LINE WITH ME HELP IT ON THE WAY THEY ON,wav2vec2
+bot_echo-15,bot_echo,phone,smoke,THEN YOU SEE ANY SMOKE OR FLAME,wav2vec2
+bot_echo-20,bot_echo,phone,help,STAY ON THE LINE WITH ME HELP IS ON THE WAY,wav2vec2
+bot_echo-26,bot_echo,phone,help,STAY ON THE LINE WITH ME HELP IS ON THE WAY STAY ON THE LINE WITH ME HELP IS ON THE WAY STAY ON THE LINE WITH ME HELP IS ON THE WAY STAY ON THE LIN,wav2vec2
+bot_echo-28,bot_echo,phone,smoke,CAN YOU SEE I ANY SMOKE OR FLAME CAN YOU SEE T ANY SMOKE OR FLAME CAN YOU SEE I ANY SMOKE OR FLAME CANT YOU SEE T ANY SMOKE OR FLAME CAN YOU,wav2vec2
+bot_echo-03,bot_echo,phone+loss,smoke,Can you see any smoke or flames?,parakeet
+bot_echo-04,bot_echo,phone+loss,ambulance,"Okay, I am sending an ambulance now. Okay, I am sending an ambulance now. Okay, I am sending an ambulance now. Okay, I am.",parakeet
+bot_echo-06,bot_echo,phone+loss,help,"Say on the lying with me, help is on the way. Say on the lying with me, help is on the way.",parakeet
+bot_echo-08,bot_echo,phone+loss,smoke,Can you see any smoke or flames? Can you see any smoke or flames? Can you see any smoke or flames? Can you see any smoke or flames?,parakeet
+bot_echo-15,bot_echo,phone+loss,smoke,Can you see any smoke or flames?,parakeet
+bot_echo-20,bot_echo,phone+loss,help,Stay on the line with me. Help is on the way.,parakeet
+bot_echo-21,bot_echo,phone+loss,ambulance,sending an ambulance,parakeet
+bot_echo-26,bot_echo,phone+loss,help,"Stay on the line with me, help is on the way, stay on the line with me, help is on the way, stay on the line with me, help is on the way, stay on the line with me.",parakeet
+bot_echo-27,bot_echo,phone+loss,help,Help is on the way.,parakeet
+bot_echo-28,bot_echo,phone+loss,smoke,Can you see any smoke or flames? Can you see any smoke or flames? Can you see any smoke or flames? Can you see any smoke or flames? Can you see?,parakeet
+bot_echo-03,bot_echo,phone,smoke,Can you see any smoke or flames?,parakeet
+bot_echo-04,bot_echo,phone,ambulance,"Okay, I am sending an ambulance now. Okay, I am sending an ambulance now. Okay, I am sending an ambulance now. Okay, I am.",parakeet
+bot_echo-06,bot_echo,phone,help,"Say on the lying with me, help is on the way. Say on the lying with me, help is on the way.",parakeet
+bot_echo-08,bot_echo,phone,smoke,Can you see any smoke or flames? Can you see any smoke or flames? Can you see any smoke or flames? Can you see any smoke or flames?,parakeet
+bot_echo-15,bot_echo,phone,smoke,Can you see any smoke or flames?,parakeet
+bot_echo-20,bot_echo,phone,help,Stay on the line with me. Help is on the way.,parakeet
+bot_echo-21,bot_echo,phone,ambulance,sending an ambulance,parakeet
+bot_echo-26,bot_echo,phone,help,"Stay on the line with me, help is on the way, stay on the line with me, help is on the way, stay on the line with me, help is on the way, stay on the line with me.",parakeet
+bot_echo-27,bot_echo,phone,help,Help is on the way.,parakeet
+bot_echo-28,bot_echo,phone,smoke,Can you see any smoke or flames? Can you see any smoke or flames? Can you see any smoke or flames? Can you see any smoke or flames? Can you see?,parakeet

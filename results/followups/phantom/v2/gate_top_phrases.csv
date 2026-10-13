@@ -1,0 +1,81 @@
+set,arm,text,clips
+main,raw,thank you,26
+main,raw,0,2
+main,raw,ah,1
+main,raw,ha ha ha,1
+main,raw,laughter,1
+main,raw,whee,1
+main,raw,ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha,1
+main,raw,weeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee,1
+main,raw_melpad,thank you,76
+main,raw_melpad,you,5
+main,raw_melpad,0 my god,2
+main,raw_melpad,i am sorry,2
+main,raw_melpad,ah ah,1
+main,raw_melpad,0,1
+main,raw_melpad,i do not know,1
+main,raw_melpad,whee,1
+main,transcribe_defaults,thank you,80
+main,transcribe_defaults,let us go,2
+main,transcribe_defaults,ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah,1
+main,transcribe_defaults,0,1
+main,transcribe_defaults,no no no no,1
+main,transcribe_defaults,gracias,1
+main,transcribe_defaults,talking in it,1
+main,transcribe_defaults,whaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,1
+main,transcribe_defaults_en,thank you,81
+main,transcribe_defaults_en,let us go,2
+main,transcribe_defaults_en,ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah,1
+main,transcribe_defaults_en,0,1
+main,transcribe_defaults_en,no no no no,1
+main,transcribe_defaults_en,talking in it,1
+main,transcribe_defaults_en,whaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,1
+main,transcribe_defaults_en,ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahah,1
+main,transcribe_en_hst2,thank you,83
+main,transcribe_en_hst2,ha ha ha,1
+main,transcribe_en_hst2,ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah ah,1
+main,transcribe_en_hst2,no no no no,1
+main,transcribe_en_hst2,talking in it,1
+main,transcribe_en_hst2,whaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,1
+main,transcribe_en_hst2,all right,1
+main,transcribe_en_hst2,ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahah,1
+randlen,raw,thank you,46
+randlen,raw,ah,1
+randlen,raw,phone ringing,1
+randlen,raw,applause applause,1
+randlen,raw,weeeeee i do not know,1
+randlen,raw,ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha,1
+randlen,raw,i am,1
+randlen,raw,you,1
+randlen,raw_melpad,thank you,73
+randlen,raw_melpad,you,5
+randlen,raw_melpad,i am sorry,3
+randlen,raw_melpad,so,2
+randlen,raw_melpad,ah ah,1
+randlen,raw_melpad,0,1
+randlen,raw_melpad,whee,1
+randlen,raw_melpad,ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha,1
+randlen,transcribe_defaults,thank you,72
+randlen,transcribe_defaults,i was in a very good time i was in a very good time i was in a very good time i ,3
+randlen,transcribe_defaults,i can do the time i can do the time i can do the time i can do the time i can do,1
+randlen,transcribe_defaults,i was the one i was the one i was the one i was the one i was the one i was the ,1
+randlen,transcribe_defaults,you all to the the the the the the the the the the the the the theude the ndudeu,1
+randlen,transcribe_defaults,aaaaaaah aaaaaaah aaaaaaah aaaaaaah,1
+randlen,transcribe_defaults,i was the one i was the one i was the one i was the one i was the one i was the ,1
+randlen,transcribe_defaults,0,1
+randlen,transcribe_defaults_en,thank you,72
+randlen,transcribe_defaults_en,i was in a very good time i was in a very good time i was in a very good time i ,3
+randlen,transcribe_defaults_en,i can do the time i can do the time i can do the time i can do the time i can do,1
+randlen,transcribe_defaults_en,i was the one i was the one i was the one i was the one i was the one i was the ,1
+randlen,transcribe_defaults_en,you all to the the the the the the the the the the the the the theude the ndudeu,1
+randlen,transcribe_defaults_en,aaaaaaah aaaaaaah aaaaaaah aaaaaaah,1
+randlen,transcribe_defaults_en,i was the one i was the one i was the one i was the one i was the one i was the ,1
+randlen,transcribe_defaults_en,0,1
+randlen,transcribe_en_hst2,thank you,74
+randlen,transcribe_en_hst2,i was in a very good time i was in a very good time i was in a very good time i ,2
+randlen,transcribe_en_hst2,i was a man i was a man,1
+randlen,transcribe_en_hst2,you all i was a man a man a man a man a man a man a man a man a man a man a man ,1
+randlen,transcribe_en_hst2,aaaaaaah aaaaaaah aaaaaaah aaaaaaah,1
+randlen,transcribe_en_hst2,you,1
+randlen,transcribe_en_hst2,i was a man i was a man i was a man i was a man i was a man i was a man i was a ,1
+randlen,transcribe_en_hst2,i can not,1
